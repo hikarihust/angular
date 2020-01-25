@@ -1,0 +1,22 @@
+============================================ Hello Angular ============================================
+
+Angular Project Structure
+    QuickStart
+        Step 1: Install the Angular CLI
+            npm install -g @angular/cli
+        Step 2: Create a workspace and initial application
+            ng new projectOne
+                Would you like to add Angular routing? No
+                CSS
+        Step 3: Run the application
+            cd projectOne
+            ng serve --open
+        Xem nội dung:
+            angular\projectOne\src\app
+                app.component.ts
+                app.module.ts
+                app.component.html
+            angular\projectOne\src
+                main.ts
+                index.html
+                styles.css
