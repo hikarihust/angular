@@ -20,3 +20,4 @@ Angular Project Structure
                 main.ts
                 index.html
                 styles.css
+    Customize
