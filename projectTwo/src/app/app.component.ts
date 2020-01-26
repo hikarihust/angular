@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
     <!-- <h1>My Application</h1> -->
     <!-- <my-sub></my-sub>
     <my-study-multi-abc></my-study-multi-abc> -->
-    <my-binding></my-binding>
+    <!-- <my-binding></my-binding> -->
+    <my-event-binding></my-event-binding>
   `,
   // templateUrl: '../template/app.component.html',
   // styles: [`.an2Cls {

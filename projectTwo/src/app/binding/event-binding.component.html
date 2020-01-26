@@ -1,0 +1,11 @@
+<h3>Event binding</h3>
+<button (click)="clickMe1()" type="button" class="btn btn-info">Button 1</button>
+<button on-click="clickMe2($event)" type="button" class="btn btn-info">Button 2</button>
+
+<div (click)="divClick($event)" style="padding: 10px; background-color: yellow;">
+	<button on-click="btnClick($event)" type="button" class="btn btn-success">Button 3</button>
+</div>
+
+<h3>Tag</h3>
+<input type="text" name="tag" class="form-control" (keyup)="onKeyUp($event)">
+<p id="result-tag" style="margin-top: 20px;"></p>

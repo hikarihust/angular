@@ -42,3 +42,6 @@ Multiple Components
 Attribute
     Interpolation
     Class - Style
+    Event binding
+        using jquery in angular
+            declare var jQuery:any;
