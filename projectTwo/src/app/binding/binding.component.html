@@ -1,3 +1,33 @@
 <!-- <h3>{{ title }}</h3> -->
 <h3>{{ personObj.name }}</h3>
 <h3>{{ showInfo() }}</h3>
+
+<a href="{{ link }}">TEMPLATE SYNTAX</a><br>
+<a [href]="link">TEMPLATE SYNTAX</a><br>
+<a bind-href="link">TEMPLATE SYNTAX</a><br>
+
+<a [attr.href]="link">TEMPLATE SYNTAX</a><br>
+
+<h3
+  [style.color]="isActive ? 'red' : 'yellow'"
+  class="title no-padding" [class.active] = "isActive">Abc</h3>
+
+<!--
+Property
+	[property]="expression"
+	bind-property="expression"
+
+	[src]="expression"
+	bind-src="expression"
+Attr
+	[attr.attr_name]="expression"
+-->
+<table border=1>
+	<tr>
+		<td [attr.colspan]="1 + 1">One-Two</td>
+	</tr>
+	<tr>
+		<td>Five</td>
+		<td>Six</td>
+	</tr>
+</table>

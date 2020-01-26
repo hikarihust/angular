@@ -41,3 +41,4 @@ Multiple Components
 
 Attribute
     Interpolation
+    Class - Style
