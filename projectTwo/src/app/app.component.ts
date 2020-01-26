@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
     <!-- <my-sub></my-sub>
     <my-study-multi-abc></my-study-multi-abc> -->
     <!-- <my-binding></my-binding> -->
-    <my-event-binding></my-event-binding>
+    <!-- <my-event-binding></my-event-binding> -->
+    <my-two-way-binding></my-two-way-binding>
   `,
   // templateUrl: '../template/app.component.html',
   // styles: [`.an2Cls {

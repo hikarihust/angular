@@ -45,3 +45,4 @@ Attribute
     Event binding
         using jquery in angular
             declare var jQuery:any;
+    Two way binding
