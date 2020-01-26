@@ -21,3 +21,6 @@ Angular Project Structure
                 index.html
                 styles.css
     Customize
+
+Component Metadata 
+    Selector
