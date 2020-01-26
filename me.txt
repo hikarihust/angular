@@ -27,3 +27,5 @@ Component Metadata
     Template
     TemplateURL
     Style, StyleURL
+
+============================================ Template Setting ============================================
