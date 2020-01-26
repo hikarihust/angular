@@ -4,7 +4,13 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   // template: '<h1>My Application</h1>',
   templateUrl: '../template/app.component.html',
-  styleUrls: ['./app.component.css']
+  // styles: [`.an2Cls { 
+  //   background-color: red;
+  // }
+  // .tsCls {
+  //     background-color: yellow;
+  // }`],
+  styleUrls: ['../template/app.component.css']
 })
 export class AppComponent {
   title = 'projectOne';

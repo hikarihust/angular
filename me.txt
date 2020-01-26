@@ -26,3 +26,4 @@ Component Metadata
     Selector
     Template
     TemplateURL
+    Style, StyleURL
