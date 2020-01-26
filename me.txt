@@ -29,3 +29,12 @@ Component Metadata
     Style, StyleURL
 
 ============================================ Template Setting ============================================
+
+Multiple Components
+    @Component({
+        selector: 'my-study-multi-abc',
+        template: '<h1>Study Multi ABC</h1>'
+    })    
+        @: Decorator indicator
+        Component: Decorator name 
+        (): Argument
