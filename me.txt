@@ -24,3 +24,4 @@ Angular Project Structure
 
 Component Metadata 
     Selector
+    Template
