@@ -8,6 +8,7 @@ import { StudyMultiAbcComponent } from './multi-component/study-multi-abc.compon
 import { BindingComponent } from './binding/binding.component';
 import { EventBindingComponent } from './binding/event-binding.component';
 import { TwoWayBindingComponent } from './binding/two-way-binding.component';
+import { NgIfComponent } from './directive/ng-if.component';
 
 @NgModule({
   declarations: [
@@ -15,8 +16,9 @@ import { TwoWayBindingComponent } from './binding/two-way-binding.component';
     // SubComponent,
     // StudyMultiAbcComponent
     // BindingComponent,
-    EventBindingComponent,
-    TwoWayBindingComponent
+    // EventBindingComponent,
+    // TwoWayBindingComponent,
+    NgIfComponent
   ],
   imports: [
     BrowserModule,

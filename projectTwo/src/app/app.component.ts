@@ -8,7 +8,8 @@ import { Component } from '@angular/core';
     <my-study-multi-abc></my-study-multi-abc> -->
     <!-- <my-binding></my-binding> -->
     <!-- <my-event-binding></my-event-binding> -->
-    <my-two-way-binding></my-two-way-binding>
+    <!-- <my-two-way-binding></my-two-way-binding> -->
+    <my-ng-if></my-ng-if>
   `,
   // templateUrl: '../template/app.component.html',
   // styles: [`.an2Cls {
