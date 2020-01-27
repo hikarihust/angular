@@ -9,7 +9,8 @@ import { Component } from '@angular/core';
     <!-- <my-binding></my-binding> -->
     <!-- <my-event-binding></my-event-binding> -->
     <!-- <my-two-way-binding></my-two-way-binding> -->
-    <my-ng-if></my-ng-if>
+    <!-- <my-ng-if></my-ng-if> -->
+    <my-ng-for></my-ng-for>
   `,
   // templateUrl: '../template/app.component.html',
   // styles: [`.an2Cls {

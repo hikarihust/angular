@@ -9,6 +9,7 @@ import { BindingComponent } from './binding/binding.component';
 import { EventBindingComponent } from './binding/event-binding.component';
 import { TwoWayBindingComponent } from './binding/two-way-binding.component';
 import { NgIfComponent } from './directive/ng-if.component';
+import { NgForComponent } from './directive/ng-for.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NgIfComponent } from './directive/ng-if.component';
     // BindingComponent,
     // EventBindingComponent,
     // TwoWayBindingComponent,
-    NgIfComponent
+    // NgIfComponent,
+    NgForComponent
   ],
   imports: [
     BrowserModule,

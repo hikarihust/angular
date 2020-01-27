@@ -49,3 +49,4 @@ Attribute
 
 Built-in directives
     NgIF
+    NgFor
