@@ -1,0 +1,26 @@
+<h3>ngClass</h3>
+<button type="button" class="btn btn-info btn-lg">
+	<span 
+		[class.glyphicon-th]="!isList"
+		[class.glyphicon-th-list]="isList"
+		class="glyphicon">Article</span>
+</button>
+
+<button type="button" class="btn btn-info btn-lg">
+	<span 
+		[ngClass]="{
+			'glyphicon-th': !isList,
+			'glyphicon-th-list': isList
+		}"
+		class="glyphicon">Article</span>
+</button>
+
+<button type="button" class="btn btn-info btn-lg">
+	<span 
+		[ngClass]="setClasses()"
+		class="glyphicon">Article</span>
+</button>
+
+<!-- <button type="button" class="btn btn-info btn-lg">
+	<span class="glyphicon glyphicon-th-list ">Article</span>
+</button> -->

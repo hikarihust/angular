@@ -11,7 +11,8 @@ import { Component } from '@angular/core';
     <!-- <my-two-way-binding></my-two-way-binding> -->
     <!-- <my-ng-if></my-ng-if> -->
     <!-- <my-ng-for></my-ng-for> -->
-    <my-ng-switch></my-ng-switch>
+    <!-- <my-ng-switch></my-ng-switch> -->
+    <my-ng-class></my-ng-class>
   `,
   // templateUrl: '../template/app.component.html',
   // styles: [`.an2Cls {

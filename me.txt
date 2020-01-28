@@ -51,3 +51,4 @@ Built-in directives
     NgIF
     NgFor
     NgSwitch
+    NgClass
