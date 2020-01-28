@@ -1,0 +1,16 @@
+<h3>NgSwitchComponent</h3>
+<ul class="nav nav-tabs">
+	<li role="presentation" [class.active]="tab=='home'"><a (click)="changeTab('home')" href="#" >Home</a></li>
+	<li role="presentation" [class.active]="tab=='profile'"><a (click)="changeTab('profile')" href="#">Profile</a></li>
+</ul>
+
+<div [ngSwitch]="tab">
+	<div *ngSwitchCase="'home'">
+		Home Lorem ipsum dolor sit amet
+		<button type="button" class="btn btn-default">button</button>
+	</div>
+	<div *ngSwitchCase="'profile'" >
+		<h3>Profile Lorem ipsum dolor sit amet <span class="label label-info">Label</span></h3>
+	</div>
+	<div *ngSwitchDefault >default</div>
+</div>

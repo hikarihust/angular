@@ -10,6 +10,7 @@ import { EventBindingComponent } from './binding/event-binding.component';
 import { TwoWayBindingComponent } from './binding/two-way-binding.component';
 import { NgIfComponent } from './directive/ng-if.component';
 import { NgForComponent } from './directive/ng-for.component';
+import { NgSwitchComponent } from './directive/ng-switch.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NgForComponent } from './directive/ng-for.component';
     // EventBindingComponent,
     // TwoWayBindingComponent,
     // NgIfComponent,
-    NgForComponent
+    // NgForComponent,
+    NgSwitchComponent
   ],
   imports: [
     BrowserModule,

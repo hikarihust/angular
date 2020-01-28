@@ -50,3 +50,4 @@ Attribute
 Built-in directives
     NgIF
     NgFor
+    NgSwitch
