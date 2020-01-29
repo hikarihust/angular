@@ -13,7 +13,8 @@ import { Component } from '@angular/core';
     <!-- <my-ng-for></my-ng-for> -->
     <!-- <my-ng-switch></my-ng-switch> -->
     <!-- <my-ng-class></my-ng-class> -->
-    <my-ng-style></my-ng-style>
+    <!-- <my-ng-style></my-ng-style> -->
+    <proj-style></proj-style>
   `,
   // templateUrl: '../template/app.component.html',
   // styles: [`.an2Cls {

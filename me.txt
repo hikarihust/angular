@@ -53,3 +53,6 @@ Built-in directives
     NgSwitch
     NgClass
     NgStyle
+
+Setting Template
+    Content & Template

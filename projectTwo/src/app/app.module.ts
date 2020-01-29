@@ -13,6 +13,7 @@ import { NgForComponent } from './directive/ng-for.component';
 import { NgSwitchComponent } from './directive/ng-switch.component';
 import { NgClassComponent } from './directive/ng-class.component';
 import { NgStyleComponent } from './binding/ng-style.component';
+import { StyleComponent } from './proj-style/style.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { NgStyleComponent } from './binding/ng-style.component';
     // NgForComponent,
     // NgSwitchComponent,
     // NgClassComponent,
-    NgStyleComponent
+    // NgStyleComponent,
+    StyleComponent
   ],
   imports: [
     BrowserModule,
