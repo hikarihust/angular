@@ -17,17 +17,21 @@
 						</select>
 					</div>
 
-					<div class="row">
+          <div class="row"
+            [ngStyle]="{
+              display: theme.value === 'custom' ? 'block' : 'none'
+            }"
+          >
 						<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 							<div class="form-group">
 								<label for="">Background Color</label>
-								<input type="color" class="form-control">
+								<input type="color" class="form-control" #backgroundColor (change)="0">
 							</div>
 						</div>
 						<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 							<div class="form-group">
 								<label for="">Text Color</label>
-								<input type="color" class="form-control" value="#ffffff">
+								<input type="color" class="form-control" value="#ffffff" #textColor (change)="0">
 							</div>
 						</div>
 					</div>
@@ -49,7 +53,14 @@
 					</div>
 				</form>
 
-        <p class="result {{ theme.value }}">{{ textDemo }}</p>
+        <p *ngIf="theme.value !== 'custom'" class="result {{ theme.value }}">{{ textDemo }}</p>
+
+        <p class="result"
+          *ngIf="theme.value === 'custom'"
+          [ngStyle]="{
+            backgroundColor: backgroundColor.value,
+            color: textColor.value}"
+        >{{ textDemo }}</p>
 			</div>
 		</div>
 	</div>

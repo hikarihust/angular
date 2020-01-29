@@ -56,3 +56,4 @@ Built-in directives
 
 Setting Template
     Content & Template
+    Custom template
