@@ -58,3 +58,7 @@ Setting Template
     Content & Template
     Custom template
     Optimized
+
+============================================ Setting Color ============================================
+
+Template reference variables
