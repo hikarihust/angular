@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
     <h1>My Application</h1>
+    <zvn-variable></zvn-variable>
   `,
   // templateUrl: '../template/app.component.html',
   // styles: [`.an2Cls {

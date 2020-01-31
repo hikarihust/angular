@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { VariableComponent } from './template-variable/variable.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    VariableComponent
   ],
   imports: [
     BrowserModule,
