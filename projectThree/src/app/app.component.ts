@@ -4,7 +4,11 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
     <h1>My Application</h1>
-    <zvn-variable></zvn-variable>
+    <!-- <zvn-variable></zvn-variable> -->
+    <zvn-input
+      [mtitle]="title"
+      [mdescription]="description"
+      ></zvn-input>
   `,
   // templateUrl: '../template/app.component.html',
   // styles: [`.an2Cls {
@@ -16,5 +20,7 @@ import { Component } from '@angular/core';
   styleUrls: ['../template/app.component.css']
 })
 export class AppComponent {
-  title = 'projectThree';
+  title = 'project 3 -Input Properties';
+
+  description: string = "Project 03 - Input Properties - Description";
 }

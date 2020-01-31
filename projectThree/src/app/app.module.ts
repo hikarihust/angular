@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { VariableComponent } from './template-variable/variable.component';
+import { InputComponent } from './input/input.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    VariableComponent
+    // VariableComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule,

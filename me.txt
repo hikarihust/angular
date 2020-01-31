@@ -62,3 +62,6 @@ Setting Template
 ============================================ Setting Color ============================================
 
 Template reference variables
+
+Sử dụng @Input và @Output
+    Input
