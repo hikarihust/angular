@@ -2,15 +2,15 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: `
-    <h1>My Application</h1>
-    <!-- <zvn-variable></zvn-variable> -->
-    <zvn-input
-      [mtitle]="title"
-      [mdescription]="description"
-      ></zvn-input>
-  `,
-  // templateUrl: '../template/app.component.html',
+  // template: `
+  //   <h1>My Application</h1>
+  //   <!-- <zvn-variable></zvn-variable> -->
+  //   <zvn-input
+  //     [mtitle]="title"
+  //     [mdescription]="description"
+  //     ></zvn-input>
+  // `,
+  templateUrl: './app.component.html',
   // styles: [`.an2Cls {
   //   background-color: red;
   // }
@@ -23,4 +23,8 @@ export class AppComponent {
   title = 'project 3 -Input Properties';
 
   description: string = "Project 03 - Input Properties - Description";
+
+	answer($event) : void {
+		console.log($event);
+	}
 }
