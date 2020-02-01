@@ -7,6 +7,8 @@ import { VariableComponent } from './template-variable/variable.component';
 import { InputComponent } from './input/input.component';
 import { OutputComponent } from './output/output.component';
 import { TemplateComponent } from './template/template.component';
+import { ControlComponent } from './proj-setting-color/control.component';
+import { PreviewerComponent } from './proj-setting-color/previewer.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { TemplateComponent } from './template/template.component';
     // VariableComponent,
     // InputComponent,
     // OutputComponent,
-    TemplateComponent
+    // TemplateComponent,
+    ControlComponent,
+    PreviewerComponent
   ],
   imports: [
     BrowserModule,

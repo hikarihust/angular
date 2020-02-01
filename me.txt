@@ -68,3 +68,6 @@ Sử dụng @Input và @Output
     Output
 
 Template tag
+
+Project 03: Setting Color
+    Setting Color 01
