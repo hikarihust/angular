@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { VariableComponent } from './template-variable/variable.component';
 import { InputComponent } from './input/input.component';
 import { OutputComponent } from './output/output.component';
+import { TemplateComponent } from './template/template.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     // VariableComponent,
-    InputComponent,
-    OutputComponent
+    // InputComponent,
+    // OutputComponent,
+    TemplateComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,36 @@
+<h3>Template</h3>
+
+<ng-template ngIf="isShow">
+	<div class="alert alert-danger">
+		<strong>Number is greater than 10</strong>
+	</div>
+</ng-template>
+
+<ul class="list-group">
+	<ng-template ngFor let-i=index let-course [ngForOf]="courses">
+		<li class="list-group-item">{{ (i+1)  + " " + course }}</li>
+	</ng-template>
+</ul>
+
+<ul class="nav nav-tabs">
+	<li role="presentation" [class.active]="tab=='home'"><a (click)="changeTab('home')" href="#" >Home</a></li>
+	<li role="presentation" [class.active]="tab=='profile'"><a (click)="changeTab('profile')" href="#">Profile</a></li>
+</ul>
+
+<div [ngSwitch]="tab">
+
+	<ng-template [ngSwitchCase]="'home'">
+		<div>
+			Home Lorem ipsum dolor sit amet
+			<button type="button" class="btn btn-default">button</button>
+		</div>
+	</ng-template>
+
+	<ng-template [ngSwitchCase]="'profile'">
+		<div>
+			<h3>Profile Lorem ipsum dolor sit amet <span class="label label-info">Label</span></h3>
+		</div>
+	</ng-template>
+
+	<ng-template ngSwitchDefault><div>default</div></ng-template>
+</div>
