@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
 	moduleId: module.id,
@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 
 export class ControlComponent {
+  componentTitle: string = "ControlComponent";
+  @Input("mcolor") controlColor: string
 	constructor() {}
 }
 

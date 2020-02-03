@@ -26,5 +26,9 @@ export class AppComponent {
 
 	answer($event) : void {
 		console.log($event);
-	}
+  }
+
+  componentTitle: string = "AppComponent";
+  // resetColor: string = "#000804";
+  resetColor: string = "red";
 }

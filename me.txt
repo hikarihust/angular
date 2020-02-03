@@ -71,3 +71,4 @@ Template tag
 
 Project 03: Setting Color
     Setting Color 01
+    Setting Color 02

@@ -1,9 +1,9 @@
 <div class="panel panel-info">
   <div class="panel-heading">
-    <h3 class="panel-title">ControlComponent</h3>
+    <h3 class="panel-title">{{componentTitle}}</h3>
   </div>
   <div class="panel-body">
-    <p>ControlComponent</p>
+    <p [ngStyle]="{'color': controlColor}">{{componentTitle}}</p>
     <button type="button" class="btn btn-danger">Red</button>
     <button type="button" class="btn btn-primary">Blue</button>
     <button type="button" class="btn btn-success">Green</button>
