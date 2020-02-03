@@ -30,5 +30,13 @@ export class AppComponent {
 
   componentTitle: string = "AppComponent";
   // resetColor: string = "#000804";
-  resetColor: string = "red";
+  resetColor: string = "#000804";
+
+	changeColor($event) {
+		this.resetColor = $event;
+  }
+
+  // funcResetColor() {
+  //   this.resetColor = "#000804";
+  // }
 }

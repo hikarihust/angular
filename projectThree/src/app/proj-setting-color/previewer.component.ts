@@ -8,7 +8,7 @@ import { Component, Input } from '@angular/core';
 
 export class PreviewerComponent {
   componentTitle: string = "PreviewerComponent";
-  @Input("color") previewerColor: string
+  @Input("color") previewerColor: string;
 	constructor() {}
 }
 

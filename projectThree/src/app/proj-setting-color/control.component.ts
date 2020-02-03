@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
 	moduleId: module.id,
@@ -8,10 +8,12 @@ import { Component, Input } from '@angular/core';
 
 export class ControlComponent {
   componentTitle: string = "ControlComponent";
-  @Input("mcolor") controlColor: string
-	constructor() {}
+
+  @Input("mcolor") controlColor: string;
+  @Output("selectColor") selecColor = new EventEmitter<string>();
+  constructor() {}
+
+	changeColor(value: string) {
+		this.selecColor.emit(value);
+  }
 }
-
-
-
-

@@ -24,16 +24,17 @@
         </div>
         <div class="panel-body">
           <p [ngStyle]="{'color': resetColor}">{{componentTitle}}</p>
-          <button type="button" class="btn btn-primary">Reset</button>
+          <button (click)="control.changeColor('#000804')" type="button" class="btn btn-primary">Reset</button>
         </div>
     </div>
   </div>
 
   <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
     <zvn-control
-    [mcolor]="resetColor"
-    ></zvn-control
-      >
+      ref-control
+      [mcolor]="resetColor"
+      (selectColor)="changeColor($event)"
+    ></zvn-control>
   </div>
 
   <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">

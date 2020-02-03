@@ -4,8 +4,8 @@
   </div>
   <div class="panel-body">
     <p [ngStyle]="{'color': controlColor}">{{componentTitle}}</p>
-    <button type="button" class="btn btn-danger">Red</button>
-    <button type="button" class="btn btn-primary">Blue</button>
-    <button type="button" class="btn btn-success">Green</button>
+    <button (click)="changeColor('#F20941')" type="button" class="btn btn-danger">Red</button>
+    <button (click)="changeColor('#2E86C1')" type="button" class="btn btn-primary">Blue</button>
+    <button (click)="changeColor('#229954')" type="button" class="btn btn-success">Green</button>
   </div>
 </div>
