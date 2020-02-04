@@ -73,3 +73,5 @@ Project 03: Setting Color
     Setting Color 01
     Setting Color 02
     Setting Color 03
+
+============================================ List Course with Pipe & Custom Pipe ============================================
