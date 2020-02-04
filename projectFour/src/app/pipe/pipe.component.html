@@ -1,0 +1,24 @@
+<table class="table table-bordered table-striped table-hover">
+	<thead>
+		<tr class="info">
+			<th width="20%">Name</th>
+			<th width="40%">Input</th>
+			<th width="40%">Output</th>
+		</tr>
+	</thead>
+	<tbody>
+		<!-- uppercase -->
+		<tr>
+			<td>uppercase</td>
+			<td>{{ courseObj.name }}</td>
+			<td>{{ courseObj.name | uppercase }}</td>
+    </tr>
+
+		<!-- lowercase -->
+		<tr>
+			<td>lowercase</td>
+			<td>{{ courseObj.name }}</td>
+			<td>{{ courseObj.name | lowercase }}</td>
+		</tr>
+	</tbody>
+</table>

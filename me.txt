@@ -75,3 +75,6 @@ Project 03: Setting Color
     Setting Color 03
 
 ============================================ List Course with Pipe & Custom Pipe ============================================
+
+Sử dụng Pipe cơ bản
+    Lowercase - Uppercase
