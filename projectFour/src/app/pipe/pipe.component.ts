@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 
 
-export class PipeComponent { 
+export class PipeComponent {
 	// Normarl
 	courseObj: any = {
 		'id'	: 20,

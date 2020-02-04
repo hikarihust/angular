@@ -78,3 +78,4 @@ Project 03: Setting Color
 
 Sử dụng Pipe cơ bản
     Lowercase - Uppercase
+    Slice

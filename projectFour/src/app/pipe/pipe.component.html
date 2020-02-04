@@ -19,6 +19,24 @@
 			<td>lowercase</td>
 			<td>{{ courseObj.name }}</td>
 			<td>{{ courseObj.name | lowercase }}</td>
+    </tr>
+
+		<!-- slice -->
+		<tr>
+			<td>slice - string</td>
+			<td>{{ courseObj.name }}</td>
+			<td>{{ courseObj.name | slice:2:4 }}</td>
+    </tr>
+
+		<!-- slice -->
+		<tr>
+			<td>slice - array</td>
+			<td>
+				<ul><li *ngFor="let course of courseObj.require">{{ course }}</li></ul>
+			</td>
+			<td>
+				<ul><li *ngFor="let course of courseObj.require | slice:-1">{{ course }}</li></ul>
+			</td>
 		</tr>
 	</tbody>
 </table>
