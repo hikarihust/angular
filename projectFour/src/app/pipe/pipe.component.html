@@ -37,6 +37,13 @@
 			<td>
 				<ul><li *ngFor="let course of courseObj.require | slice:-1">{{ course }}</li></ul>
 			</td>
+    </tr>
+
+		<!-- decimal -->
+		<tr>
+			<td>decimal</td>
+			<td>{{ courseObj.price }}</td>
+			<td>{{ courseObj.price | number:'3.0-3' }}</td>
 		</tr>
 	</tbody>
 </table>
