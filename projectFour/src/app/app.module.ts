@@ -9,6 +9,7 @@ import { CapitalizePipe } from './pipes/capitalize.pipe';
 import { ArrayPipe } from './pipes/array.pipe';
 import { SortPipe } from './pipes/sort.pipe';
 import { SummaryPipe } from './pipes/summary.pipe';
+import { CategoryPipe } from './pipes/category.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SummaryPipe } from './pipes/summary.pipe';
     CapitalizePipe,
     ArrayPipe,
     SortPipe,
-    SummaryPipe
+    SummaryPipe,
+    CategoryPipe
   ],
   imports: [
     BrowserModule,

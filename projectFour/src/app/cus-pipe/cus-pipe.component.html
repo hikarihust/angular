@@ -64,6 +64,13 @@
 			<td>summary</td>
 			<td>{{ description }}</td>
 			<td>{{ description | summary:30:'...'}}
+    </tr>
+
+		<!-- Categoty -->
+    <tr>
+			<td>Categoty</td>
+			<td><ul><li *ngFor="let category of arrCategory">{{ category }}</li></ul></td>
+      <td>{{ arrCategory | sort:'DESC' | category | uppercase }}</td>
 		</tr>
 	</tbody>
 </table>

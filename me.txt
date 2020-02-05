@@ -89,3 +89,4 @@ Xây dựng Pipe với PipeTransform
     Capitalize
     Array
     Summary
+    Category
