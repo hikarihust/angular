@@ -15,5 +15,26 @@
 			<td>{{ text | capitalize }}</td>
     </tr>
 
+		<!-- array - even -->
+		<tr>
+			<td>array - even</td>
+			<td>
+				<ul><li *ngFor="let num of arrNumber">{{ num }}</li></ul>
+			</td>
+			<td>
+				<ul><li *ngFor="let num of arrNumber | array">{{ num }}</li></ul>
+			</td>
+    </tr>
+
+		<!-- array - odd -->
+		<tr>
+			<td>array - odd</td>
+			<td>
+				<ul><li *ngFor="let num of arrNumber">{{ num }}</li></ul>
+			</td>
+			<td>
+				<ul><li *ngFor="let num of arrNumber | array:'odd'">{{ num }}</li></ul>
+			</td>
+		</tr>
 	</tbody>
 </table>

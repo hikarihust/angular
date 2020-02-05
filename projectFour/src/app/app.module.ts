@@ -5,14 +5,16 @@ import { AppComponent } from './app.component';
 
 import { PipeComponent } from './pipe/pipe.component';
 import { CusPipeComponent } from './cus-pipe/cus-pipe.component';
-import { CapitalizePipe } from './cus-pipe/capitalize.pipe';
+import { CapitalizePipe } from './pipes/capitalize.pipe';
+import { ArrayPipe } from './pipes/array.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     PipeComponent,
     CusPipeComponent,
-    CapitalizePipe
+    CapitalizePipe,
+    ArrayPipe
   ],
   imports: [
     BrowserModule,

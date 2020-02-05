@@ -86,4 +86,5 @@ Sử dụng Pipe cơ bản
     Json
 
 Xây dựng Pipe với PipeTransform
-    Capitalize 01
+    Capitalize
+    Array
