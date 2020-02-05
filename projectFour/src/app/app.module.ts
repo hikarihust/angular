@@ -7,6 +7,7 @@ import { PipeComponent } from './pipe/pipe.component';
 import { CusPipeComponent } from './cus-pipe/cus-pipe.component';
 import { CapitalizePipe } from './pipes/capitalize.pipe';
 import { ArrayPipe } from './pipes/array.pipe';
+import { SortPipe } from './pipes/sort.pipe';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ArrayPipe } from './pipes/array.pipe';
     PipeComponent,
     CusPipeComponent,
     CapitalizePipe,
-    ArrayPipe
+    ArrayPipe,
+    SortPipe
   ],
   imports: [
     BrowserModule,

@@ -35,6 +35,28 @@
 			<td>
 				<ul><li *ngFor="let num of arrNumber | array:'odd'">{{ num }}</li></ul>
 			</td>
+    </tr>
+
+		<!-- sort - ASC -->
+		<tr>
+			<td>sort - asc</td>
+			<td>
+				<ul><li *ngFor="let course of courseObj.require">{{ course }}</li></ul>
+	  		</td>
+			<td>
+				<ul><li *ngFor="let course of courseObj.require | sort">{{ course }}</li></ul>
+			</td>
+    </tr>
+
+		<!-- sort - DESC -->
+		<tr>
+			<td>sort - desc</td>
+			<td>
+				<ul><li *ngFor="let course of courseObj.require">{{ course }}</li></ul>
+	  		</td>
+			<td>
+				<ul><li *ngFor="let course of courseObj.require | sort:'DESC' ">{{ course }}</li></ul>
+			</td>
 		</tr>
 	</tbody>
 </table>
