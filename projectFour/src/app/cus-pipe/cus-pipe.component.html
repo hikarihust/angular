@@ -57,6 +57,13 @@
 			<td>
 				<ul><li *ngFor="let course of courseObj.require | sort:'DESC' ">{{ course }}</li></ul>
 			</td>
+    </tr>
+
+		<!-- summary -->
+		<tr>
+			<td>summary</td>
+			<td>{{ description }}</td>
+			<td>{{ description | summary:30:'...'}}
 		</tr>
 	</tbody>
 </table>
