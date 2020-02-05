@@ -58,6 +58,13 @@
 			<td>currency</td>
 			<td>{{ courseObj.price }}</td>
 			<td>{{ courseObj.price | currency:'VND':true:'9.0-0' }}</td>
+    </tr>
+
+		<!-- date -->
+		<tr>
+			<td>date</td>
+			<td>{{ courseObj.date }}</td>
+			<td>{{ courseObj.date | date:'dd-MM-y'  }}</td>
 		</tr>
 	</tbody>
 </table>

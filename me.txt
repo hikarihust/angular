@@ -82,3 +82,4 @@ Sử dụng Pipe cơ bản
     Decimal
     Percent
     Currency
+    Date
