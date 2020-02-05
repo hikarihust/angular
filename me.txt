@@ -83,3 +83,4 @@ Sử dụng Pipe cơ bản
     Percent
     Currency
     Date
+    Json

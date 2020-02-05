@@ -65,6 +65,13 @@
 			<td>date</td>
 			<td>{{ courseObj.date }}</td>
 			<td>{{ courseObj.date | date:'dd-MM-y'  }}</td>
-		</tr>
+    </tr>
+
+    <!-- json -->
+    <tr>
+      <td>json</td>
+      <td>{{ courseObj }}</td>
+      <td>{{ courseObj | json  }}</td>
+    </tr>
 	</tbody>
 </table>
