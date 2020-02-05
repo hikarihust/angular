@@ -44,6 +44,13 @@
 			<td>decimal</td>
 			<td>{{ courseObj.price }}</td>
 			<td>{{ courseObj.price | number:'3.0-3' }}</td>
+    </tr>
+
+		<!-- percent -->
+		<tr>
+			<td>percent</td>
+			<td>{{ percentB }}</td>
+			<td>{{ percentB | percent:'3.2-3'}}</td>
 		</tr>
 	</tbody>
 </table>

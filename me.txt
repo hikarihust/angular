@@ -80,3 +80,4 @@ Sử dụng Pipe cơ bản
     Lowercase - Uppercase
     Slice
     Decimal
+    Percent
