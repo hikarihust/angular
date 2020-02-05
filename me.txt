@@ -84,3 +84,6 @@ Sử dụng Pipe cơ bản
     Currency
     Date
     Json
+
+Xây dựng Pipe với PipeTransform
+    Capitalize 01

@@ -4,11 +4,15 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 
 import { PipeComponent } from './pipe/pipe.component';
+import { CusPipeComponent } from './cus-pipe/cus-pipe.component';
+import { CapitalizePipe } from './cus-pipe/capitalize.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PipeComponent
+    PipeComponent,
+    CusPipeComponent,
+    CapitalizePipe
   ],
   imports: [
     BrowserModule,
