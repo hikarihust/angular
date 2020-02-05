@@ -81,3 +81,4 @@ Sử dụng Pipe cơ bản
     Slice
     Decimal
     Percent
+    Currency

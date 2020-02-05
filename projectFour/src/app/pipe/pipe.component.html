@@ -51,6 +51,13 @@
 			<td>percent</td>
 			<td>{{ percentB }}</td>
 			<td>{{ percentB | percent:'3.2-3'}}</td>
+    </tr>
+
+		<!-- currency -->
+		<tr>
+			<td>currency</td>
+			<td>{{ courseObj.price }}</td>
+			<td>{{ courseObj.price | currency:'VND':true:'9.0-0' }}</td>
 		</tr>
 	</tbody>
 </table>
