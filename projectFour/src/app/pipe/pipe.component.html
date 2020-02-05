@@ -73,5 +73,12 @@
       <td>{{ courseObj }}</td>
       <td>{{ courseObj | json  }}</td>
     </tr>
+
+		<!-- Chaining pipes  -->
+		<tr>
+			<td>Chaining pipes </td>
+			<td>{{ courseObj }}</td>
+			<td>{{ courseObj | json | uppercase | lowercase }}</td>
+		</tr>
 	</tbody>
 </table>
