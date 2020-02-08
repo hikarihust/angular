@@ -108,3 +108,4 @@ List Course with Pipe & Custom Pipe
     List Courses
     Setting 01
     Setting 02
+    CourseCapitalizePipe

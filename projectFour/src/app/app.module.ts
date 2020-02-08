@@ -18,6 +18,7 @@ import { CategoryPipe } from './pipes/category.pipe';
 import { ProjectComponent } from './project-list/components/project.component';
 import { ControlComponent } from './project-list/components/control.component';
 import { CourseComponent } from './project-list/components/course.componet';
+import { CourseCapitalizePipe } from './project-list/pipes/course-capitalize.pipe';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { CourseComponent } from './project-list/components/course.componet';
     // Project
     ProjectComponent,
     ControlComponent,
-    CourseComponent
+    CourseComponent,
+    CourseCapitalizePipe
   ],
   imports: [
     BrowserModule,
