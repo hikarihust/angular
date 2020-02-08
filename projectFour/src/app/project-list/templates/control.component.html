@@ -1,7 +1,7 @@
 <form class="navbar-form navbar-right" role="search">
   <div class="form-group">
     <label>Summary Type: </label>
-      <select class="form-control">
+      <select #selectSummary (change)="settingSummary(selectSummary.value)" class="form-control">
           <option value="0">Small</option>
           <option value="1">Medium</option>
           <option value="2">Full</option>
@@ -10,7 +10,7 @@
 
   <div class="form-group">
     <label>Currency: </label>
-      <select class="form-control">
+      <select #selectCurrency (change)="settingCurrency(selectCurrency.value)" class="form-control">
           <option value="vnd">VND</option>
           <option value="usd" selected="true">USD</option>
       </select>

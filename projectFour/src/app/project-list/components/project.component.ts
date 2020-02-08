@@ -9,6 +9,17 @@ import { Course } from './../define/course.class';
 
 export class ProjectComponent  {
   courses: Course[] = [];
+  typeSummary: number = 0;
+  typeCurrency: string = "usd";
+
+	changeSummary(value: number) {
+		this.typeSummary = value;
+	}
+
+	changeCurrency(value: string) {
+		this.typeCurrency = value;
+	}
+
 	constructor() {
 		this.courses.push(
 			new Course("C01", "ruby on rails developer course", "c01.jpg",

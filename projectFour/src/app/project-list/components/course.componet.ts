@@ -8,6 +8,8 @@ import { Course } from '../define/course.class';
 })
 
 export class CourseComponent  {
+	@Input("typeSummary") typeSummary: number;
+	@Input("typeCurrency") typeCurrency: string;
   @Input("course") courseObj: Course;
 	constructor() {
 
