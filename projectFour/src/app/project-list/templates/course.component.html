@@ -1,4 +1,3 @@
-{{ typeSummary + "-" + typeCurrency }}
 <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
   <div class="thumbnail">
     <img src="./../../../assets/images/course/{{courseObj.picture}}" alt="{{courseObj.picture}}">
@@ -7,7 +6,12 @@
       <p>{{ courseObj.summary | courseSummary:typeSummary }}</p>
       <p [innerHTML]="courseObj.cat | courseCategory"></p>
       <p class="text-right">
-        <a href="#" class="btn btn-danger" role="button">{{courseObj.price}} USD</a>
+				<ng-template [ngIf]="typeCurrency==='USD'">
+					<a href="#" class="btn btn-danger" role="button">{{ courseObj.price | currency:typeCurrency:true:'1.2-3' }} </a>
+				</ng-template>
+				<ng-template [ngIf]="typeCurrency==='VND'">
+					<a href="#" class="btn btn-danger" role="button">{{ (courseObj.price * 20000) | currency:typeCurrency:true:'1.0-0' }} </a>
+				</ng-template>
       </p>
     </div>
   </div>

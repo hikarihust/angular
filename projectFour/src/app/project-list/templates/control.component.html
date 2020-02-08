@@ -8,7 +8,7 @@
 
   <div class="form-group">
     <label>Currency: </label>
-    <select ref-selectCurrency (change)="settingSummary(selectCurrency.value)" class="form-control">
+    <select ref-selectCurrency (change)="settingCurrency(selectCurrency.value)" class="form-control">
       <option *ngFor="let item of valueCurrency" value="{{ item }}" [selected]="item == typeCurrency">{{ item | uppercase }}</option>
     </select>
   </div>

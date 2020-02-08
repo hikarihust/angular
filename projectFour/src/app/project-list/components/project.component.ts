@@ -10,7 +10,7 @@ import { Course } from './../define/course.class';
 export class ProjectComponent  {
   courses: Course[] = [];
   typeSummary: number = 0;
-  typeCurrency: string = "usd";
+  typeCurrency: string = "USD";
 
 	changeSummary(value: number) {
 		this.typeSummary = value;
