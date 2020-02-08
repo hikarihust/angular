@@ -104,3 +104,4 @@ List Course with Pipe & Custom Pipe
                 "types": ["node"]
             }
         <img src="../assets/course/c01.jpg" alt="...">
+    Data sample
