@@ -107,3 +107,4 @@ List Course with Pipe & Custom Pipe
     Data sample
     List Courses
     Setting 01
+    Setting 02

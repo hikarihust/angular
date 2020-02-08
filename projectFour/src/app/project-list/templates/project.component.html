@@ -3,9 +3,12 @@
 	<!-- CONTROL -->
 	<div class="panel-heading">
     <zvn-control
+      [typeSummary]="typeSummary"
+      [typeCurrency]="typeCurrency"
       (typeSummaryChange)="changeSummary($event)"
       (typeCurrencyChange)="changeCurrency($event)"
     ></zvn-control
+
       >
 	</div>
 	<div class="panel-body">
