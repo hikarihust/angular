@@ -5,11 +5,7 @@
     <div class="caption">
       <h3><a href="#">{{ courseObj.name | courseCapitalize }}</a></h3>
       <p>{{ courseObj.summary | courseSummary:typeSummary }}</p>
-      <p>
-        <ng-template ngFor let-category [ngForOf]="courseObj.cat">
-          <a href="#"><span class="label label-success">{{category}}</span></a>
-        </ng-template>
-      </p>
+      <p [innerHTML]="courseObj.cat | courseCategory"></p>
       <p class="text-right">
         <a href="#" class="btn btn-danger" role="button">{{courseObj.price}} USD</a>
       </p>

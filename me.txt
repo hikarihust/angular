@@ -110,3 +110,4 @@ List Course with Pipe & Custom Pipe
     Setting 02
     CourseCapitalizePipe
     CourseSummaryPipe
+    CourseCategoryPipe
