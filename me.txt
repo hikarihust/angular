@@ -90,3 +90,17 @@ Xây dựng Pipe với PipeTransform
     Array
     Summary
     Category
+
+List Course with Pipe & Custom Pipe
+    Project - Control
+        1. @types/node をインストール
+            npm install --save @types/node
+        2. tsconfig.json に以下を記述
+            "compilerOptions": {
+                "types": ["node"]
+            }
+        3. src/tsconfig.app.json にも、同じく記述
+            "compilerOptions": {
+                "types": ["node"]
+            }
+        <img src="../assets/course/c01.jpg" alt="...">
