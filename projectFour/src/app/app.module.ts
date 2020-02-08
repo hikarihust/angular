@@ -17,6 +17,7 @@ import { CategoryPipe } from './pipes/category.pipe';
 // Project
 import { ProjectComponent } from './project-list/components/project.component';
 import { ControlComponent } from './project-list/components/control.component';
+import { CourseComponent } from './project-list/components/course.componet';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ControlComponent } from './project-list/components/control.component';
 
     // Project
     ProjectComponent,
-    ControlComponent
+    ControlComponent,
+    CourseComponent
   ],
   imports: [
     BrowserModule,
