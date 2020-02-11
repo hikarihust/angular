@@ -112,3 +112,18 @@ List Course with Pipe & Custom Pipe
     CourseSummaryPipe
     CourseCategoryPipe
     CoursePricePipe
+
+============================================ Expand and collapse content ============================================
+
+Init
+    Step 1: Install the Angular CLI
+        npm install -g @angular/cli
+    Step 2: Create a workspace and initial application
+        ng new projectOne
+            Would you like to add Angular routing? No
+            CSS
+    Step 3: Run the application
+        cd projectFive
+        ng serve --open
+    An unhandled exception occurred: Port 4200 is already in use. Use '--port' to specify a different port
+        ng serve --open --port 4201
