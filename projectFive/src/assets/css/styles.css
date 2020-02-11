@@ -1,0 +1,62 @@
+div.row {
+	margin-bottom: 20px;
+}
+
+div.btn-group {
+	margin-bottom: 20px;
+}
+
+p.result {
+	margin-top: 20px;
+	padding: 10px;
+	border: 1px solid #EBD7D3;
+}
+
+p.blue {
+	background-color: #20AFF1;
+	color: #21211A;
+}
+
+p.black {
+	background-color: #090909;
+	color: #F0F353;
+}
+
+p.white {
+	background-color: #fff;
+	color: #F21F09;
+}
+
+div.media img {
+	max-height: 100px;
+}
+
+.is-favorite {
+	padding: 5px 10px;
+	background-color: #B4FAD1;
+}
+
+.is-hovering  {
+	font-weight: bold;
+}
+
+
+/* ======================== COLLAPSE - START ======================== */
+
+
+
+
+
+
+h3.panel-title {
+	position: relative;
+}
+
+div.panel-heading a{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+
+/* ======================== COLLAPSE - END ======================== */
