@@ -1,13 +1,32 @@
-import  { Directive, ElementRef } from "@angular/core";
+import  { Directive, ElementRef, HostListener } from "@angular/core";
 
 @Directive({
-	selector: '[zvnHighlight]'
+  selector: '[zvnHighlight]',
+	host: {
+		'(click)': 'onClick($event)'
+	}
 })
 
 export class HighlightDirective {
 	constructor(private el: ElementRef) {
-    this.highlight("blue");
+
   }
+
+  @HostListener('mouseenter') onMouseEnter() {
+    this.highlight('yellow');
+  }
+
+  @HostListener('mouseleave') onMouseLeave() {
+    this.highlight(null);
+  }
+
+	// @HostListener('click', ['$event']) onClick(btn) {
+	// 	console.log(btn);
+  // }
+
+	onClick($event) {
+		console.log($event.target.innerText);
+	}
 
   private highlight(color: string) {
     // this.el.nativeElement.style.backgroundColor = color;
