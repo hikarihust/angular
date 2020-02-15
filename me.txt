@@ -140,3 +140,4 @@ index.html
 HightLight Plugin
     Attribute Directive
     HostListener
+    Param 1

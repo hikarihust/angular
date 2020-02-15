@@ -1,4 +1,4 @@
-import  { Directive, ElementRef, HostListener } from "@angular/core";
+import  { Directive, ElementRef, HostListener, Input } from "@angular/core";
 
 @Directive({
   selector: '[zvnHighlight]',
@@ -8,12 +8,16 @@ import  { Directive, ElementRef, HostListener } from "@angular/core";
 })
 
 export class HighlightDirective {
+  @Input("zvnHighlight") highLightColor: string;
+
+  private _defaultColor: string = "yellow";
+
 	constructor(private el: ElementRef) {
 
   }
 
   @HostListener('mouseenter') onMouseEnter() {
-    this.highlight('yellow');
+    this.highlight(this.highLightColor || this._defaultColor);
   }
 
   @HostListener('mouseleave') onMouseLeave() {

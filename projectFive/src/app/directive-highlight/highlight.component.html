@@ -4,8 +4,8 @@
 	</div>
 	<div class="panel-body">
 		<p zvnHighlight>P - Highlight me!</p>
-		<p>Highlight me!</p>
-		<p>Highlight me!</p>
+		<p [zvnHighlight]="'#F20941'">Highlight me!</p>
+		<p [zvnHighlight]="'#2E86C1'">Highlight me!</p>
 
 		<p>
 			<button (click)="changeColor('#F20941')" type="button" class="btn btn-danger">Red</button>
@@ -13,7 +13,7 @@
 			<button (click)="changeColor('#229954')" type="button" class="btn btn-success">Green</button>
 		</p>
 
-		<p>Highlight me!</p>
-		<h3 zvnHighlight>H3 - Highlight me!</h3>
+		<p [zvnHighlight]="color">Highlight me!</p>
+		<h3 [zvnHighlight]="color">H3 - Highlight me!</h3>
 	</div>
 </div>
