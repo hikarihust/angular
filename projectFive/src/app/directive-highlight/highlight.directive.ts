@@ -9,15 +9,14 @@ import  { Directive, ElementRef, HostListener, Input } from "@angular/core";
 
 export class HighlightDirective {
   @Input("zvnHighlight") highLightColor: string;
-
-  private _defaultColor: string = "yellow";
+  @Input("defaultColor") defaultColor: string = "yellow";
 
 	constructor(private el: ElementRef) {
 
   }
 
   @HostListener('mouseenter') onMouseEnter() {
-    this.highlight(this.highLightColor || this._defaultColor);
+    this.highlight(this.highLightColor || this.defaultColor);
   }
 
   @HostListener('mouseleave') onMouseLeave() {

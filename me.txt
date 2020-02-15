@@ -141,3 +141,4 @@ HightLight Plugin
     Attribute Directive
     HostListener
     Param 1
+    Param 2
