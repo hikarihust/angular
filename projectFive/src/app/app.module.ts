@@ -11,9 +11,15 @@ import { HighlightDirective } from './directive-highlight/highlight.directive';
 import { FavoriteComponent } from './directive-favorite/favorite.component';
 import { FavoriteDirective } from './directive-favorite/favorite.directive';
 
+// CollapsedDirective
+import { CollapsedComponent } from './directive-collapsed/collapsed.component';
+import { CollapsedDirective } from './directive-collapsed/collapsed.directive';
+
 @NgModule({
   declarations: [
     AppComponent,
+    CollapsedComponent,
+    CollapsedDirective,
     HighlightComponent,
     HighlightDirective,
     FavoriteComponent,

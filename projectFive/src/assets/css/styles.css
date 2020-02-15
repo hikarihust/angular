@@ -43,10 +43,9 @@ div.media img {
 
 /* ======================== COLLAPSE - START ======================== */
 
-
-
-
-
+div.is-collapsed div.panel-body {
+  display: none
+}
 
 h3.panel-title {
 	position: relative;

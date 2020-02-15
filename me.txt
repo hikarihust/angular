@@ -142,3 +142,6 @@ HightLight Plugin
     HostListener
     Param 1
     Param 2
+
+Collapsed Plugin
+    Is-collapsed
