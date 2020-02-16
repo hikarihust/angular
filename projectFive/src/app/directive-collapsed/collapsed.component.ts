@@ -11,21 +11,10 @@ export class CollapsedComponent {
   onCollapsedChange($event) {
     this.isCollapsed = $event;
   }
-	setClasses() {
+	setClasses(isCollapsed: boolean) {
 		return {
-			'glyphicon-chevron-down': !this.isCollapsed,
-			'glyphicon-chevron-right': this.isCollapsed
+			'glyphicon-chevron-down': !isCollapsed,
+			'glyphicon-chevron-right': isCollapsed
 		}
   }
-
-  isCollapsed2: boolean=true;
-  onCollapsedChange2($event) {
-    this.isCollapsed2 = $event;
-  }
-	setClasses2() {
-		return {
-			'glyphicon-chevron-down': !this.isCollapsed2,
-			'glyphicon-chevron-right': this.isCollapsed2
-		}
-	}
 }

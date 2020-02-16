@@ -1,7 +1,8 @@
 import { Directive, HostListener, HostBinding, Input, Output, EventEmitter } from '@angular/core';
 
 @Directive({
-	selector: '[zvnCollapsed]'
+  selector: '[zvnCollapsed]',
+  exportAs: 'zvnCollapsed'
 })
 
 export class CollapsedDirective {
@@ -17,10 +18,5 @@ export class CollapsedDirective {
 
 	@HostListener('click') toogle() {
     this.isCollapsed = !this.isCollapsed;
-    this.collapsed.emit(this.isCollapsed);
-    this.collapsed2.emit(this.isCollapsed);
   }
-
-  @Output('collapsed') collapsed = new EventEmitter<boolean>();
-  @Output('collapsed2') collapsed2 = new EventEmitter<boolean>();
 }

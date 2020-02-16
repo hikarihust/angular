@@ -2,40 +2,42 @@
 	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 
 		<!-- AREA CONTENT 01 -->
-		<div class="panel panel-info" [zvnCollapsed]="false" (collapsed)="onCollapsedChange($event)">
+		<div class="panel panel-info" [zvnCollapsed]="false" #zvnCollapsed1="zvnCollapsed">
 			<div class="panel-heading">
 				<h3 class="panel-title">
 					Panel title 01
-					<a class="control" href="#"><span class="glyphicon" [ngClass]="setClasses()" aria-hidden="true"></span></a>
+					<a class="control" href="#"><span class="glyphicon" [ngClass]="setClasses(zvnCollapsed1.isCollapsed)" aria-hidden="true"></span></a>
 				</h3>
-			</div>
-      <div class="panel-body">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione dignissimos beatae rem magni similique, distinctio quas pariatur laudantium. Laudantium, incidunt!
       </div>
+      <ng-template [ngIf]="!zvnCollapsed1.isCollapsed">
+        <div class="panel-body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione dignissimos beatae rem magni similique, distinctio quas pariatur laudantium. Laudantium, incidunt!
+        </div>
+      </ng-template>
     </div>
 
 		<!-- AREA CONTENT 02 -->
-		<div class="panel panel-info" zvnCollapsed (collapsed2)="onCollapsedChange2($event)">
+		<div class="panel panel-info" zvnCollapsed #zvnCollapsed2="zvnCollapsed">
 			<div class="panel-heading">
 				<h3 class="panel-title">
 					Panel title 02
-					<a class="control" href="#"><span class="glyphicon" [ngClass]="setClasses2()" aria-hidden="true"></span></a>
+					<a class="control" href="#"><span class="glyphicon" [ngClass]="setClasses(zvnCollapsed2.isCollapsed)" aria-hidden="true"></span></a>
 				</h3>
 			</div>
-      <div class="panel-body">
+      <div class="panel-body" *ngIf="!zvnCollapsed2.isCollapsed">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione dignissimos beatae rem magni similique, distinctio quas pariatur laudantium. Laudantium, incidunt!
       </div>
     </div>
 
 		<!-- AREA CONTENT 03 -->
-		<div class="panel panel-info" [zvnCollapsed]=true>
+		<div class="panel panel-info" [zvnCollapsed]="true" #zvnCollapsed3="zvnCollapsed">
 			<div class="panel-heading">
 				<h3 class="panel-title">
 					Panel title 03
-					<a class="control" href="#"><span class="glyphicon glyphicon-chevron-right" aria-hidden=""></span></a>
+					<a class="control" href="#"><span class="glyphicon" [ngClass]="setClasses(zvnCollapsed3.isCollapsed)" aria-hidden=""></span></a>
 				</h3>
 			</div>
-      <div class="panel-body">
+      <div class="panel-body" *ngIf="!zvnCollapsed3.isCollapsed">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione dignissimos beatae rem magni similique, distinctio quas pariatur laudantium. Laudantium, incidunt!
       </div>
     </div>
