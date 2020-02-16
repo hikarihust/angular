@@ -14,4 +14,13 @@ export class CollapsedDirective {
       this.isCollapsed=true;
     }
   }
+
+	@HostListener('click') toogle() {
+    this.isCollapsed = !this.isCollapsed;
+    this.collapsed.emit(this.isCollapsed);
+    this.collapsed2.emit(this.isCollapsed);
+  }
+
+  @Output('collapsed') collapsed = new EventEmitter<boolean>();
+  @Output('collapsed2') collapsed2 = new EventEmitter<boolean>();
 }

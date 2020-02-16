@@ -145,3 +145,4 @@ HightLight Plugin
 
 Collapsed Plugin
     Is-collapsed
+    Collapsed - expand
