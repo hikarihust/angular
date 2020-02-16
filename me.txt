@@ -147,3 +147,4 @@ Collapsed Plugin
     Is-collapsed
     Collapsed - expand
     ExportAs
+    Span

@@ -16,7 +16,9 @@ export class CollapsedDirective {
     }
   }
 
-	@HostListener('click') toogle() {
-    this.isCollapsed = !this.isCollapsed;
+	@HostListener('click', ['$event.target']) toogle(elem) {
+		if(elem.tagName.toLowerCase() === "span") {
+			this.isCollapsed = !this.isCollapsed;
+    }
   }
 }
