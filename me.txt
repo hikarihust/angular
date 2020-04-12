@@ -148,3 +148,18 @@ Collapsed Plugin
     Collapsed - expand
     ExportAs
     Span
+
+============================================ Tab Container ============================================
+
+Init
+    Step 1: Install the Angular CLI
+        npm install -g @angular/cli
+    Step 2: Create a workspace and initial application
+        ng new projectSix
+            Would you like to add Angular routing? No
+            CSS
+    Step 3: Run the application
+        cd projectSix
+        ng serve --open
+    An unhandled exception occurred: Port 4200 is already in use. Use '--port' to specify a different port
+        ng serve --open --port 4201
