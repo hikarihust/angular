@@ -6,11 +6,17 @@ import { FormsModule }   from '@angular/forms';
 // StructuralComponent
 import { StructuralComponent } from './structural/structural.component';
 
+// Unless
+import { UnlessComponent } from './directive-unless/unless.component';
+import { UnlessDirective } from './directive-unless/unless.directive';
+
 @NgModule({
   imports:      [ BrowserModule],
   declarations: [
     AppComponent,
-    StructuralComponent
+    StructuralComponent,
+    UnlessComponent,
+    UnlessDirective
   ],
   providers: [],
   bootstrap: [AppComponent]
