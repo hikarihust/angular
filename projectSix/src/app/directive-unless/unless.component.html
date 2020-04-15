@@ -13,19 +13,33 @@
 		<div class="alert alert-info" *ngIf="!condition">
 			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 			<strong>Title!</strong> *ngIf="false"
-		</div>
+    </div>
+
+    <ng-template [ngIf]="condition">
+      <div class="alert alert-info">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <strong>Title!</strong> *ngIf="true"
+      </div>
+     </ng-template>
   </div>
 
 	<div class="panel-body">
     <h3>zvnUnless</h3>
-		<div class="alert alert-info" *zvnUnless>
+		<div class="alert alert-info" *zvnUnless="condition">
 			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 			<strong>Title!</strong> *zvnUnless="true"
 		</div>
 
-		<div class="alert alert-info" *zvnUnless>
+		<div class="alert alert-info" *zvnUnless="!condition">
 			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 			<strong>Title!</strong> *zvnUnless="false"
-		</div>
+    </div>
+
+    <ng-template [zvnUnless]="!condition">
+      <div class="alert alert-info">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <strong>Title!</strong> *zvnUnless="false"
+      </div>
+     </ng-template>
 	</div>
 </div>
