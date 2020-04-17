@@ -14,6 +14,9 @@ import { UnlessDirective } from './directive-unless/unless.directive';
 import { DelayComponent } from './directive-delay/delay.component';
 import { DelayDirective } from './directive-delay/delay.directive';
 
+// TabDirective
+import { TabComponent } from './directive-tab/tab.component';
+
 @NgModule({
   imports:      [ BrowserModule],
   declarations: [
@@ -22,7 +25,8 @@ import { DelayDirective } from './directive-delay/delay.directive';
     UnlessComponent,
     UnlessDirective,
 		DelayComponent,
-		DelayDirective,
+    DelayDirective,
+    TabComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

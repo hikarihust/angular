@@ -173,3 +173,7 @@ Unless Directive
 
 Delay Directive
     Delay
+
+Xây dựng plugin với Structural Directive 
+    Init
+    
