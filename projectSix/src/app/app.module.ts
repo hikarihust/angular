@@ -10,13 +10,19 @@ import { StructuralComponent } from './structural/structural.component';
 import { UnlessComponent } from './directive-unless/unless.component';
 import { UnlessDirective } from './directive-unless/unless.directive';
 
+// Delay
+import { DelayComponent } from './directive-delay/delay.component';
+import { DelayDirective } from './directive-delay/delay.directive';
+
 @NgModule({
   imports:      [ BrowserModule],
   declarations: [
     AppComponent,
     StructuralComponent,
     UnlessComponent,
-    UnlessDirective
+    UnlessDirective,
+		DelayComponent,
+		DelayDirective,
   ],
   providers: [],
   bootstrap: [AppComponent]
