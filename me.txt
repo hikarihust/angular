@@ -179,3 +179,4 @@ Xây dựng plugin với Structural Directive
     SelectorDirective
     ContainDirective
     TabDirective
+    Viết show method

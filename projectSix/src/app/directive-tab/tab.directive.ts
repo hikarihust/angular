@@ -21,7 +21,11 @@ export class TabDirective {
 
 	show(id: string) {
 		this.selectors.forEach( (selector: SelectorDirective) => {
-      // console.log(id);
-		});
+      selector.active = selector.id == id;
+    });
+
+		this.contains.forEach( (contain: ContainDirective) => {
+      contain.active = contain.id == id;
+    });
 	}
 }
