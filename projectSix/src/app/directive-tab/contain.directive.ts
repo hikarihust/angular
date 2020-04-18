@@ -1,4 +1,4 @@
-import { Directive, Input, HostBinding } from '@angular/core';
+import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 
 import { TabDirective } from './tab.directive';
 
@@ -7,14 +7,20 @@ import { TabDirective } from './tab.directive';
 })
 
 export class ContainDirective {
-	@Input("zvnContain") id: string;
-	@Input("active") active: boolean = false;
+  id: string;
+	@Input() set zvnContain(id: string) {
+    this.id = id;
+  }
 
-	@HostBinding('hidden') get attrHidden(){
-		return !this.active;
-	}
+  showContain(){
+    this.viewContainer.createEmbeddedView(this.templateRef);
+  }
 
-	constructor(private tabDirective: TabDirective) {
+  hideContain(){
+    this.viewContainer.clear();
+  }
+
+	constructor(private templateRef: TemplateRef<any>, private viewContainer: ViewContainerRef, private tabDirective: TabDirective) {
 		tabDirective.addContain(this);
-	}
+  }
 }

@@ -160,7 +160,7 @@ Init
             CSS
     Step 3: Run the application
         cd projectSix
-        ng serve --open
+        ng serve --openng serve --open
     An unhandled exception occurred: Port 4200 is already in use. Use '--port' to specify a different port
         ng serve --open --port 4201
     moduleId: module.id(Khong can)
@@ -180,3 +180,4 @@ Xây dựng plugin với Structural Directive
     ContainDirective
     TabDirective
     Viết show method
+    Structural Directive
