@@ -2,14 +2,14 @@
 	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 		<ul class="list-group">
 			<li class="list-group-item" zvnSelector="angular" [active]="true">Angular</li>
-			<li class="list-group-item" zvnSelector="php" >PHP</li>
+			<li class="list-group-item" zvnSelector="php">PHP</li>
 			<li class="list-group-item" zvnSelector="typescript">TypeScript</li>
 		</ul>
 	</div>
 
 	<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
 
-		<div class="panel panel-info">
+		<div class="panel panel-info" zvnContain="'angular'" [active]="true">
 			<div class="panel-heading">
 				<h3 class="panel-title">Angular</h3>
 			</div>
@@ -18,7 +18,7 @@
 			</div>
 		</div>
 
-		<div class="panel panel-success">
+		<div class="panel panel-success" zvnContain="'php'">
 			<div class="panel-heading">
 				<h3 class="panel-title">PHP</h3>
 			</div>
@@ -27,7 +27,7 @@
 			</div>
 		</div>
 
-		<div class="panel panel-danger">
+		<div class="panel panel-danger" zvnContain="'typescript'">
 			<div class="panel-heading">
 				<h3 class="panel-title">TypeScript</h3>
 			</div>
