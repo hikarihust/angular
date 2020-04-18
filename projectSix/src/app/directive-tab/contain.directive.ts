@@ -1,5 +1,7 @@
 import { Directive, Input, HostBinding } from '@angular/core';
 
+import { TabDirective } from './tab.directive';
+
 @Directive({
 	selector: '[zvnContain]'
 })
@@ -12,4 +14,7 @@ export class ContainDirective {
 		return !this.active;
 	}
 
+	constructor(private tabDirective: TabDirective) {
+		tabDirective.addContain(this);
+	}
 }

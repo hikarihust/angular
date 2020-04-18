@@ -1,5 +1,7 @@
 import { Directive, Input, HostBinding, HostListener } from '@angular/core';
 
+import { TabDirective } from './tab.directive';
+
 @Directive({
 	selector: '[zvnSelector]'
 })
@@ -13,7 +15,11 @@ export class SelectorDirective {
 	}
 
 	@HostListener('click') onClick(){
-    console.log(this.id);
+    // tabDirective
+    this.tabDirective.show(this.id);
 	}
 
+	constructor(private tabDirective: TabDirective) {
+		tabDirective.addSelector(this);
+	}
 }

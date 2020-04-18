@@ -18,6 +18,7 @@ import { DelayDirective } from './directive-delay/delay.directive';
 import { TabComponent } from './directive-tab/tab.component';
 import { SelectorDirective } from './directive-tab/selector.directive';
 import { ContainDirective } from './directive-tab/contain.directive';
+import { TabDirective } from './directive-tab/tab.directive';
 
 @NgModule({
   imports:      [ BrowserModule],
@@ -30,7 +31,8 @@ import { ContainDirective } from './directive-tab/contain.directive';
     DelayDirective,
     TabComponent,
     SelectorDirective,
-    ContainDirective
+    ContainDirective,
+    TabDirective
   ],
   providers: [],
   bootstrap: [AppComponent]
