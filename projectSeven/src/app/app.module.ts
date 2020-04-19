@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './life-cycle/main.component';
 import { AllComponent } from './life-cycle/all.component';
 import { OneComponent } from './life-cycle/one.component';
+import { TwoComponent } from './life-cycle/two.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +20,9 @@ import { OneComponent } from './life-cycle/one.component';
 
 		// 02 LifeCycle
 		MainComponent,
-    AllComponent,
-    OneComponent
+    // AllComponent,
+    OneComponent,
+    TwoComponent
   ],
   imports: [
     BrowserModule

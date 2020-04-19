@@ -11,7 +11,7 @@ export class AllComponent implements OnInit, OnChanges {
 	constructor() {
   }
 
-  ngOnChanges(changes: SimpleChanges) {
+  ngOnChanges() {
     console.log("ngOnChanges");
   }
 

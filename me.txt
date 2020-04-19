@@ -202,7 +202,7 @@ Augury
 LifeCycle Hooks
     LifeCycle hook
         Lập trình viên có thể dựa vào các hook trong LifeCycle để đưa ra các xử lý phù hợp
-        Hook -> Interface -> hook 
+        Hook -> Interface -> hook method
         Thứ tự:
             ngOnInit
             ngDoCheck
@@ -216,4 +216,6 @@ LifeCycle Hooks
 OnInit - OnDestroy
     ngOnInit dùng khi khởi tạo các giá trị như thiết lập các giá trị trong một mảng nào đó...
     ngOnDestroy dùng khi clean
-    Constructor nó được gọi đầu tiên trước tất cả các LifeCycle Hooks và nó thường tiêm vào các DI
+    Constructor nó được gọi đầu tiên trước tất cả các LifeCycle Hooks và nó thường tiêm vào các DI, tuy nhiên
+        Constructor không phải là 1 hook nằm trong LifeCycle
+OnChanges 01
