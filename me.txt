@@ -199,4 +199,17 @@ Init
     moduleId: module.id(Khong can)
 
 Augury
-    
+LifeCycle Hooks
+    LifeCycle hook
+        Lập trình viên có thể dựa vào các hook trong LifeCycle để đưa ra các xử lý phù hợp
+        Hook -> Interface -> hook 
+        Thứ tự:
+            ngOnInit
+            ngDoCheck
+            ngAfterContentInit
+            ngAfterContentChecked
+            ngAfterViewInit
+            ngAfterViewChecked
+            ngDoCheck
+            ngAfterContentChecked
+            ngAfterViewChecked
