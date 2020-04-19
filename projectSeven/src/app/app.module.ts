@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 // LifeCycle
 import { MainComponent } from './life-cycle/main.component';
 import { AllComponent } from './life-cycle/all.component';
+import { OneComponent } from './life-cycle/one.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AllComponent } from './life-cycle/all.component';
 
 		// 02 LifeCycle
 		MainComponent,
-		AllComponent
+    AllComponent,
+    OneComponent
   ],
   imports: [
     BrowserModule
