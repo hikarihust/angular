@@ -219,3 +219,4 @@ OnInit - OnDestroy
     Constructor nó được gọi đầu tiên trước tất cả các LifeCycle Hooks và nó thường tiêm vào các DI, tuy nhiên
         Constructor không phải là 1 hook nằm trong LifeCycle
 OnChanges 01
+OnChanges 02
