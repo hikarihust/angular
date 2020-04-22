@@ -12,6 +12,10 @@ import { AllComponent } from './life-cycle/all.component';
 import { OneComponent } from './life-cycle/one.component';
 import { TwoComponent } from './life-cycle/two.component';
 
+// Study NgContent
+import { NgContentMainComponent } from './ng-content/ng-content-main.component';
+import { NgContentChildOneComponent } from './ng-content/ng-content-child-one.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +26,10 @@ import { TwoComponent } from './life-cycle/two.component';
 		MainComponent,
     // AllComponent,
     OneComponent,
-    TwoComponent
+    TwoComponent,
+    // NgContent
+    NgContentMainComponent,
+    NgContentChildOneComponent
   ],
   imports: [
     BrowserModule

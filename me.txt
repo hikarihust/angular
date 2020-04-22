@@ -220,3 +220,4 @@ OnInit - OnDestroy
         Constructor không phải là 1 hook nằm trong LifeCycle
 OnChanges 01
 OnChanges 02
+Ng-content 01
