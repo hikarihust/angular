@@ -221,3 +221,4 @@ OnInit - OnDestroy
 OnChanges 01
 OnChanges 02
 Ng-content 01
+Ng-content 02

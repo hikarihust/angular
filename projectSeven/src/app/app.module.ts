@@ -15,6 +15,7 @@ import { TwoComponent } from './life-cycle/two.component';
 // Study NgContent
 import { NgContentMainComponent } from './ng-content/ng-content-main.component';
 import { NgContentChildOneComponent } from './ng-content/ng-content-child-one.component';
+import { NgContentChildTwoComponent } from './ng-content/ng-content-child-two.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { NgContentChildOneComponent } from './ng-content/ng-content-child-one.co
     TwoComponent,
     // NgContent
     NgContentMainComponent,
-    NgContentChildOneComponent
+    NgContentChildOneComponent,
+    NgContentChildTwoComponent
   ],
   imports: [
     BrowserModule

@@ -13,6 +13,16 @@ import { Component } from '@angular/core';
           <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>
           <p>MainNumber: {{ mainNumber }}</p>
         </zvn-ng-content-child-one>
+        <zvn-ng-content-child-two>
+          <div class="abc-def">
+				 		Class: .abc-def
+          </div>
+          <h3>Selector: H3 Element</h3>
+          <div my-attribute>Attribute</div>
+          <div my-attribute2="angular">Attribute with value</div>
+
+          <div item-content item-active>Multi Attribute</div>
+        </zvn-ng-content-child-two>
 			</div>
 			<div class="panel-footer">
 
