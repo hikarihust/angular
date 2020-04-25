@@ -26,7 +26,7 @@ import {
 
 export class ThreeComponent implements OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
   @ContentChild('myChild') myChild: ElementRef;
-  @ViewChild('h2Child') h2Child: ElementRef;
+  // @ViewChild('h2Child') h2Child: ElementRef;
 
 	hooks: string[] = [];
 
@@ -48,8 +48,13 @@ export class ThreeComponent implements OnInit, DoCheck, AfterContentInit, AfterC
 
 	ngAfterContentChecked() {
     this.hooks.push("ngAfterContentChecked");
-    console.log(this.myChild.nativeElement.innerText);
-		this.myChild.nativeElement.innerText = "11111111111111111";
+		if(this.myChild.nativeElement.innerText == 'abc') {
+			this.myChild.nativeElement.innerText = "11111111111111111";
+		}
+
+		if(this.myChild.nativeElement.innerText == 'def') {
+			this.myChild.nativeElement.innerText = "222222222222222222";
+		}
 	}
 
 	ngAfterViewInit() {
@@ -57,6 +62,6 @@ export class ThreeComponent implements OnInit, DoCheck, AfterContentInit, AfterC
   }
 
 	ngAfterViewChecked() {
-    this.h2Child.nativeElement.innerText = "222222222222222222";
+    // this.h2Child.nativeElement.innerText = "222222222222222222";
 	}
 }

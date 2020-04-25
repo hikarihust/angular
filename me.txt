@@ -227,3 +227,4 @@ AfterContent 01
     ngAfterViewInit(): Called once after the first ngAfterContentChecked(). Nó chỉ được gọi một lần
     AfterContent -> thì sẽ thao tác với phần ng-content -> Sử dụng đến ContentChild để thao tác
     AfterView -> template -> Sử dụng ViewChild để thao tác
+AfterContent 02

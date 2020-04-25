@@ -16,7 +16,8 @@ import { Component } from '@angular/core';
         </zvn-lifecycle-three>
       </div>
 			<div class="panel-footer">
-        <button (click)="title = 'abc'" type="button" class="btn btn-default">Change Content</button>
+        <button (click)="title = 'abc'" type="button" class="btn btn-default">Change ABC</button>
+        <button (click)="title = 'def'" type="button" class="btn btn-default">Change DEF</button>
         <!-- <button (click)="show = false" type="button" class="btn btn-default">Destroy</button> -->
 				<!-- <button (click)="value1 = '456'" type="button" class="btn btn-info">Change value 1</button> -->
 				<!-- <button (click)="value1 = '234'; value2 = '456'" type="button" class="btn btn-danger">Change value 1 & 2</button> -->
@@ -29,7 +30,7 @@ export class MainComponent   {
   show:boolean = true;
 	value1: string = "123";
   value2: string = "def";
-  title: string = "abc";
+  title: string = "After Content";
 	constructor() {
 	}
 }
