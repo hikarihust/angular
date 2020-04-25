@@ -213,18 +213,19 @@ LifeCycle Hooks
             ngDoCheck
             ngAfterContentChecked
             ngAfterViewChecked
-OnInit - OnDestroy
-    ngOnInit dùng khi khởi tạo các giá trị như thiết lập các giá trị trong một mảng nào đó...
-    ngOnDestroy dùng khi clean
-    Constructor nó được gọi đầu tiên trước tất cả các LifeCycle Hooks và nó thường tiêm vào các DI, tuy nhiên
-        Constructor không phải là 1 hook nằm trong LifeCycle
-OnChanges 01
-OnChanges 02
-Ng-content 01
-Ng-content 02
-AfterContent 01
-    ngAfterViewChecked(): Called after the ngAfterViewInit() and every subsequent. Khi có sự thay đổi thì sẽ được gọi
-    ngAfterViewInit(): Called once after the first ngAfterContentChecked(). Nó chỉ được gọi một lần
-    AfterContent -> thì sẽ thao tác với phần ng-content -> Sử dụng đến ContentChild để thao tác
-    AfterView -> template -> Sử dụng ViewChild để thao tác
-AfterContent 02
+    OnInit - OnDestroy
+        ngOnInit dùng khi khởi tạo các giá trị như thiết lập các giá trị trong một mảng nào đó...
+        ngOnDestroy dùng khi clean
+        Constructor nó được gọi đầu tiên trước tất cả các LifeCycle Hooks và nó thường tiêm vào các DI, tuy nhiên
+            Constructor không phải là 1 hook nằm trong LifeCycle
+    OnChanges 01
+    OnChanges 02
+    Ng-content 01
+    Ng-content 02
+    AfterContent 01
+        ngAfterViewChecked(): Called after the ngAfterViewInit() and every subsequent. Khi có sự thay đổi thì sẽ được gọi
+        ngAfterViewInit(): Called once after the first ngAfterContentChecked(). Nó chỉ được gọi một lần
+        AfterContent -> thì sẽ thao tác với phần ng-content -> Sử dụng đến ContentChild để thao tác
+        AfterView -> template -> Sử dụng ViewChild để thao tác
+    AfterContent 02
+    AfterView

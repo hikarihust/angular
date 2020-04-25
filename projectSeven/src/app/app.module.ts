@@ -12,6 +12,7 @@ import { AllComponent } from './life-cycle/all.component';
 import { OneComponent } from './life-cycle/one.component';
 import { TwoComponent } from './life-cycle/two.component';
 import { ThreeComponent } from './life-cycle/three.component';
+import { FourComponent } from './life-cycle/four.component';
 
 // Study NgContent
 import { NgContentMainComponent } from './ng-content/ng-content-main.component';
@@ -33,7 +34,8 @@ import { NgContentChildTwoComponent } from './ng-content/ng-content-child-two.co
     NgContentMainComponent,
     NgContentChildOneComponent,
     NgContentChildTwoComponent,
-    ThreeComponent
+    ThreeComponent,
+    FourComponent
   ],
   imports: [
     BrowserModule
