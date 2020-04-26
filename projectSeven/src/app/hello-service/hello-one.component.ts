@@ -7,8 +7,7 @@ import { LogService } from './../services/log.service';
 		<button type="button" class="btn btn-info" (click)="print('HelloOneComponent')">
 			HelloOneComponent
 		</button>
-  `,
-  providers: [LogService]
+  `
 })
 
 export class HelloOneComponent  {
