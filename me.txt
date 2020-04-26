@@ -235,3 +235,4 @@ Service & Dependency Injection
         Dependency Injection(DI) giúp giảm sự phụ thuộc giữa các lớp, tạo ra sự linh hoạt cao và tính dễ bảo trì cho ứng dụng
         Lợi ích khi sử DI: Giảm sự phụ thuộc giữa các class, tăng khả năng dùng lại và khả năng dễ đọc của mã nguồn, tạo cho ứng 
             dụng tính mềm dẻo và khả năng nâng cấp bảo trì trở nên đơn giản và nhanh chóng hơn
+    DI 02
