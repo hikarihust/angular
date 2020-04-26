@@ -19,23 +19,30 @@ import { NgContentMainComponent } from './ng-content/ng-content-main.component';
 import { NgContentChildOneComponent } from './ng-content/ng-content-child-one.component';
 import { NgContentChildTwoComponent } from './ng-content/ng-content-child-two.component';
 
+// Hello Service
+import { HelloOneComponent } from './hello-service/hello-one.component';
+import { HelloTwoComponent } from './hello-service/hello-two.component';
+
 @NgModule({
   declarations: [
     AppComponent,
+		// Service & DI
+		HelloOneComponent,
+		HelloTwoComponent,
 		// 01 Augury
     // AuguryComponent,
 
 		// 02 LifeCycle
-		MainComponent,
+		// MainComponent,
     // AllComponent,
-    OneComponent,
-    TwoComponent,
+    // OneComponent,
+    // TwoComponent,
     // NgContent
-    NgContentMainComponent,
-    NgContentChildOneComponent,
-    NgContentChildTwoComponent,
-    ThreeComponent,
-    FourComponent
+    // NgContentMainComponent,
+    // NgContentChildOneComponent,
+    // NgContentChildTwoComponent,
+    // ThreeComponent,
+    // FourComponent
   ],
   imports: [
     BrowserModule

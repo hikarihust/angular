@@ -236,3 +236,4 @@ Service & Dependency Injection
         Lợi ích khi sử DI: Giảm sự phụ thuộc giữa các class, tăng khả năng dùng lại và khả năng dễ đọc của mã nguồn, tạo cho ứng 
             dụng tính mềm dẻo và khả năng nâng cấp bảo trì trở nên đơn giản và nhanh chóng hơn
     DI 02
+    LogService 01
