@@ -237,7 +237,13 @@ Service & Dependency Injection
             dụng tính mềm dẻo và khả năng nâng cấp bảo trì trở nên đơn giản và nhanh chóng hơn
     DI 02
     LogService 01
-    LogService 
+    LogService 02
         providers: Khai báo để các thể hiện của Service nằm trong các component con nó cùng là 1 Service
         Khi ở component cha đã khai báo provider rồi thì ở trong các component con không cần khai báo provider đó nữa và trong các      
             component con nó có thể dùng chung provider đó
+    CaculatorService - Init
+        ng new projectSeven2
+            Would you like to add Angular routing? No
+            CSS
+        cd projectSeven2
+            ng serve --open
