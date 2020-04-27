@@ -247,3 +247,5 @@ Service & Dependency Injection
             CSS
         cd projectSeven2
             ng serve --open
+    CaculatorService
+    

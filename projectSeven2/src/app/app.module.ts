@@ -3,9 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+// Hello Service
+import { LogService } from './services/log.service';
+
+// Caculator Service
+import { CaculatorComponent } from './caculator-service/caculator.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CaculatorComponent,
   ],
   imports: [
     BrowserModule
