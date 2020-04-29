@@ -248,4 +248,4 @@ Service & Dependency Injection
         cd projectSeven2
             ng serve --open
     CaculatorService
-    
+    CourseService
