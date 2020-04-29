@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+// Component
+import { YoutubeComponent } from './project/components/youtube.component';
+
 // Hello Service
 import { LogService } from './services/log.service';
 
@@ -16,7 +19,8 @@ import { CourseComponent } from './course-service/course.component';
   declarations: [
     AppComponent,
     CaculatorComponent,
-    CourseComponent
+    CourseComponent,
+    YoutubeComponent
   ],
   imports: [
     BrowserModule
