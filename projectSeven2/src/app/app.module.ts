@@ -8,6 +8,9 @@ import { YoutubeComponent } from './project/components/youtube.component';
 import { OutlineComponent } from './project/components/outline.component';
 import { PlayerComponent } from './project/components/player.component';
 
+// Pipe
+import { SafePipe } from './project/pipes/safe.pipe';
+
 // Hello Service
 import { LogService } from './services/log.service';
 
@@ -24,7 +27,9 @@ import { CourseComponent } from './course-service/course.component';
     CourseComponent,
     YoutubeComponent,
     OutlineComponent,
-    PlayerComponent
+    PlayerComponent,
+
+    SafePipe
   ],
   imports: [
     BrowserModule

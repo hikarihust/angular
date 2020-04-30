@@ -1,11 +1,20 @@
-<div class="panel panel-danger">
+<div class="panel panel-danger" *ngIf="currentVideo">
   <div class="panel-heading">
-    <h3 class="panel-title">Panel title</h3>
+    <h3 class="panel-title">{{ currentVideo.name }}</h3>
   </div>
   <div class="panel-body">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/MfqW6VsZ8aQ"
-      frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
+    <iframe width="560" height="315" [src]="('https://www.youtube.com/embed/' + currentVideo.id) | safe"
+      frameborder="0" allowfullscreen>
     </iframe>
   </div>
 </div>
+
+<div class="panel panel-danger" *ngIf="currentVideo == null">
+  <div class="panel-heading">
+    <h3 class="panel-title">Video Content</h3>
+  </div>
+  <div class="panel-body">
+    Select video what you want to see
+  </div>
+</div>
+
