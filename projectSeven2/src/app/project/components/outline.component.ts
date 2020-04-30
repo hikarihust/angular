@@ -1,10 +1,12 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { VideoService } from './../services/video.service';
 import { Video } from './../class/video.class';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
 	selector: 'zvn-project-outline',
-	templateUrl: './../templates/outline.component.html',
+  templateUrl: './../templates/outline.component.html',
+  providers: [ CookieService ]
 })
 export class OutlineComponent implements OnInit {
   videos: Video[] = [];
@@ -12,13 +14,27 @@ export class OutlineComponent implements OnInit {
   @Output('changeVideo') changeVideo = new EventEmitter<Video>();
 
 	constructor(
-		private _videoService: VideoService
+    private _videoService: VideoService,
+    private _cookieService: CookieService
 		) {
-	}
+  }
+
+  putCookie() {
+    this._cookieService.set("test", "1111111111");
+  }
+
+  getCookie() {
+    console.log(this._cookieService.get("test"));
+  }
+
+  removeCookie() {
+    this._cookieService.delete("test");
+  }
+
 
   ngOnInit() {
     this.videos = this._videoService.getVideos();
-    console.log(this.videos);
+    console.log(this._cookieService);
   }
 
 	setClass(video: Video) {
