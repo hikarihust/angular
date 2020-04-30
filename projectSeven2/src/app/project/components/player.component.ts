@@ -13,6 +13,6 @@ export class PlayerComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.currentVideo);
+    // console.log(this.currentVideo);
   }
 }

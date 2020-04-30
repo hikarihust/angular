@@ -10,6 +10,7 @@ import { PlayerComponent } from './project/components/player.component';
 
 // Pipe
 import { SafePipe } from './project/pipes/safe.pipe';
+import { CapitalizePipe } from './project/pipes/capitalize.pipe';
 
 // Hello Service
 import { LogService } from './services/log.service';
@@ -29,7 +30,8 @@ import { CourseComponent } from './course-service/course.component';
     OutlineComponent,
     PlayerComponent,
 
-    SafePipe
+    SafePipe,
+    CapitalizePipe
   ],
   imports: [
     BrowserModule

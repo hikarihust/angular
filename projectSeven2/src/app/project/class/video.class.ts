@@ -1,7 +1,7 @@
 export class Video {
-	
+
 	constructor(
-		private _id: string,
+		public _id: string,
 		private _name: string,
 		private _seen: boolean = false
 	){
