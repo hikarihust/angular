@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { VideoService } from './../services/video.service';
+import { KEY_COOKIE_VIDEO_IDS } from './../defines/cookie';
 import { Video } from './../class/video.class';
 import { CookieService } from 'ngx-cookie-service';
 
@@ -20,15 +21,17 @@ export class OutlineComponent implements OnInit {
   }
 
   putCookie() {
-    this._cookieService.set("test", "1111111111");
+    let videoIDs: string[] = ["hCoZpTg8kyY", "mysGwkVkxuE"];
+    this._cookieService.set(KEY_COOKIE_VIDEO_IDS, JSON.stringify(videoIDs));
   }
 
   getCookie() {
-    console.log(this._cookieService.get("test"));
+    let stringIDs = this._cookieService.get(KEY_COOKIE_VIDEO_IDS)
+    console.log(JSON.parse(stringIDs));
   }
 
   removeCookie() {
-    this._cookieService.delete("test");
+    this._cookieService.delete(KEY_COOKIE_VIDEO_IDS);
   }
 
 
