@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 
 // Component
 import { YoutubeComponent } from './project/components/youtube.component';
+import { OutlineComponent } from './project/components/outline.component';
+import { PlayerComponent } from './project/components/player.component';
 
 // Hello Service
 import { LogService } from './services/log.service';
@@ -20,7 +22,9 @@ import { CourseComponent } from './course-service/course.component';
     AppComponent,
     CaculatorComponent,
     CourseComponent,
-    YoutubeComponent
+    YoutubeComponent,
+    OutlineComponent,
+    PlayerComponent
   ],
   imports: [
     BrowserModule

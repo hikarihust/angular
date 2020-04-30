@@ -252,3 +252,5 @@ Service & Dependency Injection
 
 View video programming on Youtube
     YoutubeComponent
+    Outline & Player
+    
