@@ -29,8 +29,12 @@ export class OutlineComponent implements OnInit {
   }
 
 	aClick(video: Video) {
-    console.log(video);
     video.seen = true;
     this.changeVideo.emit(video);
-	}
+  }
+
+  ckbClick(event: any, video: Video) {
+    video.seen = !video.seen;
+    event.stopPropagation();
+  }
 }
