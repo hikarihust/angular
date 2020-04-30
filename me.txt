@@ -257,3 +257,4 @@ View video programming on Youtube
     Player Component
         unsafe value used in a resource URL context
     Outline Component
+    Change video

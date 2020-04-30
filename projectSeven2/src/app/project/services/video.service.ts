@@ -15,7 +15,7 @@ export class VideoService {
   }
 
 	getCurrentVideo() : Video{
-		return this.videos[2];
+		return this.videos[0];
 	}
 
 	private createVideo(){

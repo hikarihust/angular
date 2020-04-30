@@ -20,4 +20,8 @@ export class YoutubeComponent implements OnInit {
   ngOnInit() {
     this.currentVideo = this._videoService.getCurrentVideo();
   }
+
+  onChangeVideo(event: Video) {
+    this.currentVideo = event;
+  }
 }

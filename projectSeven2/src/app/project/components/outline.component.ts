@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { VideoService } from './../services/video.service';
 import { Video } from './../class/video.class';
 
@@ -9,6 +9,7 @@ import { Video } from './../class/video.class';
 export class OutlineComponent implements OnInit {
   videos: Video[] = [];
   @Input('currentVideo') currentVideo: Video;
+  @Output('changeVideo') changeVideo = new EventEmitter<Video>();
 
 	constructor(
 		private _videoService: VideoService
@@ -25,5 +26,11 @@ export class OutlineComponent implements OnInit {
       'seen'	: video.seen == true,
       'active': video.id == this.currentVideo.id
 		}
+  }
+
+	aClick(video: Video) {
+    console.log(video);
+    video.seen = true;
+    this.changeVideo.emit(video);
 	}
 }

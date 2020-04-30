@@ -1,6 +1,6 @@
 <div class="list-group">
-  <a *ngFor="let video of videos" class="list-group-item" [ngClass]="setClass(video)" >
-    <input type="checkbox" value="asafefec" />
+  <a (click)="aClick(video)" *ngFor="let video of videos" class="list-group-item" [ngClass]="setClass(video)" >
+    <input type="checkbox" [value]="video.id" [checked]="video.seen" />
     {{ video.name | capitalize }}
   </a>
 </div>
