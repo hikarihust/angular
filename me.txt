@@ -259,3 +259,12 @@ View video programming on Youtube
     Outline Component
     Change video
     Change seen
+    CookieService 01
+        npm
+        ng-cookie(Simple cookie service for AngularJS)
+        npm i ng-cookies
+        npm uninstall ng-cookies
+        angular cookieservice
+        angular-cookie
+        npm install ngx-cookie-service
+       
