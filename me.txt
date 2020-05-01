@@ -280,3 +280,12 @@ View video programming on Youtube
     Service
         Không sử dụng Input và Output
         ngAfterContentChecked()
+
+============================================ Router Master ============================================
+
+Exercise 1: Home - About - Contact 
+    Init
+        ng new projectEight
+        cd projectEight
+        ng serve --open
+    
