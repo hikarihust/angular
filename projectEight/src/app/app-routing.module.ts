@@ -9,6 +9,7 @@ import { NotFoundComponent } from './exe-one/not-found.component';
 const routes: Routes = [
   { path: ''          , component: HomeComponent },
   { path: 'about'     , component: AboutComponent },
+  { path: 'about/web'     , component: AboutComponent },
   { path: 'contact'   , component: ContactComponent },
   { path: '**'		    , component: NotFoundComponent },
 ];

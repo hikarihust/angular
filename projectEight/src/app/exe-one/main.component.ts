@@ -16,7 +16,10 @@ import { Component, OnInit } from '@angular/core';
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: true }"
         >Home</a>
-      <a class="link" routerLink="/about" routerLinkActive="active">About</a>
+      <a class="link" routerLink="/about" routerLinkActive="active abc"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >About</a>
+      <a class="link" routerLink="/about/web" routerLinkActive="active">About Web</a>
       <a class="link" [routerLink]="['/contact']" routerLinkActive="active">Contact</a>
     </div>
   </div>
