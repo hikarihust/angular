@@ -272,3 +272,4 @@ View video programming on Youtube
     Save videoids
     Sync
     AddHistory
+    RemoveHistory

@@ -21,20 +21,19 @@ export class OutlineComponent implements OnInit {
 		) {
   }
 
-  putCookie() {
-    let videoIDs: string[] = ["sDuqdfhtgwU", "mysGwkVkxuE"];
-    this._cookieService.set(KEY_COOKIE_VIDEO_IDS, JSON.stringify(videoIDs));
-  }
+  // putCookie() {
+  //   let videoIDs: string[] = ["sDuqdfhtgwU", "mysGwkVkxuE"];
+  //   this._cookieService.set(KEY_COOKIE_VIDEO_IDS, JSON.stringify(videoIDs));
+  // }
 
-  getCookie() {
-    let stringIDs = this._cookieService.get(KEY_COOKIE_VIDEO_IDS)
-    console.log(JSON.parse(stringIDs));
-  }
+  // getCookie() {
+  //   let stringIDs = this._cookieService.get(KEY_COOKIE_VIDEO_IDS)
+  //   console.log(JSON.parse(stringIDs));
+  // }
 
-  removeCookie() {
-    this._cookieService.delete(KEY_COOKIE_VIDEO_IDS);
-  }
-
+  // removeCookie() {
+  //   this._cookieService.delete(KEY_COOKIE_VIDEO_IDS);
+  // }
 
   ngOnInit() {
     this.videos = this._videoService.getVideos();
@@ -52,16 +51,34 @@ export class OutlineComponent implements OnInit {
     video.seen = true;
     this.changeVideo.emit(video);
 
-		if(this.cookieIDs.indexOf(video.id)==-1){
-			this.cookieIDs.push(video.id);
-    }
+    this.addVideoToCookieArray(video);
     this.saveCookie();
   }
 
   ckbClick(event: any, video: Video) {
+		if(video.seen == true) { // đã xem
+			this.removeVideoFromCookieArray(video);
+		}else { // chưa xem
+			this.addVideoToCookieArray(video);
+    }
+
     video.seen = !video.seen;
+    this.saveCookie();
     event.stopPropagation();
   }
+
+	removeVideoFromCookieArray(video: Video){
+		let index = this.cookieIDs.indexOf(video.id);
+		if(index!=-1){
+			this.cookieIDs.splice(index, 1);
+		}
+	}
+
+	addVideoToCookieArray(video: Video){
+		if(this.cookieIDs.indexOf(video.id)==-1){
+			this.cookieIDs.push(video.id);
+		}
+	}
 
 	saveCookie(){
 		this._cookieService.set(KEY_COOKIE_VIDEO_IDS, JSON.stringify(this.cookieIDs));
