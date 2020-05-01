@@ -277,3 +277,6 @@ View video programming on Youtube
         https://www.npmjs.com/package/@angular/youtube-player
         https://medium.com/angular-in-depth/the-new-angular-youtube-player-component-9ce52ecf3dee
         npm i @angular/youtube-player
+    Service
+        Không sử dụng Input và Output
+        ngAfterContentChecked()

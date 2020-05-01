@@ -1,25 +1,27 @@
-import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, AfterContentChecked } from '@angular/core';
 import { Video } from './../class/video.class';
+import { VideoService } from './../services/video.service';
 
 @Component({
 	selector: 'zvn-project-player',
 	templateUrl: './../templates/player.component.html',
 })
-export class PlayerComponent implements OnInit, OnChanges {
-  @Input('currentVideo') currentVideo: Video
-  videoId: string = "";
+export class PlayerComponent implements OnInit, AfterContentChecked {
+  currentVideo: Video;
 
-	constructor() {
-
+	constructor(
+    private _videoService: VideoService
+		) {
   }
 
   ngOnInit() {
     const tag = document.createElement('script');
     tag.src = 'https://www.youtube.com/iframe_api';
     document.body.appendChild(tag);
+    this.currentVideo = this._videoService.getCurrentVideo();
   }
 
-  ngOnChanges() {
-    this.videoId = this.currentVideo.id;
+  ngAfterContentChecked() {
+    this.currentVideo = this._videoService.getCurrentVideo();
   }
 }

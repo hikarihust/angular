@@ -7,21 +7,8 @@ import { Video } from './../class/video.class';
   templateUrl: './../templates/youtube.component.html',
   providers: [ VideoService ]
 })
-export class YoutubeComponent implements OnInit {
+export class YoutubeComponent {
 
-  currentVideo: Video;
-
-	constructor(
-    private _videoService: VideoService
-  ) {
-
-  }
-
-  ngOnInit() {
-    this.currentVideo = this._videoService.getCurrentVideo();
-  }
-
-  onChangeVideo(event: Video) {
-    this.currentVideo = event;
+	constructor() {
   }
 }

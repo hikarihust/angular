@@ -8,6 +8,7 @@ export class VideoService {
 
 	constructor() {
     this.createVideo();
+    this.setCurrentVideo();
   }
 
 	getVideos() : Video[]{
@@ -15,8 +16,16 @@ export class VideoService {
   }
 
 	getCurrentVideo() : Video{
-		return this.videos[0];
-	}
+		return this.currentVideo;
+  }
+
+	setCurrentVideo(video?: Video){
+    if(video) {
+      this.currentVideo = video;
+    } else {
+      this.currentVideo = this.videos[0];
+    }
+  }
 
 	private createVideo(){
 		this.videos.push(new Video('hCoZpTg8kyY', 'Lập trình TypeScript - 01 Giới thiệu khóa học'));

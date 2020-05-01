@@ -12,8 +12,7 @@ import { CookieService } from 'ngx-cookie-service';
 export class OutlineComponent implements OnInit {
   videos: Video[] = [];
   cookieIDs: string[] = [];
-  @Input('currentVideo') currentVideo: Video;
-  @Output('changeVideo') changeVideo = new EventEmitter<Video>();
+  currentVideo: Video;
 
 	constructor(
     private _videoService: VideoService,
@@ -37,6 +36,7 @@ export class OutlineComponent implements OnInit {
 
   ngOnInit() {
     this.videos = this._videoService.getVideos();
+    this.currentVideo = this._videoService.getCurrentVideo();
     this.sync();
   }
 
@@ -49,10 +49,12 @@ export class OutlineComponent implements OnInit {
 
 	aClick(video: Video) {
     video.seen = true;
-    this.changeVideo.emit(video);
 
     this.addVideoToCookieArray(video);
     this.saveCookie();
+
+    this._videoService.setCurrentVideo(video);
+    this.currentVideo = this._videoService.getCurrentVideo();
   }
 
   ckbClick(event: any, video: Video) {
