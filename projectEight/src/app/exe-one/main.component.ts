@@ -11,9 +11,13 @@ import { Component, OnInit } from '@angular/core';
       <router-outlet></router-outlet>
     </div>
     <div class="panel-footer">
-      <a class="link" routerLink="/">Home</a>
-      <a class="link" routerLink="/about">About</a>
-      <a class="link" [routerLink]="['/contact']">Contact</a>
+      <a class="link"
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Home</a>
+      <a class="link" routerLink="/about" routerLinkActive="active">About</a>
+      <a class="link" [routerLink]="['/contact']" routerLinkActive="active">Contact</a>
     </div>
   </div>
 	`
