@@ -11,7 +11,7 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class OutlineComponent implements OnInit {
   videos: Video[] = [];
-  historyIDs: string[] = [];
+  cookieIDs: string[] = [];
   @Input('currentVideo') currentVideo: Video;
   @Output('changeVideo') changeVideo = new EventEmitter<Video>();
 
@@ -51,6 +51,11 @@ export class OutlineComponent implements OnInit {
 	aClick(video: Video) {
     video.seen = true;
     this.changeVideo.emit(video);
+
+		if(this.cookieIDs.indexOf(video.id)==-1){
+			this.cookieIDs.push(video.id);
+    }
+    this.saveCookie();
   }
 
   ckbClick(event: any, video: Video) {
@@ -58,13 +63,17 @@ export class OutlineComponent implements OnInit {
     event.stopPropagation();
   }
 
+	saveCookie(){
+		this._cookieService.set(KEY_COOKIE_VIDEO_IDS, JSON.stringify(this.cookieIDs));
+	}
+
 	sync() {
     let stringIDs = this._cookieService.get(KEY_COOKIE_VIDEO_IDS);
     if(stringIDs) {
-      this.historyIDs = JSON.parse(stringIDs);
-			if(this.historyIDs.length > 0) {
+      this.cookieIDs = JSON.parse(stringIDs);
+			if(this.cookieIDs.length > 0) {
 				for (let i = 0; i < this.videos.length; i++) {
-					if(this.historyIDs.indexOf(this.videos[i].id) != -1){
+					if(this.cookieIDs.indexOf(this.videos[i].id) != -1){
 						this.videos[i].seen = true;
 					}
 				}
