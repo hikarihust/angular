@@ -3,9 +3,10 @@
     <h3 class="panel-title">{{ currentVideo.name }}</h3>
   </div>
   <div class="panel-body">
-    <iframe width="560" height="315" [src]="('https://www.youtube.com/embed/' + currentVideo.id) | safe"
+    <!-- <iframe width="560" height="315" [src]="('https://www.youtube.com/embed/' + currentVideo.id) | safe"
       frameborder="0" allowfullscreen>
-    </iframe>
+    </iframe> -->
+    <youtube-player [videoId]="videoId"></youtube-player>
   </div>
 </div>
 
