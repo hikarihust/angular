@@ -341,4 +341,6 @@ Exercise 2: Manage Course - List Info - Part 1
             Bootstrap trong main.ts
             Feature Module
             Share Module
-    
+    Angular Modules 02
+        Khi xây dựng 1 ứng dụng thì ứng dụng đó có thể được xây dựng từ nhiều Module khác nhau
+        Một Module thì có thể phụ thuộc vào nhiều Module khác

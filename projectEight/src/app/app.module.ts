@@ -11,11 +11,13 @@ import { AboutComponent } from './exe-one/about.component';
 import { ContactComponent } from './exe-one/contact.component';
 import { NotFoundComponent } from './exe-one/not-found.component';
 
-// Exe Two
-import { CourseListComponent } from './exe-two/components/course-list.component';
-import { CourseService } from './exe-two/services/course.service';
-import { CourseDetailComponent } from './exe-two/components/course-detail.component';
-import { CourseDetailGuard } from './exe-two/course-detail-guard.service';
+import { CourseModule } from './exe-two/course.module';
+
+// // Exe Two
+// import { CourseListComponent } from './exe-two/components/course-list.component';
+// import { CourseService } from './exe-two/services/course.service';
+// import { CourseDetailComponent } from './exe-two/components/course-detail.component';
+// import { CourseDetailGuard } from './exe-two/course-detail-guard.service';
 
 @NgModule({
   declarations: [
@@ -28,14 +30,15 @@ import { CourseDetailGuard } from './exe-two/course-detail-guard.service';
     NotFoundComponent,
 
     // Exe Two
-    CourseListComponent,
-    CourseDetailComponent
+    // CourseListComponent,
+    // CourseDetailComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CourseModule
   ],
-  providers: [CourseService, CourseDetailGuard ],
+  // providers: [CourseService, CourseDetailGuard ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

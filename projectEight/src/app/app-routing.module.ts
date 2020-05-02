@@ -10,7 +10,7 @@ import { NotFoundComponent } from './exe-one/not-found.component';
 // Exe Two
 import { CourseListComponent } from './exe-two/components/course-list.component';
 import { CourseDetailComponent } from './exe-two/components/course-detail.component';
-import { CourseDetailGuard } from './exe-two/course-detail-guard.service';
+import { CourseDetailGuard } from './exe-two/services/course-detail-guard.service';
 
 const routes: Routes = [
   // Exe One
