@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { Routes, RouterModule } from '@angular/router'; // CLI imports router
 
 // Exe One
-import { MainComponent } from './exe-one/main.component';
 import { HomeComponent } from './exe-one/home.component';
 import { AboutComponent } from './exe-one/about.component';
 import { ContactComponent } from './exe-one/contact.component';
@@ -17,7 +16,6 @@ import { NotFoundComponent } from './exe-one/not-found.component';
     AppComponent,
 
     // Exe One
-    MainComponent,
     HomeComponent,
     AboutComponent,
     ContactComponent,
