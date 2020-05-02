@@ -355,4 +355,6 @@ Exercise 2: Manage Course - List Info - Part 1
                 AppRoutingModule
             ]
         Feature Module: Là 1 module chức năng nào đó nó thực hiện 1 công việc cụ thể
+    Angular Modules 04
+        Share Module: Chia sẻ giữa các Module với nhau
     

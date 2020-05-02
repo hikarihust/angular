@@ -23,8 +23,8 @@ import { ICourse } from './../defines/course.interface';
 					<tbody>
 						<tr *ngFor="let course of courses; let i = index">
 							<td>{{ i+1 }}</td>
-							<td >{{ course.name }}</td>
-							<td><span (click)="onSelect(course.id)" class="label label-success">View</span></td>
+							<td >{{ course.name | capitalize }}</td>
+							<td [zvnHighlight]="'#F7F9D2'"><span (click)="onSelect(course.id)" class="label label-success">View</span></td>
 						</tr>
 					</tbody>
 				</table>
