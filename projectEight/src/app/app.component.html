@@ -38,9 +38,9 @@
 
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
 			<ul class="nav navbar-nav">
-				<li><a href="#">Course List</a></li>
-				<li><a href="#">Course C01</a></li>
-				<li><a href="#">Course C02</a></li>
+				<li routerLinkActive="active" ><a [routerLink]="['/courses']">Course List</a></li>
+				<li routerLinkActive="active" ><a [routerLink]="['/course', 'C01']">Course C01</a></li>
+				<li routerLinkActive="active" ><a [routerLink]="['/course', 'C02']">Course C02</a></li>
 			</ul>
 		</div>
 	</div>

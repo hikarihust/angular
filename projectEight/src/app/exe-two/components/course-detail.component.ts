@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { CourseService } from './../services/course.service';
 import { ICourse } from './../defines/course.interface';
@@ -26,12 +27,14 @@ export class CourseDetailComponent implements OnInit {
 	course: ICourse;
 
 	constructor(
-  		private _courseService: CourseService
+      private _courseService: CourseService,
+      private _routerService: Router
 	) {
 
 	}
 
 	goCourseList(){
+    this._routerService.navigate(['/courses']);
 	}
 
 	ngOnInit(){

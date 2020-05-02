@@ -310,4 +310,6 @@ Exercise 2: Manage Course - List Info - Part 1
             providers: [CourseService],
     Router setting
         Thứ tự khai báo router rất quan trọng, router nào càng chi tiết thì khai báo trên, chung chung thì khai báo sau
+    Create link
+        <a [routerLink]="['/course', 'C01']"> truyền tham số thứ 2 cho routerLink
     
