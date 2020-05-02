@@ -11,9 +11,9 @@ import { ICourse } from './../defines/course.interface';
 				<h3 class="panel-title">Course Detail</h3>
 			</div>
 			<div class="panel-body">
-				<h4><span class="label label-info">ID</span> {{ course.id}} </h4>
-				<h4><span class="label label-info">Name</span> {{ course.name}} </h4>
-				<h4><span class="label label-info">Description</span> {{ course.description}}</h4>
+				<h4><span class="label label-info">ID</span></h4>
+				<h4><span class="label label-info">Name</span></h4>
+				<h4><span class="label label-info">Description</span></h4>
 			</div>
 			<div class="panel-footer">
 				<button (click)="goCourseList()" type="button" class="btn btn-danger">Back Course List</button>

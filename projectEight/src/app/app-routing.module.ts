@@ -10,6 +10,7 @@ import { NotFoundComponent } from './exe-one/not-found.component';
 // Exe Two
 // Exe Two
 import { CourseListComponent } from './exe-two/components/course-list.component';
+import { CourseDetailComponent } from './exe-two/components/course-detail.component';
 
 const routes: Routes = [
   // Exe One
@@ -20,7 +21,10 @@ const routes: Routes = [
   // { path: '**'		    , component: NotFoundComponent },
 
   // Exe two
-  { path: ''          , component: CourseListComponent },
+  { path: 'course/:id', component: CourseDetailComponent },
+  { path: 'courses'   , component: CourseListComponent },
+  { path: ''          , redirectTo: '/courses', pathMatch: 'full' },
+  { path: '**'		    , component: NotFoundComponent },
 ];
 
 @NgModule({

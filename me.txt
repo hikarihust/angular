@@ -308,4 +308,6 @@ Exercise 2: Manage Course - List Info - Part 1
         Injectable: Import vào cho Service
         Service thì phải đăng ký providers
             providers: [CourseService],
+    Router setting
+        Thứ tự khai báo router rất quan trọng, router nào càng chi tiết thì khai báo trên, chung chung thì khai báo sau
     

@@ -14,6 +14,7 @@ import { NotFoundComponent } from './exe-one/not-found.component';
 // Exe Two
 import { CourseListComponent } from './exe-two/components/course-list.component';
 import { CourseService } from './exe-two/services/course.service';
+import { CourseDetailComponent } from './exe-two/components/course-detail.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CourseService } from './exe-two/services/course.service';
     NotFoundComponent,
 
     // Exe Two
-    CourseListComponent
+    CourseListComponent,
+    CourseDetailComponent
   ],
   imports: [
     BrowserModule,
