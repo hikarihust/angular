@@ -316,4 +316,29 @@ Exercise 2: Manage Course - List Info - Part 1
         ActivatedRoute
     CanActivate
         Cơ chế bảo mật(gard)
+    Angular Modules 01
+--------Angular Modules(note)
+            -------------------------------------------------------------
+            An Angular module is a class decorated with @NgModule metadata:
+            + declarations: 
+                components, directives and pipes (belong to one and only one Angular module)
+            + imports  
+                module, components, directives and pipes (if needed)
+
+                BrowserModule, the module every browser app must import (NgIf and 
+                NgFor)
+                    NgIf is declared in CommonModule from @angular/common
+                    BrowserModule imports CommonModule
+            + providers: services
+            + exports
+                Export/Reexport module, components, directives and pipes 
+                Nevert export a service
+            bootstrap:	[ AppComponent ]  identifies this AppComponent as the bootstrap component.
+            -------------------------------------------------------------
+            Every Angular app has at least one module class, the root module. We bootstrap that module to launch the application.
+            AppModule - the application root module - app.module.ts.
+            -------------------------------------------------------------
+            Bootstrap trong main.ts
+            Feature Module
+            Share Module
     
