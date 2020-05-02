@@ -15,6 +15,7 @@ import { NotFoundComponent } from './exe-one/not-found.component';
 import { CourseListComponent } from './exe-two/components/course-list.component';
 import { CourseService } from './exe-two/services/course.service';
 import { CourseDetailComponent } from './exe-two/components/course-detail.component';
+import { CourseDetailGuard } from './exe-two/course-detail-guard.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { CourseDetailComponent } from './exe-two/components/course-detail.compon
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [CourseService],
+  providers: [CourseService, CourseDetailGuard ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

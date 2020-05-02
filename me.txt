@@ -314,4 +314,6 @@ Exercise 2: Manage Course - List Info - Part 1
         <a [routerLink]="['/course', 'C01']"> truyền tham số thứ 2 cho routerLink
     Course Detail
         ActivatedRoute
+    CanActivate
+        Cơ chế bảo mật(gard)
     
