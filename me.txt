@@ -324,7 +324,6 @@ Exercise 2: Manage Course - List Info - Part 1
                 components, directives and pipes (belong to one and only one Angular module)
             + imports  
                 module, components, directives and pipes (if needed)
-
                 BrowserModule, the module every browser app must import (NgIf and 
                 NgFor)
                     NgIf is declared in CommonModule from @angular/common
@@ -344,3 +343,16 @@ Exercise 2: Manage Course - List Info - Part 1
     Angular Modules 02
         Khi xây dựng 1 ứng dụng thì ứng dụng đó có thể được xây dựng từ nhiều Module khác nhau
         Một Module thì có thể phụ thuộc vào nhiều Module khác
+    Angular Modules 03
+        CommonModule: NgIf is declared in CommonModule from @angular/common
+        Cấu hình Routing
+        Cấu hình routing chung cho toàn bộ ứng dụng: forRoot()
+        Đối với các module con thì dùng forChild()
+        app.module.ts: AppRoutingModule được import sau cùng
+          imports: [
+                BrowserModule,
+                CourseModule,
+                AppRoutingModule
+            ]
+        Feature Module: Là 1 module chức năng nào đó nó thực hiện 1 công việc cụ thể
+    

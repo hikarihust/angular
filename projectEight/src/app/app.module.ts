@@ -35,8 +35,8 @@ import { CourseModule } from './exe-two/course.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    CourseModule
+    CourseModule,
+    AppRoutingModule
   ],
   // providers: [CourseService, CourseDetailGuard ],
   bootstrap: [AppComponent]
