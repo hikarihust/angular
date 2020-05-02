@@ -11,6 +11,10 @@ import { AboutComponent } from './exe-one/about.component';
 import { ContactComponent } from './exe-one/contact.component';
 import { NotFoundComponent } from './exe-one/not-found.component';
 
+// Exe Two
+import { CourseListComponent } from './exe-two/components/course-list.component';
+import { CourseService } from './exe-two/services/course.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,13 +23,16 @@ import { NotFoundComponent } from './exe-one/not-found.component';
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    NotFoundComponent
+    NotFoundComponent,
+
+    // Exe Two
+    CourseListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [CourseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

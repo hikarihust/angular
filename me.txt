@@ -302,4 +302,10 @@ Exercise 1: Home - About - Contact
     RouterLinkActiveOptions
         [routerLinkActiveOptions]="{ exact: true }"
         Tránh trường hợp khi vào thằng con thì thằng cha nó cũng bị active
+
+Exercise 2: Manage Course - List Info - Part 1
+    Structure
+        Injectable: Import vào cho Service
+        Service thì phải đăng ký providers
+            providers: [CourseService],
     

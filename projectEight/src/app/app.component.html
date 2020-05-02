@@ -1,6 +1,7 @@
 <h3>Angular 2 - Project 08: Routing</h3>
 
-<div class="panel panel-info">
+<!-- EXE ONE : START-->
+<!-- <div class="panel panel-info">
   <div class="panel-heading">
     <h3 class="panel-title">Exe One</h3>
   </div>
@@ -19,4 +20,30 @@
     <a class="link" routerLink="/about/web" routerLinkActive="active">About Web</a>
     <a class="link" [routerLink]="['/contact']" routerLinkActive="active">Contact</a>
   </div>
-</div>
+</div> -->
+<!-- EXE ONE : END-->
+
+<!-- EXE TWO : START-->
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">Exe Two</a>
+		</div>
+
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav">
+				<li><a href="#">Course List</a></li>
+				<li><a href="#">Course C01</a></li>
+				<li><a href="#">Course C02</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<router-outlet></router-outlet>
+<!-- EXE TWO : END -->
