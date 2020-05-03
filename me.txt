@@ -360,3 +360,5 @@ Exercise 2: Manage Course - List Info - Part 1
     
 Exercise 3: Manage Course - List Info - Part 2
     Prepare
+    NavigateByUrl
+    
