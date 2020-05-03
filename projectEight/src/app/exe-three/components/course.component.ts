@@ -16,7 +16,11 @@ import { Subscription } from 'rxjs';
 				<h4><span class="label label-info">ID</span> {{ course.id }} </h4>
 				<h4><span class="label label-info">Name</span> {{ course.name }} </h4>
 				<h4><span class="label label-info">Description</span> {{ course.description }} </h4>
-				<h4><span class="label label-info">QueryParams: </span> {{ text + " - " + page }} </h4>
+        <h4><span class="label label-info">QueryParams: </span> {{ text + " - " + page }} </h4>
+				<h4>
+					<span class="label label-danger">prevent navigation away from the current route</span>
+					<input (keyup)="setAllow($event.target.value)" type="text">
+				</h4>
 			</div>
 			<div class="panel-footer">
         <button (click)="goCourseList()" type="button" class="btn btn-danger">Back Course List</button>
@@ -34,6 +38,7 @@ export class CourseDetailComponent implements OnInit, OnDestroy {
   subscriptionQueryParams: Subscription;
   text: string;
   page: number = 0;
+  allow: boolean = false;
 
 	constructor(
       private _courseService: CourseService,
@@ -59,6 +64,15 @@ export class CourseDetailComponent implements OnInit, OnDestroy {
         this.page = params['page'];
 			}
     );
+  }
+
+	setAllow(value: string){
+    if(value.toLowerCase() === 'ok') {
+      this.allow = true;
+    } else {
+      this.allow = false;
+    }
+
 	}
 
 	goPrevCourse() {

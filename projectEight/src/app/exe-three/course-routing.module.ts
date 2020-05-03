@@ -6,10 +6,12 @@ import { CourseListComponent } from './components/course-list.component';
 import { CourseDetailComponent } from './components/course.component';
 import { CourseDetailGuard } from './services/course-detail-guard.service';
 
+import { CourseDetailDeactivateService } from './services/course-detail-deactivate.service';
+
 const courseRoutes: Routes = [
 
   // Exe two
-  { path: 'course/:id', component: CourseDetailComponent },
+  { path: 'course/:id', component: CourseDetailComponent, canDeactivate: [ CourseDetailDeactivateService ] },
   { path: 'courses'   , component: CourseListComponent }
 ];
 
