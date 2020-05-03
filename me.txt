@@ -386,4 +386,9 @@ Exercise 4: Manage Course - Edit Delete
         course + id + "delete"	Delete	DeleteComponent
     ChildRouter 03
     ChildRouter Param
+
+Exercise 5: Widget Dasboard
+    Required
+        mutiple route
+        auxiliary
     
