@@ -15,7 +15,10 @@ import { NotFoundComponent } from './exe-one/not-found.component';
 // import { CourseModule } from './exe-two/course.module';
 
 // Exe Three
-import { CourseModule } from './exe-three/course.module';
+// import { CourseModule } from './exe-three/course.module';
+
+// Exe Four
+import { CourseModule } from './exe-four/course.module';
 
 // // Exe Two
 // import { CourseListComponent } from './exe-two/components/course-list.component';

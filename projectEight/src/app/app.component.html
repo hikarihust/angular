@@ -48,7 +48,7 @@
 <!-- EXE TWO : END -->
 
 <!-- EXE THREE : START -->
-<nav class="navbar navbar-default" role="navigation">
+<!-- <nav class="navbar navbar-default" role="navigation">
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -74,6 +74,34 @@
 			</ul>
 		</div>
 	</div>
-</nav>
+</nav> -->
 <!-- EXE THREE : END -->
+
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">Exercise Four</a>
+		</div>
+
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav">
+				<li routerLinkActive="active">
+					<a [routerLink]="['/courses']" >Course List</a>
+				</li>
+				<li routerLinkActive="active">
+					<a [routerLink]="['/course', 1]">Course 1</a>
+				</li>
+				<li routerLinkActive="active">
+					<a [routerLink]="['/course', 2]">Course 2</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
 <router-outlet></router-outlet>

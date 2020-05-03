@@ -372,4 +372,5 @@ Exercise 3: Manage Course - List Info - Part 2
         CanDeActivate: Từ 1 router nào đó thì người dùng có thể thiết lập để người dùng đó có thể ra khỏi router đó hay không.
             Mà người dùng có thể thoát khỏi router đó khi có 1 điều kiện nào đó
 
-    
+Exercise 4: Manage Course - Edit Delete
+    ChildRouter 01
