@@ -27,7 +27,6 @@ import { Subscription } from 'rxjs';
 
 export class CourseComponent implements OnInit, OnDestroy {
   course: ICourse;
-  courseID: number;
   subscriptionParams: Subscription;
   subscriptionQueryParams: Subscription;
   text: string;
@@ -43,42 +42,17 @@ export class CourseComponent implements OnInit, OnDestroy {
 	ngOnInit(){
     this.subscriptionParams = this._activatedRouteService.params.subscribe(
       (params: Params) => {
-        this.courseID = parseInt(params['id']);
-        this.course = this._courseService.getCourseByID(this.courseID);
+        this.course = this._courseService.getCourseByID(parseInt(params['id']));
       }
     );
   }
-
-	setAllow(value: string){
-    if(value.toLowerCase() === 'ok') {
-      this.allow = true;
-    } else {
-      this.allow = false;
-    }
-
-	}
-
-	goPrevCourse() {
-		if(this.courseID > 1) {
-			this._routerService.navigate(['/course', this.courseID - 1]);
-		}
-
-	}
-
-	goNextCourse() {
-		if(this.courseID < 5) {
-			this._routerService.navigate(['/course', this.courseID + 1]);
-		}
-
-	}
 
 	goCourseList(){
     this._routerService.navigate(['/courses']);
   }
 
 	ngOnDestroy(){
-		// this.subscriptionParams.unsubscribe();
-		// this.subscriptionQueryParams.unsubscribe();
+		this.subscriptionParams.unsubscribe();
 	}
 
 }

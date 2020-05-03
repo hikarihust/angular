@@ -5,11 +5,13 @@ import { Subscription } from 'rxjs';
 
 import { CourseService } from './../services/course.service';
 import { ICourse } from './../defines/course.interface';
+import { CourseComponent } from './course.component';
 
 @Component({
 	selector: 'zvn-course-detail',
 	template: `
     <h3>Detail</h3>
+    <h4>{{ courseToJson(course) }}</h4>
 		<button (click)="goEditCourse()" type="button" class="btn btn-info">Edit</button>
 		<button (click)="goDeleteCourse()" type="button" class="btn btn-success">Delete</button>
 	`
@@ -17,7 +19,7 @@ import { ICourse } from './../defines/course.interface';
 
 export class CourseDetailComponent implements OnInit, OnDestroy {
 	course: ICourse;
-	// subscription: Subscription;
+	subscription: Subscription;
 
 	constructor(
   		private _courseService: CourseService,
@@ -27,6 +29,11 @@ export class CourseDetailComponent implements OnInit, OnDestroy {
 	}
 
 	ngOnInit(){
+    this.subscription = this._activatedRouteService.parent.params.subscribe(
+      (params: Params) => {
+        this.course = this._courseService.getCourseByID(parseInt(params['id']));
+      }
+    );
 	}
 
 	goEditCourse(){
@@ -37,8 +44,12 @@ export class CourseDetailComponent implements OnInit, OnDestroy {
 		this._routerService.navigate(['delete'], { relativeTo: this._activatedRouteService.parent } );
 	}
 
+  courseToJson(course: ICourse) {
+    return JSON.stringify(course);
+  }
+
 	ngOnDestroy(){
-    // this.subscription.unsubscribe();
-	}
+    this.subscription.unsubscribe();
+  }
 
 }

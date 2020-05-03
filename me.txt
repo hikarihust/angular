@@ -384,3 +384,6 @@ Exercise 4: Manage Course - Edit Delete
         course + id + "detail"	Detail	DetailComponent
         course + id + "edit"	Edit	EditComponent
         course + id + "delete"	Delete	DeleteComponent
+    ChildRouter 03
+    ChildRouter Param
+    
