@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, QueryList } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
 import { CourseService } from '../services/course.service';
@@ -16,6 +16,7 @@ import { Subscription } from 'rxjs';
 				<h4><span class="label label-info">ID</span> {{ course.id }} </h4>
 				<h4><span class="label label-info">Name</span> {{ course.name }} </h4>
 				<h4><span class="label label-info">Description</span> {{ course.description }} </h4>
+				<h4><span class="label label-info">QueryParams: </span> {{ text + " - " + page }} </h4>
 			</div>
 			<div class="panel-footer">
         <button (click)="goCourseList()" type="button" class="btn btn-danger">Back Course List</button>
@@ -30,6 +31,9 @@ export class CourseDetailComponent implements OnInit, OnDestroy {
   course: ICourse;
   courseID: number;
   subscriptionParams: Subscription;
+  subscriptionQueryParams: Subscription;
+  text: string;
+  page: number = 0;
 
 	constructor(
       private _courseService: CourseService,
@@ -47,6 +51,13 @@ export class CourseDetailComponent implements OnInit, OnDestroy {
         this.courseID = parseInt(params['id']);
         this.course = this._courseService.getCourseByID(this.courseID);
       }
+    );
+
+    this.subscriptionQueryParams = this._activatedRouteService.queryParams.subscribe(
+			(params: Params) => {
+        this.text = params['text'];
+        this.page = params['page'];
+			}
     );
 	}
 
@@ -70,6 +81,7 @@ export class CourseDetailComponent implements OnInit, OnDestroy {
 
 	ngOnDestroy(){
 		this.subscriptionParams.unsubscribe();
+		this.subscriptionQueryParams.unsubscribe();
 	}
 
 }

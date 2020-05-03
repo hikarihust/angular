@@ -48,7 +48,11 @@ export class CourseListComponent implements OnInit {
 	}
 
 	onSelectDetail(courseID: string){
-    // this._routerService.navigate(['/course', courseID]);
-    this._routerService.navigateByUrl(`course/${courseID}`);
+    this._routerService.navigate(['/course', courseID], {
+      queryParams: {
+        from: 'course-list'
+      }
+    });
+    // this._routerService.navigateByUrl(`course/${courseID}`);
 	}
 }

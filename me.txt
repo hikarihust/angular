@@ -366,4 +366,5 @@ Exercise 3: Manage Course - List Info - Part 2
         Subscription sẽ thực hiện lắng nghe sự thay đổi
         Khi Component sử dụng Subscription không còn sử dụng nữa thì thì không cần phải lắng nghe các sự thay đổi -> dùng 
             OnDestroy để unsubscribe(), nếu không thì có thể sẽ làm tốc độ dự án chậm lại
+    QueryParams
     
