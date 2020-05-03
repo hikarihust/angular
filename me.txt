@@ -361,4 +361,9 @@ Exercise 2: Manage Course - List Info - Part 1
 Exercise 3: Manage Course - List Info - Part 2
     Prepare
     NavigateByUrl
+    Subscription
+        Khi sử dụng snapshot thì khi Component được tái sử dụng thì nội dung không được cập nhật lại
+        Subscription sẽ thực hiện lắng nghe sự thay đổi
+        Khi Component sử dụng Subscription không còn sử dụng nữa thì thì không cần phải lắng nghe các sự thay đổi -> dùng 
+            OnDestroy để unsubscribe(), nếu không thì có thể sẽ làm tốc độ dự án chậm lại
     
