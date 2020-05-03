@@ -358,3 +358,5 @@ Exercise 2: Manage Course - List Info - Part 1
     Angular Modules 04
         Share Module: Chia sẻ giữa các Module với nhau
     
+Exercise 3: Manage Course - List Info - Part 2
+    Prepare

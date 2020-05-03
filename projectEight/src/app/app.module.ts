@@ -11,7 +11,11 @@ import { AboutComponent } from './exe-one/about.component';
 import { ContactComponent } from './exe-one/contact.component';
 import { NotFoundComponent } from './exe-one/not-found.component';
 
-import { CourseModule } from './exe-two/course.module';
+// Exe Two
+// import { CourseModule } from './exe-two/course.module';
+
+// Exe Three
+import { CourseModule } from './exe-three/course.module';
 
 // // Exe Two
 // import { CourseListComponent } from './exe-two/components/course-list.component';
