@@ -374,3 +374,13 @@ Exercise 3: Manage Course - List Info - Part 2
 
 Exercise 4: Manage Course - Edit Delete
     ChildRouter 01
+    ChildRouter 02
+        course/2/edit 	    Edit 	EditComponent
+        course/2			Detail	DetailComponent
+        course/2/detail	    Detail	DetailComponent
+        course/2/delete 	Delete 	DeleteComponent
+
+        course + id + " "		Detail	DetailComponent
+        course + id + "detail"	Detail	DetailComponent
+        course + id + "edit"	Edit	EditComponent
+        course + id + "delete"	Delete	DeleteComponent

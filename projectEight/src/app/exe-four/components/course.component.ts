@@ -15,7 +15,8 @@ import { Subscription } from 'rxjs';
 			<div class="panel-body">
 				<h4><span class="label label-info">ID</span> {{ course.id }} </h4>
 				<h4><span class="label label-info">Name</span> {{ course.name }} </h4>
-				<h4><span class="label label-info">Description</span> {{ course.description }} </h4>
+        <h4><span class="label label-info">Description</span> {{ course.description }} </h4>
+        <router-outlet></router-outlet>
 			</div>
 			<div class="panel-footer">
         <button (click)="goCourseList()" type="button" class="btn btn-danger">Back Course List</button>
@@ -45,13 +46,6 @@ export class CourseComponent implements OnInit, OnDestroy {
         this.courseID = parseInt(params['id']);
         this.course = this._courseService.getCourseByID(this.courseID);
       }
-    );
-
-    this.subscriptionQueryParams = this._activatedRouteService.queryParams.subscribe(
-			(params: Params) => {
-        this.text = params['text'];
-        this.page = params['page'];
-			}
     );
   }
 
@@ -83,8 +77,8 @@ export class CourseComponent implements OnInit, OnDestroy {
   }
 
 	ngOnDestroy(){
-		this.subscriptionParams.unsubscribe();
-		this.subscriptionQueryParams.unsubscribe();
+		// this.subscriptionParams.unsubscribe();
+		// this.subscriptionQueryParams.unsubscribe();
 	}
 
 }

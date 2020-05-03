@@ -25,8 +25,8 @@ import { ICourse } from './../defines/course.interface';
 							<td>{{ i+1 }}</td>
 							<td >{{ course.name | capitalize }}</td>
               <td [zvnHighlight]="'#F7F9D2'"><span (click)="onSelectDetail(course.id)" class="label label-success">View</span>
-                <span class="label label-warning">Edit</span>
-                <span class="label label-danger">Delete</span>
+                <span (click)="onSelectEdit(course.id)" class="label label-warning">Edit</span>
+                <span (click)="onSelectDelete(course.id)" class="label label-danger">Delete</span>
               </td>
 						</tr>
 					</tbody>
@@ -51,11 +51,15 @@ export class CourseListComponent implements OnInit {
 	}
 
 	onSelectDetail(courseID: string){
-    this._routerService.navigate(['/course', courseID], {
-      queryParams: {
-        from: 'course-list'
-      }
-    });
-    // this._routerService.navigateByUrl(`course/${courseID}`);
+    this._routerService.navigate(['/course', courseID]);
+  }
+
+	onSelectEdit(courseID: number){
+		this._routerService.navigateByUrl(`/course/${courseID}/edit`);
+  }
+
+	onSelectDelete(courseID: number){
+		this._routerService.navigate(['course', courseID, 'delete']);
+		// this._routerService.navigate([`course/${courseID}/delete`]);
 	}
 }
