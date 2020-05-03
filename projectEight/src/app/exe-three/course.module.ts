@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 // Exe Two
 // Component
 import { CourseListComponent } from './components/course-list.component';
-import { CourseDetailComponent } from './components/course.component';
+import { CourseComponent } from './components/course.component';
 import { CourseDetailGuard } from './services/course-detail-guard.service';
 import { CourseRoutingModule } from './course-routing.module';
 import { SharedModule } from '../shared/shared.module';
@@ -20,7 +20,7 @@ import { CourseDetailDeactivateService } from './services/course-detail-deactiva
   ],
   declarations: [
     CourseListComponent,
-    CourseDetailComponent
+    CourseComponent
   ],
   providers: [CourseService, CourseDetailGuard, CourseDetailDeactivateService ]
 })

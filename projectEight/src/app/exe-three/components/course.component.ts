@@ -31,7 +31,7 @@ import { Subscription } from 'rxjs';
 	`
 })
 
-export class CourseDetailComponent implements OnInit, OnDestroy {
+export class CourseComponent implements OnInit, OnDestroy {
   course: ICourse;
   courseID: number;
   subscriptionParams: Subscription;

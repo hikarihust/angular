@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-// Exe Two
+// Exe Three
 import { CourseListComponent } from './components/course-list.component';
-import { CourseDetailComponent } from './components/course.component';
+import { CourseComponent } from './components/course.component';
 import { CourseDetailGuard } from './services/course-detail-guard.service';
 
 import { CourseDetailDeactivateService } from './services/course-detail-deactivate.service';
@@ -11,7 +11,7 @@ import { CourseDetailDeactivateService } from './services/course-detail-deactiva
 const courseRoutes: Routes = [
 
   // Exe two
-  { path: 'course/:id', component: CourseDetailComponent, canDeactivate: [ CourseDetailDeactivateService ] },
+  { path: 'course/:id', component: CourseComponent, canDeactivate: [ CourseDetailDeactivateService ] },
   { path: 'courses'   , component: CourseListComponent }
 ];
 
