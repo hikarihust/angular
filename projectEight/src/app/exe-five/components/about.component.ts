@@ -41,8 +41,8 @@ export class AboutComponent implements OnInit, OnDestroy {
 		);
   }
 
-  courseToJson(param: Params) {
-    return JSON.stringify(course);
+  courseToJson(params: Params) {
+    return JSON.stringify(params);
   }
 
 	ngOnDestroy(){

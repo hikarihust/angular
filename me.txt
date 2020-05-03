@@ -389,6 +389,6 @@ Exercise 4: Manage Course - Edit Delete
 
 Exercise 5: Widget Dasboard
     Required
-        mutiple route
-        auxiliary
+    Multi router
+        Load và xóa phần outlet phụ
     

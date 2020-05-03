@@ -55,7 +55,7 @@ export class CourseListComponent implements OnInit {
   }
 
 	onSelectEdit(courseID: number){
-		this._routerService.navigateByUrl(`/course/${courseID}/edit`);
+		this._routerService.navigateByUrl(`/course/${courseID}/edit(second:about)`);
   }
 
 	onSelectDelete(courseID: number){

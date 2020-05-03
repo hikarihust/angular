@@ -132,16 +132,17 @@
 				</li>
 				<li routerLinkActive="active">
 					<a [routerLink]="['/course', 2]">Course 2</a>
-				</li>
+        </li>
 				<li>
-					<a>Load Second</a>
-				</li>
+					<a [routerLink]="[{ outlets: { second: ['about'] } }]">Load Second</a>
+        </li>
 				<li>
-					<a>Clear Second</a>
+					<a [routerLink]="[{ outlets: { second: null } }]">Clear Second</a>
 				</li>
 			</ul>
 		</div>
 	</div>
 </nav>
 <router-outlet></router-outlet>
+<router-outlet name="second"></router-outlet>
 <!-- EXE FIVE : END -->
