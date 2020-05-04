@@ -456,3 +456,8 @@ Study HTTP
                     }
                 DELETE: Xóa 1 phần tử
                 DELETE: https://5eb03afce6828200164a68aa.mockapi.io/api/angular/v1/courses/11
+    Observable & Promise
+        Thường được sử dụng trong việc khi thao tác các hành động thuộc về async(Các tao tác bất đồng bộ)
+        Observable: Là 1 array dùng để lưu trữ các giá trị bất đồng bộ vào tất cả các thời điểm
+            Là 1 thành phần nằm trong ES7, nên muốn sử dụng được thì phải import vào phần thư viện Reactive Extensions (RxJS).
+     
