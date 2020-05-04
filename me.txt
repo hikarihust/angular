@@ -394,4 +394,5 @@ Exercise 5: Widget Dasboard
     Widget Dasboard 01
         [NgClass] ---> ng-class
                        className
+    Widget Dasboard 02
     

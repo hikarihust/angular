@@ -45,6 +45,18 @@ export class DashboardComponent implements OnInit {
 	}
 
 	setDashboard(){
+		let params: string[] = [];
+
+		if(this.sectionButton) params.push('widget-button:button');
+		if(this.sectionTypography) params.push('widget-typography:typography');
+		if(this.sectionList) params.push('widget-list:list');
+
+		let urlFinal: string = '/dashboard';
+		if(params.length > 0) {
+			urlFinal += '(' + params.join("//") + ')';
+		}
+
+		this._routerService.navigateByUrl(urlFinal);
 	}
 
 	setClass(type: string){
