@@ -396,3 +396,17 @@ Exercise 5: Widget Dasboard
                        className
     Widget Dasboard 02
     
+============================================ Demo Something ============================================
+
+Init
+    ng new demo
+    Có tạo router
+    cd demo
+    ng serve --open
+Class Binding
+    [class.glyphicon-th-list]="isList"
+NgClass
+    [ngClass]="{
+        'glyphicon-th': !isList,
+        'glyphicon-th-list': isList
+    }"
