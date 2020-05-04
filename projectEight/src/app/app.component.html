@@ -110,7 +110,7 @@
 
 <!-- EXE FIVE : START -->
 
-<nav class="navbar navbar-default" role="navigation">
+<!-- <nav class="navbar navbar-default" role="navigation">
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -144,5 +144,21 @@
 	</div>
 </nav>
 <router-outlet></router-outlet>
-<router-outlet name="second"></router-outlet>
+<router-outlet name="second"></router-outlet> -->
 <!-- EXE FIVE : END -->
+
+<!-- DASHBOARD : START -->
+
+ <div class="row">
+	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+		<router-outlet></router-outlet>
+	</div>
+
+	<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+    <router-outlet name="widget-typography"></router-outlet>
+    <router-outlet name="widget-button"></router-outlet>
+    <router-outlet name="widget-list"></router-outlet>
+	</div>
+</div>
+
+<!-- DASHBOARD : END -->

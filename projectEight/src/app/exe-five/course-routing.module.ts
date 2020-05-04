@@ -9,6 +9,11 @@ import { CourseEditComponent } from './components/course-edit.component';
 import { CourseDeleteComponent } from './components/course-delete.component';
 import { AboutComponent } from './components/about.component';
 
+import { DashboardComponent } from './components/dashboard.component';
+import { ButtonComponent } from './components/button.component';
+import { TypographyComponent } from './components/typography.component';
+import { ListComponent } from './components/list.component';
+
 const courseRoutes: Routes = [
 
   // Exe Four
@@ -23,7 +28,13 @@ const courseRoutes: Routes = [
     ]
   },
   { path: 'courses'   , component: CourseListComponent },
-  { path: 'about', component: AboutComponent, outlet: 'second' }
+  { path: 'about', component: AboutComponent, outlet: 'second' },
+
+ 	// Dashboard
+ 	{ path: 'dashboard'	, component: DashboardComponent },
+ 	{ path: 'button'	  , component: ButtonComponent      , outlet:'widget-button' },
+ 	{ path: 'typography', component: TypographyComponent  , outlet:'widget-typography' },
+	{ path: 'list'		  , component: ListComponent        , outlet:'widget-list'}
 ];
 
 @NgModule({
