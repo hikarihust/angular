@@ -410,3 +410,49 @@ NgClass
         'glyphicon-th': !isList,
         'glyphicon-th-list': isList
     }"
+
+============================================ HTTP ============================================
+
+Study HTTP
+    Mockapi.com
+        mockapi
+            http://mockapi.io/
+            Đăng nhập bằng tài khoản google(gmail)
+            Tạo mới Project:
+                name: Study HTTP
+                prefix: /api/angular/v1
+            Create resource
+                name: courses
+                Fields: 
+                    id: Object ID 
+                    name: string 
+                    description: string
+            Kiểm tra: https://5eb03afce6828200164a68aa.mockapi.io/api/angular/v1/courses
+            Docs: ~
+        Postman: Là 1 Extension của trình duyệt Chrome
+            chrome://apps/
+                username: vudinhquangk53
+                pwd:
+            test: 
+                GET: https://5eb03afce6828200164a68aa.mockapi.io/api/angular/v1/courses
+                GET	1 phần tử: 
+                    https://5eb03afce6828200164a68aa.mockapi.io/api/angular/v1/courses/5
+                POST: Thêm phần tử mới
+                POST: https://5eb03afce6828200164a68aa.mockapi.io/api/angular/v1/courses
+                    id tự động tăng nên không cần truyền
+                    Headers:
+                        Content-Type: application/json
+                    Body(raw): JSON(application)
+                        {
+                            "name": "name 69",
+                            "description": "description 69"
+                        }
+                PUT: Cập nhật lại 1 đối tượng nào đó
+                PUT: https://5eb03afce6828200164a68aa.mockapi.io/api/angular/v1/courses/1
+                    {
+                        "id": 1,
+                        "name": "name 169",
+                        "description": "description 169"
+                    }
+                DELETE: Xóa 1 phần tử
+                DELETE: https://5eb03afce6828200164a68aa.mockapi.io/api/angular/v1/courses/11
