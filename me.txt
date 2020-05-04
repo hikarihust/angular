@@ -460,4 +460,9 @@ Study HTTP
         Thường được sử dụng trong việc khi thao tác các hành động thuộc về async(Các tao tác bất đồng bộ)
         Observable: Là 1 array dùng để lưu trữ các giá trị bất đồng bộ vào tất cả các thời điểm
             Là 1 thành phần nằm trong ES7, nên muốn sử dụng được thì phải import vào phần thư viện Reactive Extensions (RxJS).
-     
+    Init và thêm css, js...
+        ng new projectNine
+            Would you like to add Angular routing? (y/N)
+            (Có tạo router)
+        cd projectNine
+        ng serve --open
