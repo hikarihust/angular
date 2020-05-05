@@ -10,6 +10,7 @@ import { ICourse } from './../defines/course.interface';
 })
 
 export class CourseListComponent implements OnInit {
+  errorMessage: string;
 	courses: ICourse[] = [];
 	course: ICourse;
 
@@ -24,7 +25,8 @@ export class CourseListComponent implements OnInit {
 
 	getItems(){
     this._httpService.getItems().subscribe(
-      (data: any) => console.log(data)
+      (data: ICourse[]) => this.courses = data,
+      (error: any) =>  this.errorMessage = error
     );
 	}
 

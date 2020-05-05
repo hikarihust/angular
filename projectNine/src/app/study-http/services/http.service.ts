@@ -1,7 +1,8 @@
 // import { Response } from '@angular/http';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 import { ICourse } from '../defines/course.interface';
 
 @Injectable()
@@ -18,8 +19,25 @@ export class HttpService {
 
   }
 
-	// getItems(): Observable<ICourse[]> {
-	getItems(): any {
-    return this._httpService.get(this.apiUrl);
-	}
+	getItems() {
+    return this._httpService.get(this.apiUrl)
+                .pipe(
+                  catchError(this.handleError)
+                );
+  }
+
+  private handleError(error: HttpErrorResponse) {
+    let errMsg: string;
+    if (error.error instanceof ErrorEvent) {
+      console.error('An error occurred:', error.error.message);
+      errMsg = 'An error occurred:' + error.error.message;
+    } else {
+      console.error(
+        `Backend returned code ${error.status}, ` +
+        `body was: ${error.error}`);
+      errMsg = `Backend returned code ${error.status}, ` +
+      `body was: ${error.error}`;
+    }
+    return throwError(errMsg);
+  }
 }

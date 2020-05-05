@@ -3,6 +3,7 @@
 		<h3 class="panel-title">Study HTTP</h3>
 	</div>
 	<div class="panel-body">
+    <span class="label label-danger">{{ errorMessage }}</span>
 		<table class="table table-hover">
 			<thead>
 				<tr>
@@ -13,7 +14,19 @@
 				</tr>
 			</thead>
 			<tbody>
-
+				<ng-template [ngIf]="courses.length > 0">
+					<tr *ngFor="let item of courses; let i = index">
+						<td>{{ i + 1 }}</td>
+						<td>{{ item.id }}</td>
+						<td>{{ item.name }}</td>
+						<td>{{ item.description }}</td>
+					</tr>
+        </ng-template>
+				<ng-template [ngIf]="courses.length == 0">
+					<tr>
+						<td colspan="4">... updating ...</td>
+					</tr>
+				</ng-template>
 			</tbody>
 			<tfoot>
 				<tr>
