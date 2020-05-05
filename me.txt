@@ -468,6 +468,8 @@ Study HTTP
         ng serve --open
     Prepare
     GetItems 01
+        Before you can use HttpClient, you need to import the Angular HttpClientModule. Most apps do so in the root AppModule.
         JSON format Extension
         GET: https://5eb03afce6828200164a68aa.mockapi.io/api/angular/v1/courses
+    GetItems 02
     

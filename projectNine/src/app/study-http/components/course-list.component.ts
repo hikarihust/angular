@@ -23,7 +23,9 @@ export class CourseListComponent implements OnInit {
 	}
 
 	getItems(){
-    this._httpService.getItems();
+    this._httpService.getItems().subscribe(
+      (data: any) => console.log(data)
+    );
 	}
 
 	getItem(id: number){
