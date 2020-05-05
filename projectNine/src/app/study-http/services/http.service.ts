@@ -26,6 +26,13 @@ export class HttpService {
                 );
   }
 
+	getItem(id: number) {
+    return this._httpService.get(this.apiUrl + id)
+                .pipe(
+                  catchError(this.handleError)
+                );
+  }
+
   private handleError(error: HttpErrorResponse) {
     let errMsg: string;
     if (error.error instanceof ErrorEvent) {

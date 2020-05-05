@@ -31,6 +31,10 @@ export class CourseListComponent implements OnInit {
 	}
 
 	getItem(id: number){
+    this._httpService.getItem(id).subscribe(
+      (data: ICourse) => this.course = data,
+      (error: any) =>  this.errorMessage = error
+    );
 	}
 
 	addItem(){

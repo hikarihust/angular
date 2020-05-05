@@ -33,7 +33,7 @@
 					<td colspan="4">
 						<div class="btn-group">
 							<button (click)="getItems()" type="button" class="btn btn-warning">Get All Items</button>
-							<button (click)="getItem(2)" type="button" class="btn btn-primary">Get (2)</button>
+							<button (click)="getItem(1)" type="button" class="btn btn-primary">Get (1)</button>
 							<button (click)="addItem()" type="button" class="btn btn-primary">Add</button>
 							<button (click)="editItem(1)" type="button" class="btn btn-info">Edit (1)</button>
 							<button (click)="deleteItem(5)" type="button" class="btn btn-danger">Delete (5)</button>
@@ -42,6 +42,9 @@
 				</tr>
 			</tfoot>
 		</table>
+  </div>
+	<div class="panel-footer">
+		{{ course | json }}
 	</div>
 </div>
 

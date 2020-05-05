@@ -473,4 +473,5 @@ Study HTTP
         GET: https://5eb03afce6828200164a68aa.mockapi.io/api/angular/v1/courses
     GetItems 02
     GetItems 03
+    GetItem
     
