@@ -59,6 +59,13 @@ export class CourseService {
               );
   }
 
+	deleteItem(id: number): Observable<{}> {
+    return this._httpService.delete(this.apiUrl + id)
+              .pipe(
+                catchError(this.handleError)
+              );
+  }
+
   private handleError(error: HttpErrorResponse) {
     let errMsg: string;
     if (error.error instanceof ErrorEvent) {
