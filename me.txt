@@ -474,4 +474,5 @@ Study HTTP
     GetItems 02
     GetItems 03
     GetItem
+    AddItem
     

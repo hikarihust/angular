@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CourseListComponent } from "./components/course-list.component";
 
 // Service
-import { HttpService } from './services/http.service';
+import { CourseService } from './services/course.service';
 
 // Routing
 import { StudyHttpRoutingModule } from './study-http-routing.module';
@@ -22,7 +22,7 @@ import { SharedModule } from './../shared/shared.module';
 	declarations: [
 		CourseListComponent,
 	],
-	providers: 	[ HttpService],
+	providers: 	[ CourseService],
 })
 
 export class StudyHttpModule { }

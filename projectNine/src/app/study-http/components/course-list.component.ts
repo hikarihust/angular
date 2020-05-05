@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { HttpService } from '../services/http.service';
+import { CourseService } from '../services/course.service';
 import { ICourse } from './../defines/course.interface';
 
 @Component({
@@ -15,29 +15,38 @@ export class CourseListComponent implements OnInit {
 	course: ICourse;
 
 	constructor(
-		private _httpService: HttpService)
+		private _courseService: CourseService)
 	{
 
 	}
 
 	ngOnInit(){
+    this.getItems();
 	}
 
 	getItems(){
-    this._httpService.getItems().subscribe(
+    this._courseService.getItems().subscribe(
       (data: ICourse[]) => this.courses = data,
       (error: any) =>  this.errorMessage = error
     );
 	}
 
 	getItem(id: number){
-    this._httpService.getItem(id).subscribe(
+    this._courseService.getItem(id).subscribe(
       (data: ICourse) => this.course = data,
       (error: any) =>  this.errorMessage = error
     );
 	}
 
 	addItem(){
+		let course: ICourse = {
+			name: 'abc - name - 123',
+			description: 'abc - description - 123'
+		};
+    this._courseService.addItem(course).subscribe(
+      (data: ICourse) => this.courses.push(data),
+      (error: any) =>  this.errorMessage = error
+    );
 	}
 
 	editItem(id: number){
