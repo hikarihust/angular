@@ -467,4 +467,7 @@ Study HTTP
         cd projectNine
         ng serve --open
     Prepare
+    GetItems 01
+        JSON format Extension
+        GET: https://5eb03afce6828200164a68aa.mockapi.io/api/angular/v1/courses
     

@@ -23,6 +23,7 @@ export class CourseListComponent implements OnInit {
 	}
 
 	getItems(){
+    this._httpService.getItems();
 	}
 
 	getItem(id: number){
