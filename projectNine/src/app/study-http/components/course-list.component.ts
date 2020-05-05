@@ -50,6 +50,15 @@ export class CourseListComponent implements OnInit {
 	}
 
 	editItem(id: number){
+		let course: ICourse = {
+			name: 'edit - name',
+			description: 'edit - description'
+    };
+
+    this._courseService.editItem(id, course).subscribe(
+      (data: ICourse) => this.getItems(),
+      (error: any) =>  this.errorMessage = error
+    );
 	}
 
 	deleteItem(id: number){

@@ -46,6 +46,19 @@ export class CourseService {
               );
   }
 
+	editItem(id: number, course: ICourse): Observable<ICourse> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json'
+      })
+    };
+
+    return this._httpService.put<ICourse>(this.apiUrl + id, course, httpOptions)
+              .pipe(
+                catchError(this.handleError)
+              );
+  }
+
   private handleError(error: HttpErrorResponse) {
     let errMsg: string;
     if (error.error instanceof ErrorEvent) {
