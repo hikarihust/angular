@@ -6,20 +6,23 @@ import { catchError } from 'rxjs/operators';
 @Injectable()
 export class GithubService {
   apiUrl: string 		=  'https://api.github.com/';
+  clientID: string = '34269a786bf469a2b82a';
+  clientSecret: string = '51f3c3221b66a05e5bb1588bdfab76c88e388d6e';
+
   username: string;
 
 	constructor(private _httpService: HttpClient){
   }
 
 	getUser() {
-    return this._httpService.get(this.apiUrl + 'users/' + this.username)
+    return this._httpService.get(this.apiUrl + 'users/' + this.username + '?client_id=' + this.clientID + '&client_secret=' + this.clientSecret)
                 .pipe(
                   catchError(this.handleError)
                 );
   }
 
 	getRepos() {
-    return this._httpService.get(this.apiUrl + 'users/' + this.username + '/repos')
+    return this._httpService.get(this.apiUrl + 'users/' + this.username + '/repos?client_id=' + this.clientID + '&client_secret=' + this.clientSecret)
                 .pipe(
                   catchError(this.handleError)
                 );

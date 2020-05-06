@@ -488,5 +488,13 @@ Github API
         https://api.github.com Tất cả các dữ liệu sẽ được gửi và nhận dưới dạng JSON
         Lấy thông tin user:
             https://api.github.com/users/:username
-        Repository
+    Repository
+    Rate Limiting
+        Nếu sử dụng Basic Authentication or OAuth thì có thể 5000 request trong 1 giờ, còn không thì chỉ được 60 request
+        Github -> Setting -> Developer settings -> OAuth Apps -> Register a new application
+            Application name: githu api
+            Homepage URL: http://localhost:4200/
+            Application description: Github api Test
+            Authorization callback URL: http://localhost:4200/
+        Sau khi đăng ký xong ta có Client ID và Client Secret
     
