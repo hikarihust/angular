@@ -482,3 +482,9 @@ Github API
         ngModel 
         FormsModule
         Khi sử dụng đến ngModel thì cần phải imports thêm FormsModule
+    Profile
+        Github api
+        https://developer.github.com/v3/
+        https://api.github.com Tất cả các dữ liệu sẽ được gửi và nhận dưới dạng JSON
+        Lấy thông tin user:
+            https://api.github.com/users/:username

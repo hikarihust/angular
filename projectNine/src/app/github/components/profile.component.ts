@@ -10,8 +10,8 @@ import { GithubService } from './../services/github.service';
 
 export class ProfileComponent implements OnInit {
 	profile: any;
-	repos: any;
-
+  repos: any;
+  errorMessage: string;
 	username: string;
 	flagDisabled: boolean = true;
 	constructor(
@@ -29,5 +29,11 @@ export class ProfileComponent implements OnInit {
 	}
 
 	loadUser(){
+    this._githubService.setUsername(this.username);
+
+    this._githubService.getUser().subscribe(
+      (data: any) => this.profile = data,
+      (error: any) =>  this.errorMessage = error
+    );
 	}
 }

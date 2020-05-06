@@ -12,14 +12,16 @@ import { GithubRoutingModule } from './github-routing.module';
 
 // SharedModule
 import { SharedModule } from './../shared/shared.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
 	imports: [
 		SharedModule,
-		FormsModule,
+    FormsModule,
+    HttpClientModule,
 		GithubRoutingModule
 	],
-	declarations: [ 
+	declarations: [
 		ProfileComponent
 	],
 	providers: 	[
