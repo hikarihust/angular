@@ -497,4 +497,8 @@ Github API
             Application description: Github api Test
             Authorization callback URL: http://localhost:4200/
         Sau khi đăng ký xong ta có Client ID và Client Secret
+
+Spotify API 
+    Intro
+        Spotify là 1 music service cung cấp hàng triệu bài hát mình có thể nghe
     
