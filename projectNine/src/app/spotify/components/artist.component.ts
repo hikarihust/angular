@@ -13,8 +13,9 @@ import { SpotifyService } from './../services/spotify.service';
 })
 
 export class ArtistComponent implements OnInit, OnDestroy {
+  errorMessage: string;
 	searchValue: string;
-	artist: IArtist;
+	artist: any;
 	albums: IAlbum[] = [];
 	subscription: Subscription;
 
@@ -29,6 +30,15 @@ export class ArtistComponent implements OnInit, OnDestroy {
 	ngOnInit(){
 		this.subscription = this._activatedRouteService.params.subscribe(
 			(params: Params) => {
+        this._spotifyService.getArtist(params['id']).subscribe(
+          (data: any) => this.artist = data,
+          (error: any) =>  this.errorMessage = error
+        );
+
+        this._spotifyService.getAlbums(params['id']).subscribe(
+          (data: any) => this.albums = data.items,
+          (error: any) =>  this.errorMessage = error
+        );
 			}
 		);
 	}

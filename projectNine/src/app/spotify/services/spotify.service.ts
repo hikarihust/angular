@@ -8,19 +8,23 @@ export class SpotifyService {
   apiURL: string = 'https://api.spotify.com/';
   clientID: string = 'a9603bfb11e242bf8e81426311efa095';
   clientSecret: string = '75f88d806ee241d7b3ebbd463c9cda03';
-  authToken: string = 'BQCvx5AFH0PIidvIFDvNQjHQ64QPXs91rCmINLK0lmLI2XCxcg9GiA7Fgcu6bvLuL4puXnqB6gR0isivqXfnVya0f31pclImruSsMcf0mndTL_drVGvJaA9i5k73FT2p1OICx3xbhWk-5S-4pf-MXv8j3HYFnPNghZn_ucbYDpZAxb3AtQ';
+  authToken: string = 'BQCL5iugh1ScGJB7g-01fgp2PPu6VjD7mfuaTwiMWJUS-gFayZ6LAGqDROJi9R_2A7tVIPS6gYPixQWazO53pBtyJfNpKpwvasK6IlQLeJOFP7iIb9oeBAYuTMCTsUlHTuofGpB2QN3Ilu2IHUbMI2trDbDNr69-V4kNcp5K7ftABYFXYQ';
 	constructor(private _httpService: HttpClient){
 	}
 
 	searchArtists(name: string): any{
     let url: string = this.apiURL + 'v1/search?q=' + name + '&type=artist';
+    const httpOptions = this.getOptions();
 
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type':  'application/json',
-        'Authorization': `Bearer ${this.authToken}`
-      })
-    };
+    return this._httpService.get(url, httpOptions)
+                .pipe(
+                  catchError(this.handleError)
+                );
+  }
+
+	getArtist(id: string): any{
+    let url: string = this.apiURL + 'v1/artists/' + id;
+    const httpOptions = this.getOptions();
 
     return this._httpService.get(url, httpOptions)
                 .pipe(
@@ -28,17 +32,29 @@ export class SpotifyService {
                 );
 	}
 
-	getArtist(id: string): any{
-	}
-
 	getAlbums(artistId: string){
+    let url: string = this.apiURL + 'v1/artists/' + artistId + '/albums?offset=0&limit=5';
+    const httpOptions = this.getOptions();
+
+    return this._httpService.get(url, httpOptions)
+                .pipe(
+                  catchError(this.handleError)
+                );
   }
 
   getAlbum(id: string){
   }
 
-	private extractData(res) {
-	}
+  getOptions() {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+        'Authorization': `Bearer ${this.authToken}`
+      })
+    };
+
+    return httpOptions;
+  }
 
   private handleError(error: HttpErrorResponse) {
     let errMsg: string;
