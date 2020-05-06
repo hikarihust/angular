@@ -503,4 +503,29 @@ Spotify API
         Spotify là 1 music service cung cấp hàng triệu bài hát mình có thể nghe
     Prepare
         Luồng đi: SearchComponent -> ArtistComponent -> AlbumComponent
-    
+    Search
+        Spotify api
+        https://developer.spotify.com/documentation/web-api/
+        Docs -> Web API -> Reference
+        Base URL: https://api.spotify.com/v1
+        Search: https://api.spotify.com/v1/search
+        Tham số bắt buộc: q, type
+        q: Giá trị muốn tìm kiếm
+        type: album , artist, playlist, track, show...
+        Spotify Docs -> Guides -> App Setting
+            Login(gmail, 54)
+        Client ID a9603bfb11e242bf8e81426311efa095
+        Client Secret 75f88d806ee241d7b3ebbd463c9cda03 
+        EDIT SETTINGS
+            Redirect URIs: http://localhost:8888/callback/
+		https://github.com/spotify/web-api-auth-examples
+			npm install
+			cd authorization_code
+			app.js:
+				var client_id = 'CLIENT_ID'; // Your client id
+				var client_secret = 'CLIENT_SECRET'; // Your secret
+				var redirect_uri = 'REDIRECT_URI'; // Your redirect uri
+					http://localhost:8888/callback/
+			node app.js
+		Mở trang http://localhost:8888/ thì thu được Access token
+			Sử dụng giá trị này để gọi API gửi đến Spotify thì thu được kết quả

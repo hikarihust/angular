@@ -5,9 +5,10 @@
 	<div class="panel-body">
 		<h4>Spotify is a digital music service that gives you access to millions of songs.</h4>
 		<ul class="list-group" *ngIf="artists">
+      {{ artists | json }}
 			<li class="list-group-item" *ngFor="let artist of artists">
-				<h4><a [routerLink]="['/artist/' + artist.id]">{{ artist.name }}</a></h4> 
-				<p>Genres: <span style="margin-right: 5px" class="label label-warning" *ngFor="let genre of artist.genres">{{ genre }}</span> </p> 
+				<h4><a [routerLink]="['/artist/' + artist.id]">{{ artist.name }}</a></h4>
+				<p>Genres: <span style="margin-right: 5px" class="label label-warning" *ngFor="let genre of artist.genres">{{ genre }}</span> </p>
 			</li>
 		</ul>
 	</div>

@@ -1,27 +1,27 @@
 <div class="panel panel-info" *ngIf="artist">
 	<div class="panel-heading">
-		
+
 		<h3 class="panel-title">{{ artist.name }}</h3>
 	</div>
 
 	<div class="panel-body" *ngIf="artist">
 		<div class="col-sm-4 col-md-4">
-		    <img [src]="artist.images[0].url" alt="{{ artist.name }}" class="img-rounded img-responsive" />
+		    <!-- <img [src]="artist.images[0].url" alt="{{ artist.name }}" class="img-rounded img-responsive" /> -->
 		</div>
 		<div class="col-sm-4 col-md-4">
 		    <blockquote><p>{{ artist.name }}</p> </blockquote>
-		    <p> 
-		        <i class="glyphicon glyphicon-play-circle"></i> 
-		        <a href="{{ artist.external_urls.spotify }}" target="_blank">View Spotify</a><br/><br/>
-				
+		    <p>
+		        <i class="glyphicon glyphicon-play-circle"></i>
+		        <!-- <a href="{{ artist.external_urls.spotify }}" target="_blank">View Spotify</a><br/><br/> -->
+
 	        	<i class="glyphicon glyphicon-play-circle"></i> Genres:
 	        	<span style="margin-right: 5px" class="label label-success" *ngFor="let genre of artist.genres">
 	        		{{ genre }}
-        		</span>  
-	
+        		</span>
+
 		    </p>
 		</div>
-		
+
 		<div class="col-sm-4 col-md-4" *ngIf="albums">
 
 			<h4>List albums</h4>

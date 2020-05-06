@@ -33,7 +33,9 @@ export class SearchComponent implements OnInit {
 	}
 
 	loadArtists(){
-		this._spotifyService.searchArtists(this.searchValue).subscribe(
-		)
+    this._spotifyService.searchArtists(this.searchValue).subscribe(
+      (data: any) => this.artists = data.artists.items,
+      (error: any) =>  this.errorMessage = error
+    );
 	}
 }
