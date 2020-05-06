@@ -475,4 +475,10 @@ Study HTTP
     GetItems 03
     GetItem
     DeleteItem
-    
+
+Github API
+    Prepare
+        [(ngModel)]="username" -> Giá trị username sẽ thay đổi khi giá trị trong ô Input thay đổi
+        ngModel 
+        FormsModule
+        Khi sử dụng đến ngModel thì cần phải imports thêm FormsModule

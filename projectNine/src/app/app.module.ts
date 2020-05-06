@@ -3,7 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { StudyHttpModule } from './study-http/study-http.module';
+import { GithubModule } from './github/github.module';
 
 @NgModule({
   declarations: [
@@ -12,6 +14,7 @@ import { StudyHttpModule } from './study-http/study-http.module';
   imports: [
     BrowserModule,
     StudyHttpModule,
+    GithubModule,
     AppRoutingModule
   ],
   providers: [],
