@@ -5,14 +5,14 @@
 	<div class="panel-body">
 		<div class="media" *ngIf="profile">
 			<div class="col-sm-2 col-md-2">
-			    <img style="max-height: 300px" [src]="profile?.avatar_url" alt="{{ profile.name }}" class="img-rounded img-responsive" />
+			    <img style="max-height: 300px" [src]="profile.avatar_url" alt="{{ profile.name }}" class="img-rounded img-responsive" />
 			</div>
 			<div class="col-sm-4 col-md-4">
 			    <blockquote>
 			        <p>{{ profile.name }}</p>
 			        <small>
 			        	<cite title="Source Title">
-			        		{{ profile?.company }} in {{ profile?.location }}
+			        		{{ profile.company }} in {{ profile.location }}
 			        		<i class="glyphicon glyphicon-map-marker"></i>
 			        	</cite>
 			    	</small>

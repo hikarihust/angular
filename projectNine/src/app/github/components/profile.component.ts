@@ -35,5 +35,10 @@ export class ProfileComponent implements OnInit {
       (data: any) => this.profile = data,
       (error: any) =>  this.errorMessage = error
     );
+
+    this._githubService.getRepos().subscribe(
+      (data: any) => this.repos = data,
+      (error: any) =>  this.errorMessage = error
+    );
 	}
 }

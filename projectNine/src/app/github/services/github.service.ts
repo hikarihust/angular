@@ -18,6 +18,13 @@ export class GithubService {
                 );
   }
 
+	getRepos() {
+    return this._httpService.get(this.apiUrl + 'users/' + this.username + '/repos')
+                .pipe(
+                  catchError(this.handleError)
+                );
+	}
+
 	setUsername(value: string){
 		this.username = value;
 	}
