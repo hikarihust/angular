@@ -1,0 +1,23 @@
+<div class="panel panel-info">
+	<div class="panel-heading">
+		<h3 class="panel-title">Spotify API</h3>
+	</div>
+	<div class="panel-body">
+		<h4>Spotify is a digital music service that gives you access to millions of songs.</h4>
+		<ul class="list-group" *ngIf="artists">
+			<li class="list-group-item" *ngFor="let artist of artists">
+				<h4><a [routerLink]="['/artist/' + artist.id]">{{ artist.name }}</a></h4> 
+				<p>Genres: <span style="margin-right: 5px" class="label label-warning" *ngFor="let genre of artist.genres">{{ genre }}</span> </p> 
+			</li>
+		</ul>
+	</div>
+	<div class="panel-footer">
+		<form class="form-inline" role="form">
+			<div class="form-group">
+				<input (keyup)="setActiveButton()" [(ngModel)]="searchValue" name="username" type="text" class="form-control" placeholder="Enter artist name ...">
+				<button (click)="loadArtists()" [disabled]="flagDisabled" type="button" class="btn btn-danger">Search</button>
+				<strong>{{ searchValue }}</strong>
+			</div>
+		</form>
+	</div>
+</div>

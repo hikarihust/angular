@@ -501,4 +501,6 @@ Github API
 Spotify API 
     Intro
         Spotify là 1 music service cung cấp hàng triệu bài hát mình có thể nghe
+    Prepare
+        Luồng đi: SearchComponent -> ArtistComponent -> AlbumComponent
     

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 
 import { StudyHttpModule } from './study-http/study-http.module';
 import { GithubModule } from './github/github.module';
+import { SpotifyModule } from './spotify/spotify.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { GithubModule } from './github/github.module';
     BrowserModule,
     StudyHttpModule,
     GithubModule,
+    SpotifyModule,
     AppRoutingModule
   ],
   providers: [],

@@ -1,0 +1,23 @@
+<div class="panel panel-danger" *ngIf="album">
+	<div class="panel-heading">
+		<h3 class="panel-title">{{ album.name }}</h3>
+	</div>
+	<div class="panel-body">
+		<div class="col-sm-4 col-md-4">
+			<img class="media-object img-thumbnail" [src]="album.images[1].url" alt="Image">
+		</div>
+		<div class="col-sm-8 col-md-8">
+			<ul class="list-group" *ngIf="album.tracks.items.length > 0" style="max-height: 300px; overflow-y: auto;">
+				<li class="list-group-item" *ngFor="let track of album.tracks.items" >
+					<h4>{{ track.name }}</h4>
+				 	<audio src="{{track.preview_url}}" controls>
+						Your browser does not support the audio element.
+					</audio>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="panel-footer">
+		<a [routerLink]="['/spotify']" type="button" class="btn btn-danger">Search Page</a>
+	</div>
+</div>
