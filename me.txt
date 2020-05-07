@@ -530,3 +530,5 @@ Spotify API
 		Mở trang http://localhost:8888/ thì thu được Access token
 			Sử dụng giá trị này để gọi API gửi đến Spotify thì thu được kết quả
     Artist
+    Album
+    

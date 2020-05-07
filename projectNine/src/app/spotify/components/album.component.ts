@@ -14,8 +14,9 @@ import { SpotifyService } from './../services/spotify.service';
 })
 
 export class AlbumComponent implements OnInit, OnDestroy {
+  errorMessage: string;
 	subscription: Subscription;
-	album: IAlbum;
+	album: any;
 
 	constructor(
   		private _routerService: Router,
@@ -28,6 +29,10 @@ export class AlbumComponent implements OnInit, OnDestroy {
 	ngOnInit(){
 		this.subscription = this._activatedRouteService.params.subscribe(
 			(params: Params) => {
+        this._spotifyService.getAlbum(params['id']).subscribe(
+          (data: any) => this.album = data,
+          (error: any) =>  this.errorMessage = error
+        );
 			}
 		);
 	}

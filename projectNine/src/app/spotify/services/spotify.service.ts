@@ -8,7 +8,7 @@ export class SpotifyService {
   apiURL: string = 'https://api.spotify.com/';
   clientID: string = 'a9603bfb11e242bf8e81426311efa095';
   clientSecret: string = '75f88d806ee241d7b3ebbd463c9cda03';
-  authToken: string = 'BQCL5iugh1ScGJB7g-01fgp2PPu6VjD7mfuaTwiMWJUS-gFayZ6LAGqDROJi9R_2A7tVIPS6gYPixQWazO53pBtyJfNpKpwvasK6IlQLeJOFP7iIb9oeBAYuTMCTsUlHTuofGpB2QN3Ilu2IHUbMI2trDbDNr69-V4kNcp5K7ftABYFXYQ';
+  authToken: string = 'BQD7J9LhZ8rxELZufAS58Hkkwo0AezuQ8aP4l-dBuXOkGJc-LS713_BImvV0Qbt7yAtBaRKhAs6kXF80lWXRLMX6DWxReRhlrxSoQCVqFLwiiEMQrPwW4JviIOMTDbpWaEF4vU7153vqY7SxWKYXSYDnAjD3jNve38PpAfUxg8xmpdnBHA';
 	constructor(private _httpService: HttpClient){
 	}
 
@@ -43,6 +43,13 @@ export class SpotifyService {
   }
 
   getAlbum(id: string){
+    let url: string = this.apiURL + 'v1/albums/' + id;
+    const httpOptions = this.getOptions();
+
+    return this._httpService.get(url, httpOptions)
+                .pipe(
+                  catchError(this.handleError)
+                );
   }
 
   getOptions() {
