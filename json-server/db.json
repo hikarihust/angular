@@ -1,0 +1,23 @@
+{
+  "courses": [
+    { 
+        "id": 1,
+        "name": "Angular",
+        "description": "Angular Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+        "free": false
+    },
+    { 
+      "id": 2,
+      "name": "TypeScript",
+      "description": "TypeScript Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "free": false
+    },
+    { 
+      "id": 3,
+      "name": "NodeJS",
+      "description": "NodeJS Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "free": false
+    }
+  ],
+  "profile": { "name": "typicode" }
+}

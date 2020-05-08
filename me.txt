@@ -534,4 +534,23 @@ Spotify API
 
 Course CRUD with JsonServe
     Prepare
+    Json Server
+        json Server
+        https://github.com/typicode/json-server
+        https://www.npmjs.com/package/json-server
+        Có thể cài đặt và sử dụng nó ngay tại máy tính của mình
+        Tạo folder json-server
+        Cài đặt npm install -g json-server
+        Tạo file db.json trong folder json-server
+            {
+                "posts": [
+                { "id": 1, "title": "json-server", "author": "typicode" }
+                ],
+                "comments": [
+                { "id": 1, "body": "some comment", "postId": 1 }
+                ],
+                "profile": { "name": "typicode" }
+            }
+        Start JSON Server: json-server --watch db.json
+        http://localhost:3000/posts/1
     
