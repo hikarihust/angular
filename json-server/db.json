@@ -16,7 +16,13 @@
       "id": 3,
       "name": "NodeJS",
       "description": "NodeJS Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-      "free": false
+      "free": true
+    },
+    { 
+      "id": 4,
+      "name": "ReactJS",
+      "description": "ReactJS Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "free": true
     }
   ],
   "profile": { "name": "typicode" }

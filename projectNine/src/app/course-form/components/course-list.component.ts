@@ -26,7 +26,7 @@ export class CourseListComponent implements OnInit {
 
 	getItems(){
     this._courseService.getItems().subscribe(
-      (data: ICourse[]) => console.log(data),
+      (data: ICourse[]) => this.courses = data,
       (error: any) =>  this.errorMessage = error
     );
 	}
