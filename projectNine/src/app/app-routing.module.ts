@@ -4,7 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   // { path: '', redirectTo: '/study-http', pathMatch: 'full' },
-  { path: '', redirectTo: '/github', pathMatch: 'full' },
+  // { path: '', redirectTo: '/github', pathMatch: 'full' },
+  { path: '', redirectTo: '/course-form', pathMatch: 'full' }
 ];
 
 @NgModule({

@@ -1,0 +1,104 @@
+<div class="panel panel-info">
+	<div class="panel-heading">
+		<h3 class="panel-title">Study HTTP</h3>
+	</div>
+	<div class="panel-body">
+    <span class="label label-danger">{{ errorMessage }}</span>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th width="5%">#</th>
+					<th width="5%">ID</th>
+					<th width="20%">Name</th>
+					<th width="10%">Free</th>
+					<th width="40%">Description</th>
+					<th width="20%">Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<ng-template [ngIf]="courses.length > 0">
+					<tr *ngFor="let course of courses; let i = index">
+						<td>{{ i + 1 }}</td>
+						<td>{{ course.id }}</td>
+						<td>{{ course.name }}</td>
+						<td>
+							<button (click)="changeToFree(course)" type="button" class="btn btn-success btn-xs" *ngIf="course.free">Free</button>
+							<button (click)="changeToFree(course)" type="button" class="btn btn-default btn-xs" *ngIf="!course.free">No Free</button>
+						</td>
+						<td>{{ course.description }}</td>
+						<td>
+							<button (click)="selectedCourse = course" type="button" class="btn btn-info">Edit</button>
+							<button (click)="deleteItem(course.id)" type="button" class="btn btn-danger">Delete</button>
+						</td>
+					</tr>
+        </ng-template>
+				<ng-template [ngIf]="courses.length == 0">
+					<tr>
+						<td colspan="4">... updating ...</td>
+					</tr>
+				</ng-template>
+			</tbody>
+		</table>
+  </div>
+</div>
+
+<div class="row">
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+		<!-- ADD COURSE : START -->
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">Add Course</h3>
+			</div>
+			<div class="panel-body">
+				<form class="form-inline">
+					<div class="form-group">
+						<label class="sr-only">Name</label>
+						<input #courseName type="text" class="form-control" placeholder="Input field">
+					</div>
+					<div class="form-group">
+						<label class="sr-only">Description</label>
+						<input #courseDescription type="text" class="form-control" placeholder="Input field">
+					</div>
+					<div class="form-group">
+						<label class="sr-only">Free</label>
+						<div class="checkbox">
+							<label><input #courseFree type="checkbox" value="">Free</label>
+						</div>
+					</div>
+					<button (click)="addItem(courseName.value, courseDescription.value, courseFree.checked)" type="button" class="btn btn-primary">Submit</button>
+				</form>
+			</div>
+		</div>
+		<!-- ADD COURSE : END -->
+	</div>
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+		<!-- EDIT COURSE : START -->
+		<div class="panel panel-success" *ngIf="selectedCourse">
+			<div class="panel-heading">
+				<h3 class="panel-title">Edit Course</h3>
+			</div>
+			<div class="panel-body">
+				<form class="form-inline">
+					<div class="form-group">
+						<label class="sr-only">Name</label>
+						<input type="text" class="form-control">
+					</div>
+					<div class="form-group">
+						<label class="sr-only">Description</label>
+						<input type="text" class="form-control">
+					</div>
+					<div class="form-group">
+						<label class="sr-only">Free</label>
+						<div class="checkbox">
+							<label><input  type="checkbox" [checked]="selectedCourse.free">Free</label>
+						</div>
+					</div>
+					<button (click)="editItem()" type="button" class="btn btn-danger">Update</button>
+
+				</form>
+			</div>
+		</div>
+		<!-- EDIT COURSE : END -->
+	</div>
+</div>
+
