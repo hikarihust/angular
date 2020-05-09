@@ -554,4 +554,5 @@ Course CRUD with JsonServe
         Start JSON Server: json-server --watch db.json
         http://localhost:3000/posts/1
     List
-    
+    Change Course Type
+      

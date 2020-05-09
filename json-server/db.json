@@ -1,29 +1,31 @@
 {
   "courses": [
-    { 
-        "id": 1,
-        "name": "Angular",
-        "description": "Angular Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-        "free": false
+    {
+      "id": 1,
+      "name": "Angular",
+      "description": "Angular Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "free": false
     },
-    { 
+    {
       "id": 2,
       "name": "TypeScript",
       "description": "TypeScript Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-      "free": false
+      "free": true
     },
-    { 
+    {
       "id": 3,
       "name": "NodeJS",
       "description": "NodeJS Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
       "free": true
     },
-    { 
+    {
       "id": 4,
       "name": "ReactJS",
       "description": "ReactJS Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-      "free": true
+      "free": false
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "name": "typicode"
+  }
 }

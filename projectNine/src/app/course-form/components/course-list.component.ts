@@ -67,7 +67,7 @@ export class CourseListComponent implements OnInit {
 	changeToFree(course: ICourse) {
 		course.free = !course.free;
 		this._courseService.editItem(course).subscribe(
-      (data: ICourse) => console.log(data),
+      (data: ICourse) => this.updateCourseFromArray(data),
       (error: any) =>  this.errorMessage = error
 		);
   }
