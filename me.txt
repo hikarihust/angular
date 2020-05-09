@@ -587,4 +587,6 @@ Sử dụng Template Driven Form
         ng serve --open
     Prepare
         HttpModule -> HttpClient
+    NgModel
+        Khi sử dụng Two way binding [(NgModel)] thì cần đưa vào thuộc tính name cho input
     

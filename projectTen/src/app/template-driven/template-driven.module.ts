@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 // Component
 import { ProfileComponent } from './components/profile.component';
@@ -12,6 +13,7 @@ import { SharedModule } from './../shared/shared.module';
 
 @NgModule({
 	imports: [
+    FormsModule,
 		SharedModule,
 		TemplateDrivenRoutingModule,
 		HttpClientModule

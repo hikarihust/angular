@@ -9,6 +9,18 @@ import { IProfile } from './../defines/profile.interface';
 })
 
 export class ProfileComponent implements OnInit {
+  profile: IProfile = null;
+
 	ngOnInit(){
+    this.setProfileData("abc", "abc@gmail.com");
+  }
+
+	private setProfileData(username: string = "", email: string = "", facebook: string = "", website:string = ""){
+		this.profile = {
+			username	: username,
+			email 		: email,
+			facebook 	: facebook,
+			website 	: website
+		}
 	}
 }
