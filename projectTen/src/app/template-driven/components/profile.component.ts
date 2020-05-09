@@ -10,6 +10,7 @@ import { IProfile } from './../defines/profile.interface';
 
 export class ProfileComponent implements OnInit {
   profile: IProfile = null;
+  resultSubmit: any;
 
 	ngOnInit(){
     this.setProfileData("abc", "abc@gmail.com");
@@ -20,7 +21,7 @@ export class ProfileComponent implements OnInit {
   }
 
 	onSubmitForm(value: any) {
-		console.log(value);
+    this.resultSubmit = value;
 	}
 
 	private setProfileData(username: string = "", email: string = "", facebook: string = "", website:string = ""){

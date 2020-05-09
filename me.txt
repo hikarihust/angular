@@ -609,3 +609,7 @@ Sử dụng Template Driven Form
             >
             </ELEMENT>
         </FORM>
+    Show Error
+        Chỉ cho Submit khi Form đã hợp nệ
+            [disabled]="!formProfile.valid"
+    

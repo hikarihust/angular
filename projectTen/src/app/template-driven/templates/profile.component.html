@@ -6,7 +6,7 @@
 				<h3 class="panel-title">Form Profile</h3>
 			</div>
 			<div class="panel-body">
-				<form autocomplete="off" #formProfile="ngForm" (ngSubmit)="onSubmitForm(formProfile.value)" class="form-horizontal" role="form">
+				<form novalidate autocomplete="off" #formProfile="ngForm" (ngSubmit)="onSubmitForm(formProfile.value)" class="form-horizontal" role="form">
 					<!-- Username -->
 					<div class="form-group">
 						<label class="col-sm-2 control-label">Username</label>
@@ -39,13 +39,19 @@
             <label class="col-sm-2 control-label">Facebook</label>
             <div class="col-sm-10">
               <input
-                #facebook
+                #facebook="ngModel"
                 [(ngModel)]="profile.facebook"
                 name="facebook"
                 required
                 minlength="5"
                 maxlength="20"
                 type="text" class="form-control"  placeholder="Facebook">
+                <span class="label label-danger" *ngIf="(facebook.touched || facebook.dirty) && facebook.errors?.required">
+                  Facebook: required
+                </span>
+                <span class="label label-danger" *ngIf="(facebook.touched || facebook.dirty) && facebook.errors?.minlength">
+                  Facebook: minlength 5 character
+                </span>
             </div>
           </div>
 
@@ -61,7 +67,7 @@
           </div>
 					<div class="form-group">
 						<div class="col-sm-10 col-sm-offset-2">
-							<button type="submit" class="btn btn-primary">Submit</button>
+							<button [disabled]="!formProfile.valid" type="submit" class="btn btn-primary">Submit</button>
 							<button (click)="onResetForm(formProfile)" type="button" class="btn btn-danger">Reset</button>
 						</div>
 					</div>
@@ -78,11 +84,11 @@
 				<h3 class="panel-title">Result</h3>
 			</div>
 			<div class="panel-body">
-				<ul class="list-group">
-					<li class="list-group-item"><strong>Username:</strong>quang</li>
-					<li class="list-group-item"><strong>Email:</strong>quang[gmail.com</li>
-					<li class="list-group-item"><strong>Facebook:</strong>abc</li>
-					<li class="list-group-item"><strong>Website:</strong></li>
+				<ul class="list-group" *ngIf="resultSubmit">
+					<li class="list-group-item"><strong>Username:</strong>{{ resultSubmit.username }}</li>
+					<li class="list-group-item"><strong>Email:</strong>{{ resultSubmit.email }}</li>
+					<li class="list-group-item"><strong>Facebook:</strong>{{ resultSubmit.facebook }}</li>
+					<li class="list-group-item"><strong>Website:</strong>{{ resultSubmit.website }}</li>
 				</ul>
 			</div>
 		</div>
