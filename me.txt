@@ -612,4 +612,15 @@ Sử dụng Template Driven Form
     Show Error
         Chỉ cho Submit khi Form đã hợp nệ
             [disabled]="!formProfile.valid"
+    NgModelGroup
+        email: "abc@gmail.com"
+        facebook:"Facebook 123"
+        username:"abc"
+        website:"Website"
+        ↓
+        email: "",
+        username: "",
+        social: 
+            facebook: "",
+            website: ""
     
