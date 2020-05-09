@@ -6,7 +6,7 @@
 				<h3 class="panel-title">Form Profile</h3>
 			</div>
 			<div class="panel-body">
-				<form class="form-horizontal" role="form">
+				<form autocomplete="off" #formProfile="ngForm" (ngSubmit)="onSubmitForm(formProfile.value)" class="form-horizontal" role="form">
 					<!-- Username -->
 					<div class="form-group">
 						<label class="col-sm-2 control-label">Username</label>
@@ -16,7 +16,7 @@
                 [(ngModel)]="profile.username"
                 name="username"
                 required
-                type="text" class="form-control" placeholder="Username" autocomplete="off" >
+                type="text" class="form-control" placeholder="Username" >
 						</div>
 					</div>
 
@@ -30,7 +30,7 @@
                 name="email"
                 required
                 pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}"
-                type="text" class="form-control"  placeholder="Email" autocomplete="off">
+                type="text" class="form-control"  placeholder="Email">
 						</div>
           </div>
 
@@ -45,7 +45,7 @@
                 required
                 minlength="5"
                 maxlength="20"
-                type="text" class="form-control"  placeholder="Facebook" autocomplete="off">
+                type="text" class="form-control"  placeholder="Facebook">
             </div>
           </div>
 
@@ -53,13 +53,16 @@
           <div class="form-group">
             <label class="col-sm-2 control-label">Website</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control"  placeholder="Website">
+              <input
+                name="website"
+                [(ngModel)]="profile.website"
+                type="text" class="form-control"  placeholder="Website">
             </div>
           </div>
 					<div class="form-group">
 						<div class="col-sm-10 col-sm-offset-2">
 							<button type="submit" class="btn btn-primary">Submit</button>
-							<button type="button" class="btn btn-danger">Reset</button>
+							<button (click)="onResetForm(formProfile)" type="button" class="btn btn-danger">Reset</button>
 						</div>
 					</div>
 				</form>

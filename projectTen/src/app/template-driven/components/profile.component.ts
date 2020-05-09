@@ -15,6 +15,14 @@ export class ProfileComponent implements OnInit {
     this.setProfileData("abc", "abc@gmail.com");
   }
 
+	onResetForm(formProfile: NgForm){
+		formProfile.reset();
+  }
+
+	onSubmitForm(value: any) {
+		console.log(value);
+	}
+
 	private setProfileData(username: string = "", email: string = "", facebook: string = "", website:string = ""){
 		this.profile = {
 			username	: username,

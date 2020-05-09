@@ -599,4 +599,13 @@ Sử dụng Template Driven Form
         Control's value is valid	ng-valid		ng-invalid
     Validate
         html input Attribute(pattern)
-    
+    Submit
+        Phương thức reset() được hỗ trợ trong NgForm
+        <FORM #formProfile="ngForm" (ngSubmit)="onSubmit(formProfile.value)> 	NgForm
+            <ELEMENT 															FormControl
+                #element
+                [(ngModel)]="xxx"
+                name="username" 
+            >
+            </ELEMENT>
+        </FORM>
