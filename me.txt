@@ -578,9 +578,13 @@ Description
         viết. Import vào ReactiveFormsModule
 
 Sử dụng Template Driven Form
+    Docs - Fundamentals - Form for User Input - Template-driven Forms
     Init và thêm css, js, bootstrap, images
         ng new projectTen
             Would you like to add Angular routing? (y/N)
             (Có tạo router)
         cd projectTen
         ng serve --open
+    Prepare
+        HttpModule -> HttpClient
+    
