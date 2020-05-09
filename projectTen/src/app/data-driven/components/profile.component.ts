@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 import { IProfile } from './../defines/profile.interface';
 
@@ -39,10 +39,19 @@ export class ProfileComponent implements OnInit {
     })*/
 
 		this.formProfile = new FormGroup({
-			'username'	: new FormControl(''),
-      'email'		: new FormControl(''),
+			'username'	: new FormControl('abc', [
+        Validators.required,
+        Validators.minLength(5)
+      ]),
+      'email'		: new FormControl('',[
+				Validators.required,
+				Validators.pattern("[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}")
+      ]),
 			'social'	: new FormGroup({
-				'facebook'	: new FormControl(''),
+				'facebook'	: new FormControl('', [
+					Validators.required,
+					Validators.pattern("[a-z0-9]{5,10}")
+        ]),
 				'website'	: new FormControl('')
 			})
 		})

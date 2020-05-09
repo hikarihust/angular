@@ -632,4 +632,7 @@ Sử dụng Data Driven Form
     Create Form 01
         form FormGroup > FormGroup > FormControl
         Trong FormGroup có thể có các FormGroup
-    
+    Create Form 02
+        Validators(Class)
+        Ban đầu mới vào trang thì ko hiển thị thông báo lỗi Validate, chỉ hiển thị khi đã nhập giá trị
+            vào ô input
