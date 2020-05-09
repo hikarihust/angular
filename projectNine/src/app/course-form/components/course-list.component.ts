@@ -52,7 +52,7 @@ export class CourseListComponent implements OnInit {
 
 	editItem(){
     this._courseService.editItem(this.selectedCourse).subscribe(
-      (data: ICourse) => console.log(data),
+      (data: ICourse) => this.updateCourseFromArray(this.selectedCourse),
       (error: any) =>  this.errorMessage = error
     );
 	}

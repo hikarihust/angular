@@ -557,4 +557,10 @@ Course CRUD with JsonServe
     Change Course Type
     Add
     Delete
+    Edit
+        Two way binding
+            ngModel
+            [ngModelOptions]="{standalone: true}
+            Khi sử dụng NgModule thì khi thay đổi các giá trị trong các ô input hay checkbox thì 
+                giá trị của selectedCourse cũng thay đổi theo 
     

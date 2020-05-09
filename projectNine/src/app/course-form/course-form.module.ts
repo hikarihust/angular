@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 // Component
 import { CourseListComponent } from "./components/course-list.component";
@@ -16,6 +17,7 @@ import { SharedModule } from '../shared/shared.module';
 @NgModule({
 	imports: [
     HttpClientModule,
+    FormsModule,
 		SharedModule,
 		CourseFormRoutingModule,
 	],
