@@ -45,7 +45,7 @@ export class CourseListComponent implements OnInit {
 			free		: courseFree
 		};
     this._courseService.addItem(course).subscribe(
-      (data: ICourse) => console.log(data),
+      (data: ICourse) => this.courses.push(data),
       (error: any) =>  this.errorMessage = error
     );
 	}
