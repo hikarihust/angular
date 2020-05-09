@@ -1,0 +1,85 @@
+<div class="row">
+	<!-- PROFILE : START-->
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">Profile</h3>
+			</div>
+			<div class="panel-body">
+				<form class="form-horizontal" novalidate autocomplete="off">
+					<!-- NAME -->
+					<div class="form-group">
+						<label class="col-sm-2 control-label" for="">UserName</label>
+						<div class="col-sm-10">
+							<input
+								name="username"
+								type="text" class="form-control" placeholder="UserName" >
+						</div>
+					</div>
+
+					<!-- EMAIL -->
+					<div class="form-group">
+						<label class="col-sm-2 control-label" for="">Email</label>
+						<div class="col-sm-10">
+							<input
+								name="email"
+								type="text" class="form-control" placeholder="Email">
+						</div>
+					</div>
+
+					<!-- SOCIAL -->
+					<div>
+						<!-- SOCIAL Facebook -->
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="">Facebook</label>
+							<div class="col-sm-10">
+								<input
+									name="facebook"
+									type="text" class="form-control" placeholder="Facebook">
+							</div>
+						</div>
+
+						<!-- SOCIAL Website -->
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="">Website</label>
+							<div class="col-sm-10">
+								<input
+									name="website"
+									type="text" class="form-control" placeholder="Website" >
+							</div>
+						</div>
+					</div>
+
+					<!-- BUTTON -->
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button [disabled]="1==1" type="submit" class="btn btn-primary">Submit Button</button>
+							<button (click)="onBindDataForm()" type="button" class="btn btn-info">Bind Data</button>
+							<button (click)="onResetForm()" type="button" class="btn btn-danger">Reset</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- RESUST : START -->
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+		<div class="panel panel-success" >
+			<div class="panel-heading">
+				<h3 class="panel-title">Result</h3>
+			</div>
+			<div class="panel-body">
+				<h4><strong>Input: </strong>{{ profile | json }}</h4>
+				<ul class="list-group" *ngIf="resultSubmit">
+					<li class="list-group-item"><strong>Username:</strong> {{ resultSubmit.username }}</li>
+					<li class="list-group-item"><strong>Email:</strong> {{ resultSubmit.email }}</li>
+					<li class="list-group-item"><strong>Facebook:</strong> {{ resultSubmit.social.facebook }}</li>
+					<li class="list-group-item"><strong>Website:</strong> {{ resultSubmit.social.website }}</li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<!-- RESUST : END -->
+</div>
