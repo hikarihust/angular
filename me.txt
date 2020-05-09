@@ -556,4 +556,5 @@ Course CRUD with JsonServe
     List
     Change Course Type
     Add
+    Delete
     

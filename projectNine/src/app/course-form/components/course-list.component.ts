@@ -59,7 +59,7 @@ export class CourseListComponent implements OnInit {
 
 	deleteItem(id: number){
     this._courseService.deleteItem(id).subscribe(
-      (data: ICourse) => console.log(data),
+      (data: ICourse) => this.removeCourseFromArray(id),
       (error: any) =>  this.errorMessage = error
     );
   }

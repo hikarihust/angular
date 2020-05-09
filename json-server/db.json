@@ -23,24 +23,6 @@
       "name": "ReactJS",
       "description": "ReactJS Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
       "free": false
-    },
-    {
-      "name": "123",
-      "description": "dsf",
-      "free": false,
-      "id": 5
-    },
-    {
-      "name": "abc",
-      "description": "adb",
-      "free": true,
-      "id": 6
-    },
-    {
-      "name": "def",
-      "description": "12131313",
-      "free": true,
-      "id": 7
     }
   ],
   "profile": {
