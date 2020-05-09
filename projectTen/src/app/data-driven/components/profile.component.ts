@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 import { IProfile } from './../defines/profile.interface';
 
@@ -10,15 +11,45 @@ import { IProfile } from './../defines/profile.interface';
 export class ProfileComponent implements OnInit {
 
 	profile: IProfile = null;
-	resultSubmit: any;
+  resultSubmit: any;
+  formProfile: FormGroup; // = form FormGroup > FormGroup > FormControl
 
 	constructor(){}
 
 	ngOnInit(){
-		this.setProfileData("quang", "quang@gmail.com", "fb.com", "quang.vn");
+    this.setProfileData("quang", "quang@gmail.com", "fb.com", "quang.vn");
+
+		/*
+		this.formProfile = new FormGroup({
+			'username'	: new FormControl('abc', [
+				Validators.required,
+				Validators.minLength(5)
+			]),
+			'email'		: new FormControl('', [
+				Validators.required,
+				Validators.pattern("[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}")
+			]),
+			'social'	: new FormGroup({
+				'facebook'	: new FormControl('', [
+					Validators.required,
+					Validators.pattern("[a-z0-9]{5,10}")
+				]),
+				'website'	: new FormControl(),
+			})
+    })*/
+
+		this.formProfile = new FormGroup({
+			'username'	: new FormControl(''),
+      'email'		: new FormControl(''),
+			'social'	: new FormGroup({
+				'facebook'	: new FormControl(''),
+				'website'	: new FormControl('')
+			})
+		})
 	}
 
 	onSubmitForm(){
+    console.log(this.formProfile.value);
 	}
 
 	onResetForm(){

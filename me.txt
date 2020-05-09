@@ -625,7 +625,11 @@ Sử dụng Template Driven Form
             website: ""
 
 Sử dụng Data Driven Form
+    Docs - Fundamentals - Form for User Input - Reactive Forms
     Prepare
         Các thao tác tạo Form chủ yếu viết ở phần Class và sẽ viết bằng các mã lệnh TypeScript
         Khi sử dụng Driven Form thì cần phải import vào ReactiveFormsModule
+    Create Form 01
+        form FormGroup > FormGroup > FormControl
+        Trong FormGroup có thể có các FormGroup
     

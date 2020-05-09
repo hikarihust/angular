@@ -6,12 +6,13 @@
 				<h3 class="panel-title">Profile</h3>
 			</div>
 			<div class="panel-body">
-				<form class="form-horizontal" novalidate autocomplete="off">
+				<form [formGroup]="formProfile" (ngSubmit)="onSubmitForm()" class="form-horizontal" novalidate autocomplete="off">
 					<!-- NAME -->
 					<div class="form-group">
 						<label class="col-sm-2 control-label" for="">UserName</label>
 						<div class="col-sm-10">
-							<input
+              <input
+                formControlName="username"
 								name="username"
 								type="text" class="form-control" placeholder="UserName" >
 						</div>
@@ -21,19 +22,21 @@
 					<div class="form-group">
 						<label class="col-sm-2 control-label" for="">Email</label>
 						<div class="col-sm-10">
-							<input
+              <input
+                formControlName="email"
 								name="email"
 								type="text" class="form-control" placeholder="Email">
 						</div>
 					</div>
 
 					<!-- SOCIAL -->
-					<div>
+					<div formGroupName="social">
 						<!-- SOCIAL Facebook -->
 						<div class="form-group">
 							<label class="col-sm-2 control-label" for="">Facebook</label>
 							<div class="col-sm-10">
-								<input
+                <input
+                  formControlName="facebook"
 									name="facebook"
 									type="text" class="form-control" placeholder="Facebook">
 							</div>
@@ -43,7 +46,8 @@
 						<div class="form-group">
 							<label class="col-sm-2 control-label" for="">Website</label>
 							<div class="col-sm-10">
-								<input
+                <input
+                  formControlName="website"
 									name="website"
 									type="text" class="form-control" placeholder="Website" >
 							</div>
@@ -53,7 +57,7 @@
 					<!-- BUTTON -->
 					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10">
-							<button [disabled]="1==1" type="submit" class="btn btn-primary">Submit Button</button>
+							<button [disabled]="1!=1" type="submit" class="btn btn-primary">Submit Button</button>
 							<button (click)="onBindDataForm()" type="button" class="btn btn-info">Bind Data</button>
 							<button (click)="onResetForm()" type="button" class="btn btn-danger">Reset</button>
 						</div>
