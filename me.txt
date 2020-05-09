@@ -1,4 +1,4 @@
-============================================ Hello Angular ============================================
+============================================ Project 1: Hello Angular ============================================
 
 Angular Project Structure
     QuickStart
@@ -28,7 +28,7 @@ Component Metadata
     TemplateURL
     Style, StyleURL
 
-============================================ Template Setting ============================================
+============================================ Project 2: Template Setting ============================================
 
 Multiple Components
     @Component({
@@ -59,7 +59,7 @@ Setting Template
     Custom template
     Optimized
 
-============================================ Setting Color ============================================
+============================================ Project 3: Setting Color ============================================
 
 Template reference variables
 
@@ -74,7 +74,7 @@ Project 03: Setting Color
     Setting Color 02
     Setting Color 03
 
-============================================ List Course with Pipe & Custom Pipe ============================================
+============================================ Project 4: List Course with Pipe & Custom Pipe ============================================
 
 Sử dụng Pipe cơ bản
     Lowercase - Uppercase
@@ -113,7 +113,7 @@ List Course with Pipe & Custom Pipe
     CourseCategoryPipe
     CoursePricePipe
 
-============================================ Expand and collapse content ============================================
+============================================ Project 5: Expand and collapse content ============================================
 
 Init
     Step 1: Install the Angular CLI
@@ -149,7 +149,7 @@ Collapsed Plugin
     ExportAs
     Span
 
-============================================ Tab Container ============================================
+============================================ Project 6: Tab Container ============================================
 
 Init
     Step 1: Install the Angular CLI
@@ -182,7 +182,7 @@ Xây dựng plugin với Structural Directive
     Viết show method
     Structural Directive
 
-============================================ View video programming on Youtube ============================================
+============================================ Project 7: View video programming on Youtube ============================================
 
 Init
     Step 1: Install the Angular CLI
@@ -281,7 +281,7 @@ View video programming on Youtube
         Không sử dụng Input và Output
         ngAfterContentChecked()
 
-============================================ Router Master ============================================
+============================================ Project 8: Router Master ============================================
 
 Exercise 1: Home - About - Contact 
     Init
@@ -411,7 +411,7 @@ NgClass
         'glyphicon-th-list': isList
     }"
 
-============================================ HTTP ============================================
+============================================ Project 9: HTTP ============================================
 
 Study HTTP
     Mockapi.com
@@ -563,4 +563,17 @@ Course CRUD with JsonServe
             [ngModelOptions]="{standalone: true}
             Khi sử dụng NgModule thì khi thay đổi các giá trị trong các ô input hay checkbox thì 
                 giá trị của selectedCourse cũng thay đổi theo 
+    
+============================================ Project 10: Form ============================================
+
+Description
+    Form trong Angular thường được ứng dụng và tạo ra nó thông qua 2 cách: Template Driven và Data Driven
+    FORM
+        Type 					Code			Module
+        Template Driven			HTML			FormModule
+        Data (Model)Driven		TypeScript		ReactiveFormsModule
+    Khi sử dụng Form theo cách Template Driven thì tạo Form bằng các mã lệnh html, viết trong các tập tin có
+        phần mở rộng là html, đưa vào các thuộc tính cho các thẻ html. Import vào FormModule
+    Sử dụng Form theo cách Data Driven thì viết trong phần khai báo Class và sử dụng ngôn ngữ TypeScript để 
+        viết. Import vào ReactiveFormsModule
     
