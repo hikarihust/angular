@@ -12,9 +12,11 @@
 						<label class="col-sm-2 control-label">Username</label>
 						<div class="col-sm-10">
               <input
+                #username
                 [(ngModel)]="profile.username"
                 name="username"
-                type="text" class="form-control" placeholder="Username" >
+                required
+                type="text" class="form-control" placeholder="Username" autocomplete="off" >
 						</div>
 					</div>
 
@@ -22,7 +24,12 @@
 					<div class="form-group">
 						<label class="col-sm-2 control-label">Email</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control"  placeholder="Email">
+              <input
+                #email
+                [(ngModel)]="profile.email"
+                name="email"
+                required
+              type="text" class="form-control"  placeholder="Email">
 						</div>
           </div>
 

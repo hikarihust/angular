@@ -589,4 +589,11 @@ Sử dụng Template Driven Form
         HttpModule -> HttpClient
     NgModel
         Khi sử dụng Two way binding [(NgModel)] thì cần đưa vào thuộc tính name cho input
-    
+    Style Input
+        Docs - Fundamentals - Form for User Input - Template-driven Forms
+            Add custom CSS for visual feedback
+        Các giá trị class của ô input khi sử dụng đến two way binding
+        State						Class if true	Class if false
+        Control has been visited	ng-touched		ng-untouched
+        Control's value has changed	ng-dirty		ng-pristine
+        Control's value is valid	ng-valid		ng-invalid
