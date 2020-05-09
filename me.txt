@@ -576,4 +576,11 @@ Description
         phần mở rộng là html, đưa vào các thuộc tính cho các thẻ html. Import vào FormModule
     Sử dụng Form theo cách Data Driven thì viết trong phần khai báo Class và sử dụng ngôn ngữ TypeScript để 
         viết. Import vào ReactiveFormsModule
-    
+
+Sử dụng Template Driven Form
+    Init và thêm css, js, bootstrap, images
+        ng new projectTen
+            Would you like to add Angular routing? (y/N)
+            (Có tạo router)
+        cd projectTen
+        ng serve --open
