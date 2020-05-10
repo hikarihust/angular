@@ -31,7 +31,13 @@
               <input
                 formControlName="email"
 								name="email"
-								type="text" class="form-control" placeholder="Email">
+                type="text" class="form-control" placeholder="Email">
+                <span class="label label-danger" *ngIf="(formProfile.controls.email.dirty || formProfile.controls.email.touched) && formProfile.controls.email.errors?.required">
+                  Email: Required
+                </span>
+                <span class="label label-danger" *ngIf="(formProfile.controls.email.dirty || formProfile.controls.email.touched) && formProfile.controls.email.errors?.invalidEmail">
+                  Email: Invalid
+                </span>
 						</div>
 					</div>
 

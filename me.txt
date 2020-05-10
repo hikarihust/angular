@@ -650,4 +650,5 @@ Sử dụng Data Driven Form
         Trường hợp hợp nệ thì return null
         Trường hợp không hợp nệ thì return về 1 đối tượng
     Show Error 01
+    Show Error 02
     
