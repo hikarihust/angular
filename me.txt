@@ -653,4 +653,7 @@ Sử dụng Data Driven Form
     Show Error 02
     Show Error 03
         Property does not exist on type AbstractControl -> dùng phương thức get() để truy cập các controls
+    Control Message 01
+        Đơn giản lại phần hiển thị các thông báo lỗi
+        hasOwnProperty() Kiểm tra 1 đối tượng có tồn tại thuộc tính nào đó hay không
     

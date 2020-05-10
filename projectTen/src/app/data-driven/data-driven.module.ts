@@ -4,6 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 // Component
 import { ProfileComponent } from "./components/profile.component";
+import { ControlMessageComponent } from './components/control-message.component';
 
 // Service
 // import { CourseService } from './services/course.service';
@@ -22,7 +23,8 @@ import { SharedModule } from './../shared/shared.module';
 		HttpClientModule
 	],
 	declarations: [
-		ProfileComponent
+    ProfileComponent,
+    ControlMessageComponent
 	],
 	// providers: 	[ CourseService],
 })
