@@ -14,7 +14,13 @@
               <input
                 formControlName="username"
 								name="username"
-								type="text" class="form-control" placeholder="UserName" >
+                type="text" class="form-control" placeholder="UserName" >
+              <span class="label label-danger" *ngIf="(formProfile.controls.username.dirty || formProfile.controls.username.touched) && formProfile.controls.username.errors?.required">
+                Username: Required
+              </span>
+              <span class="label label-danger" *ngIf="(formProfile.controls.username.dirty || formProfile.controls.username.touched) && formProfile.controls.username.errors?.minlength">
+                Username: minLength 5 characters
+              </span>
 						</div>
 					</div>
 

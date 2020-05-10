@@ -39,7 +39,7 @@ export class ProfileComponent implements OnInit {
     })*/
 
     this.formProfile = this._formBuilder.group({
-			'username'	: [ 'abc', [
+			'username'	: [ '', [
         Validators.required,
         Validators.minLength(5)
       ]],
@@ -55,7 +55,7 @@ export class ProfileComponent implements OnInit {
 				'website'	: ['']
 			})
     });
-
+    console.log(this.formProfile.controls.username);
 		// this.formProfile.valueChanges.subscribe(
 		// 	(value: any) => console.log(value)
 		// );
