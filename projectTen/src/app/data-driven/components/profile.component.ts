@@ -55,7 +55,7 @@ export class ProfileComponent implements OnInit {
 				'website'	: ['']
 			})
     });
-    // console.log(this.formProfile.controls.email);
+    // console.log(this.formProfile.get('social'));
 		// this.formProfile.valueChanges.subscribe(
 		// 	(value: any) => console.log(value)
 		// );

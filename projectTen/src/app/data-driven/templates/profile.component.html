@@ -50,7 +50,13 @@
                 <input
                   formControlName="facebook"
 									name="facebook"
-									type="text" class="form-control" placeholder="Facebook">
+                  type="text" class="form-control" placeholder="Facebook">
+                  <span class="label label-danger" *ngIf="(formProfile.get('social').get('facebook').dirty || formProfile.get('social').get('facebook').touched) && formProfile.get('social').get('facebook').errors?.required">
+                    Facebook: Required
+                  </span>
+                  <span class="label label-danger" *ngIf="(formProfile.get('social').get('facebook').dirty || formProfile.get('social').get('facebook').touched) && formProfile.get('social').get('facebook').errors?.pattern">
+                    Facebook: Invalid
+                  </span>
 							</div>
 						</div>
 

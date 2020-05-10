@@ -651,4 +651,6 @@ Sử dụng Data Driven Form
         Trường hợp không hợp nệ thì return về 1 đối tượng
     Show Error 01
     Show Error 02
+    Show Error 03
+        Property does not exist on type AbstractControl -> dùng phương thức get() để truy cập các controls
     
