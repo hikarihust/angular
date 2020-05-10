@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 
 import { IProfile } from './../defines/profile.interface';
 
@@ -14,31 +14,12 @@ export class ProfileComponent implements OnInit {
   resultSubmit: any;
   formProfile: FormGroup; // = form FormGroup > FormGroup > FormControl
 
-	constructor(){}
+	constructor(private _formBuilder: FormBuilder){}
 
 	ngOnInit(){
     this.setProfileData("quang", "quang@gmail.com", "facebook", "quang.vn");
 
-		/*
-		this.formProfile = new FormGroup({
-			'username'	: new FormControl('abc', [
-				Validators.required,
-				Validators.minLength(5)
-			]),
-			'email'		: new FormControl('', [
-				Validators.required,
-				Validators.pattern("[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}")
-			]),
-			'social'	: new FormGroup({
-				'facebook'	: new FormControl('', [
-					Validators.required,
-					Validators.pattern("[a-z0-9]{5,10}")
-				]),
-				'website'	: new FormControl(),
-			})
-    })*/
-
-		this.formProfile = new FormGroup({
+    /*this.formProfile = new FormGroup({
 			'username'	: new FormControl('abc', [
         Validators.required,
         Validators.minLength(5)
@@ -54,7 +35,29 @@ export class ProfileComponent implements OnInit {
         ]),
 				'website'	: new FormControl('')
 			})
-		})
+    })*/
+
+    this.formProfile = this._formBuilder.group({
+			'username'	: [ 'abc', [
+        Validators.required,
+        Validators.minLength(5)
+      ]],
+      'email'		: ['',[
+				Validators.required,
+				Validators.pattern("[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}")
+      ]],
+			'social'	: this._formBuilder.group({
+				'facebook'	: ['', [
+					Validators.required,
+					Validators.pattern("[a-z0-9]{5,10}")
+        ]],
+				'website'	: ['']
+			})
+    });
+
+		// this.formProfile.valueChanges.subscribe(
+		// 	(value: any) => console.log(value)
+		// );
 	}
 
 	onSubmitForm(){

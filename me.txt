@@ -639,4 +639,8 @@ Sử dụng Data Driven Form
     Create Form 03
         Chỉ cho Submit khi Form đã hợp nệ
             [disabled]="!formProfile.valid"
+    FormBuilder
+        Với cách khai báo để tạo form như trên thì vẫn còn dài và khó đọc, FormBuilder giúp cho việc tạo
+            cấu trúc Form ngắn gọn hơn
+        valueChanges(): Lắng nghe sự thay đổi trên Form
     
