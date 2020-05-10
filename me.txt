@@ -643,4 +643,10 @@ Sử dụng Data Driven Form
         Với cách khai báo để tạo form như trên thì vẫn còn dài và khó đọc, FormBuilder giúp cho việc tạo
             cấu trúc Form ngắn gọn hơn
         valueChanges(): Lắng nghe sự thay đổi trên Form
+    Custom Validator
+        Tham khảo cấu trúc class Validators của Angular
+        Description: A validator is a function that processes a FormControl or collection of controls and returns 
+            an error map or null. A null map means that validation has passed.
+        Trường hợp hợp nệ thì return null
+        Trường hợp không hợp nệ thì return về 1 đối tượng
     

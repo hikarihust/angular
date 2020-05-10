@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 
 import { IProfile } from './../defines/profile.interface';
+import { Validators as ZValidators } from './../validators/validators.class';
 
 @Component({
 	selector: 'zvn-profile',
@@ -44,7 +45,7 @@ export class ProfileComponent implements OnInit {
       ]],
       'email'		: ['',[
 				Validators.required,
-				Validators.pattern("[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}")
+        ZValidators.emailValidator
       ]],
 			'social'	: this._formBuilder.group({
 				'facebook'	: ['', [
