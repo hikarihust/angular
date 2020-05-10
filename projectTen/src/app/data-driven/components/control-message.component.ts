@@ -21,7 +21,7 @@ export class ControlMessageComponent implements OnInit {
 	get message(): string{
 		for(let property in this.control.errors){
 			if((this.control.dirty || this.control.touched) && this.control.errors.hasOwnProperty(property)) {
-        return this.arrMessage[property];
+        return Validators.showError(property, this.control.errors[property]);
 			}
 		}
   }

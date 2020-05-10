@@ -656,4 +656,5 @@ Sử dụng Data Driven Form
     Control Message 01
         Đơn giản lại phần hiển thị các thông báo lỗi
         hasOwnProperty() Kiểm tra 1 đối tượng có tồn tại thuộc tính nào đó hay không
+    Control Message 02
     

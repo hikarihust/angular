@@ -13,4 +13,16 @@ export class Validators {
 		}
   }
 
+	static showError(validatorType: string, validatorValue?: any): string {
+    let arrMessage: any = {
+      'required' 		: 'Required',
+      'minlength'		: `Minlength: ${validatorValue.requiredLength} character`,
+      'invalidEmail'	: 'Email invalid',
+      'pattern'		: `Pattern: ${validatorValue.requiredPattern}`
+    };
+
+		return arrMessage[validatorType];
+
+	}
+
 }
