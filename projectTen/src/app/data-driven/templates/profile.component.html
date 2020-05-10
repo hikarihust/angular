@@ -57,7 +57,7 @@
 					<!-- BUTTON -->
 					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10">
-							<button [disabled]="1!=1" type="submit" class="btn btn-primary">Submit Button</button>
+							<button [disabled]="!formProfile.valid" type="submit" class="btn btn-primary">Submit Button</button>
 							<button (click)="onBindDataForm()" type="button" class="btn btn-info">Bind Data</button>
 							<button (click)="onResetForm()" type="button" class="btn btn-danger">Reset</button>
 						</div>

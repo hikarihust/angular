@@ -636,3 +636,7 @@ Sử dụng Data Driven Form
         Validators(Class)
         Ban đầu mới vào trang thì ko hiển thị thông báo lỗi Validate, chỉ hiển thị khi đã nhập giá trị
             vào ô input
+    Create Form 03
+        Chỉ cho Submit khi Form đã hợp nệ
+            [disabled]="!formProfile.valid"
+    

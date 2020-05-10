@@ -17,7 +17,7 @@ export class ProfileComponent implements OnInit {
 	constructor(){}
 
 	ngOnInit(){
-    this.setProfileData("quang", "quang@gmail.com", "fb.com", "quang.vn");
+    this.setProfileData("quang", "quang@gmail.com", "facebook", "quang.vn");
 
 		/*
 		this.formProfile = new FormGroup({
@@ -58,13 +58,25 @@ export class ProfileComponent implements OnInit {
 	}
 
 	onSubmitForm(){
-    console.log(this.formProfile.value);
+    this.resultSubmit = this.formProfile.value;
+		if(this.formProfile.dirty && this.formProfile.valid){
+			this.resultSubmit = this.formProfile.value;
+		}
 	}
 
 	onResetForm(){
+    this.formProfile.reset();
 	}
 
 	onBindDataForm(){
+		this.formProfile.patchValue({
+			username: this.profile.username,
+			email 	: this.profile.email,
+			social 	: {
+				facebook	: this.profile.facebook,
+				website 	: this.profile.website,
+			}
+		})
 	}
 
 	private setProfileData(username: string = "", email: string = "", facebook: string = "", website:string = ""){
