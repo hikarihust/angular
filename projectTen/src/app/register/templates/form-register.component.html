@@ -1,0 +1,119 @@
+<div class="row">
+	<!-- PROFILE : START-->
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">Profile</h3>
+			</div>
+			<div class="panel-body">
+				<form [formGroup]="mForm" (ngSubmit)="onSubmitForm()" class="form-horizontal" novalidate autocomplete="off">
+					<!-- USERNAME -->
+					<div class="form-group">
+						<label class="col-sm-4 control-label" for="">UserName</label>
+						<div class="col-sm-8">
+							<input
+								formControlName="username"
+								name="username"
+								type="text" class="form-control" placeholder="UserName" >
+							<zvn-control-message [control]="mForm.get('username')"></zvn-control-message>
+						</div>
+					</div>
+
+					<!-- EMAIL -->
+					<div class="form-group">
+						<label class="col-sm-4 control-label" for="">Email</label>
+						<div class="col-sm-8">
+							<input
+								formControlName="email"
+								name="email"
+								type="text" class="form-control" placeholder="Email">
+							<zvn-control-message [control]="mForm.get('email')"></zvn-control-message>
+						</div>
+					</div>
+
+					<!-- Password -->
+					<div class="form-group">
+						<label class="col-sm-4 control-label" for="">Password</label>
+						<div class="col-sm-8">
+							<input
+								formControlName="password"
+								name="password"
+								type="text" class="form-control" placeholder="Password">
+						</div>
+					</div>
+
+					<!-- Confirm Password -->
+					<div class="form-group">
+						<label class="col-sm-4 control-label" for="">Confirm Password</label>
+						<div class="col-sm-8">
+							<input
+								formControlName="confirmPassword"
+								name="confirmPassword"
+                type="text" class="form-control" placeholder="Confirm Password">
+								<span class="label label-danger" *ngIf="(mForm.get('confirmPassword').dirty || mForm.get('confirmPassword').touched) && mForm.errors?.mismatchedPasswords">
+									Password dont match
+								</span>
+						</div>
+
+					</div>
+
+					<!-- GENDER -->
+					<div class="form-group">
+						<label class="col-sm-4 control-label" for="">Gender</label>
+						<div class="col-sm-8">
+							<div class="radio" *ngFor="let genderValue of genders">
+								<label>
+									<input
+										formControlName="gender"
+										name="gender"
+										[value]="genderValue"
+										type="radio">{{ genderValue }}
+								</label>
+							</div>
+						</div>
+					</div>
+
+					<!-- COUNTRY -->
+					<div class="form-group">
+						<label class="col-sm-4 control-label" for="">Country</label>
+						<div class="col-sm-8">
+							<select
+								formControlName="country"
+								name="country"
+								class="form-control" >
+								<option *ngFor="let country of countries; let i = index" [value]="i">{{ country }}</option>
+							</select>
+						</div>
+					</div>
+
+					<!-- BUTTON -->
+					<div class="form-group">
+						<div class="col-sm-offset-4 col-sm-8">
+							<button [disabled]="!mForm.valid" type="submit" class="btn btn-primary">Submit Button</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- RESUST : START -->
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+		<div class="panel panel-success" >
+			<div class="panel-heading">
+				<h3 class="panel-title">Result</h3>
+			</div>
+			<div class="panel-body">
+				<ul class="list-group" *ngIf="resultSubmit">
+					<li class="list-group-item"><strong>Username:</strong>{{ resultSubmit.username }}</li>
+					<li class="list-group-item"><strong>Email:</strong>{{ resultSubmit.email }}</li>
+					<li class="list-group-item"><strong>Password:</strong>{{ resultSubmit.password }}</li>
+					<li class="list-group-item"><strong>Confirm Password:</strong> {{ resultSubmit.confirmPassword }}</li>
+					<li class="list-group-item"><strong>Gender:</strong>{{ resultSubmit.gender }}</li>
+					<li class="list-group-item"><strong>Country:</strong>{{ countries[resultSubmit.country] }}</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- RESUST : END -->
+</div>

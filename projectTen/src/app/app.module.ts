@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { TemplateDrivenModule } from './template-driven/template-driven.module';
 import { DataDrivenModule } from './data-driven/data-driven.module';
+import { RegisterModule } from './register/register.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,7 @@ import { ElementsModule } from './elements/elements.module';
     BrowserModule,
     TemplateDrivenModule,
     DataDrivenModule,
+    RegisterModule,
     ElementsModule,
     AppRoutingModule
   ],
