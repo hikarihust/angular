@@ -50,9 +50,10 @@
 								formControlName="confirmPassword"
 								name="confirmPassword"
                 type="text" class="form-control" placeholder="Confirm Password">
-								<span class="label label-danger" *ngIf="(mForm.get('confirmPassword').dirty || mForm.get('confirmPassword').touched) && mForm.errors?.mismatchedPasswords">
+								<!-- <span class="label label-danger" *ngIf="(mForm.get('confirmPassword').dirty || mForm.get('confirmPassword').touched) && mForm.errors?.mismatchedPasswords">
 									Password dont match
-								</span>
+                </span> -->
+                <zvn-control-message [control]="mForm.get('confirmPassword')"></zvn-control-message>
 						</div>
 
 					</div>

@@ -658,4 +658,5 @@ Sử dụng Data Driven Form
         hasOwnProperty() Kiểm tra 1 đối tượng có tồn tại thuộc tính nào đó hay không
     Control Message 02
     Form Register
+    Fix phần hiển thị phần thông báo lỗi cho confirmpassword
     

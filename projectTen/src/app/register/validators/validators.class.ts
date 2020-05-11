@@ -18,7 +18,10 @@ export class Validators {
 			let passwordControl 		= group.get(passwordControlName);
       let confirmPasswordControl 	= group.get(confirmPasswordControlName);
 
-			if(passwordControl.value !== confirmPasswordControl.value) return { 'mismatchedPasswords': true}
+			if(passwordControl.value !== confirmPasswordControl.value) {
+        confirmPasswordControl.setErrors({ mismatchedPasswords: true });
+        return { 'mismatchedPasswords': true}
+      }
 			return null;
 		}
   }
