@@ -675,4 +675,14 @@ Phân tích và phân vùng Frontend Backend
         Step 5: Get videos in playlistID 
         Step 6: Write playlistInfo to Json File
         Step 7: Check playlist exist
+
+Lấy thông tin video youtube 
+    Get video 01
+        youtube api(overview)
+        Create Project: youtubev0001
+        Credentials: Tạo key
+            AIzaSyCloKm55JPfllqqmYacRrx7EQBaAvR8fpk
+        Enable Service: YouTube Data API v3
+        Video info: https://www.googleapis.com/youtube/v3/videos?part=snippet&id=v8-lOS58NY0&key=AIzaSyCloKm55JPfllqqmYacRrx7EQBaAvR8fpk
+        youtube api(Reference): videos -> list
     
