@@ -659,4 +659,20 @@ Sử dụng Data Driven Form
     Control Message 02
     Form Register
     Fix phần hiển thị phần thông báo lỗi cho confirmpassword
+
+============================================ Project 11: Ztube Website xem video Youtube - Backend ============================================
+
+Là 1 website dùng để xem các video nằm ở trên youtube
+Phân tích và phân vùng Frontend Backend
+    Analytics
+        Input: https://www.youtube.com/playlist?list=PLv6GftO355AsnYhqaxfYF6lCJuc7iYjj0
+        Output: file json chứa thông tin playlist(danh sách video của playlist đó)
+        -> Để lấy thông tin playlist khi biết ID của playlist -> Youtube Data API
+        Step 1: Get videoInfo by videoID 
+        Step 2: Write videoInfo to Json file
+        Step 3: Check video exist
+        Step 4: Get playlistInfo by playlistID 
+        Step 5: Get videos in playlistID 
+        Step 6: Write playlistInfo to Json File
+        Step 7: Check playlist exist
     
