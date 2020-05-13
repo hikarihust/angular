@@ -688,4 +688,10 @@ Lấy thông tin video youtube
     Get video 02
     Get video 03
     Preview video
-    
+    Save
+        Lấy ra thông tin của video để lưu vào 1 tập tin json nào đó để lấy thông tin json đó để cung cấp dữ liệu cho Firebase
+        videos.json chứa thông tin của các video
+        videos.txt chứa id của các video, để khi đã lưu thông tin của 1 video nào đó thì sẽ lưu id của video đó vào tập tin này, mỗi lần lưu
+            thông tin của video thì sẽ kiểm tra xem id của video đó có tồn tại trong tập tin này hay không. Nếu đã tồn tại thì sẽ ko thực hiện
+            lưu vào trong json
+        

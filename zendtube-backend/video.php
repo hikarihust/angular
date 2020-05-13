@@ -25,6 +25,7 @@
         $videoInfo  = [];
         $videoID    = isset($_POST['video-id']) ? trim($_POST['video-id']) : '';
         $result     = '';
+        $msg        = '';
 
         $strURL = createURL([
             'part'  => 'snippet',
@@ -48,12 +49,29 @@
         if (isset($_POST["btnPreview"])){
             $result = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' . $videoInfo['id'] . '" frameborder="0" allow="accelerometer; 
                 autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-       } else if (isset($_POST["btnSave"])){
-       } else if (isset($_POST["btnClear"])){
-           $result     = '';
-           $videoInfo  = [];
-           $videoID    = '';
-       }
+        } else if (isset($_POST["btnSave"])){
+            $videoIDs = file_get_contents($FILE_VIDEO_TXT);
+
+            if (strpos($videoIDs,  "##" . $videoID . "##") === false){ 
+                // Step 1: Lưu $videoID vào file videos.txt
+                file_put_contents($FILE_VIDEO_TXT, $videoIDs . "##" . $videoID . "##");   
+
+                // Step 2: Lưu thông tin video $videoInfo của $videoID vào file videos.json    
+                $json   = json_decode(file_get_contents($FILE_VIDEO_JSON), true);
+                $json[] = $videoInfo;
+
+                file_put_contents($FILE_VIDEO_JSON, json_encode($json));
+
+                $msg   = 'Video đã được lưu thành công';
+            }else {
+                // Xuất thông báo video này đã lưu rồi
+                $msg   = 'Video này đã được lưu rồi';
+            }
+        } else if (isset($_POST["btnClear"])){
+            $result     = '';
+            $videoInfo  = [];
+            $videoID    = '';
+        }
     ?>
     <div class="container-fluid">
 
@@ -90,6 +108,7 @@
                             echo "</pre>";
                             echo $result;
                         }
+                        if($msg) echo $msg ;
                     ?>
                 </div>
                 <div class="panel-footer">
