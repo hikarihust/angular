@@ -18,6 +18,20 @@
     <![endif]-->
 </head>
 <body>
+    <?php 
+        require_once('libs/define.php'); 
+        require_once('libs/my-func.php');
+
+        $videoID    = isset($_POST['video-id']) ? trim($_POST['video-id']) : '';
+
+        $strURL = createURL([
+            'part'  => 'snippet',
+            'id'    => $videoID,
+            'key'   => $API_KEY
+        ]);
+
+        $dataReturn   = json_decode(file_get_contents($API_URL . 'videos?' . $strURL), true);
+    ?>
     <div class="container-fluid">
 
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -30,7 +44,7 @@
                     <form action="video.php" method="POST" class="form-inline" role="form">
                         <div class="form-group">
                             <label class="sr-only" for="">label</label>
-                            <input type="text" class="form-control" id="" name="video-id" placeholder="Video ID" value="">
+                            <input type="text" class="form-control" id="" name="video-id" placeholder="Video ID" value="<?php echo $videoID; ?>">
                         </div>
                         <button type="submit" name="btnPreview" class="btn btn-primary">Preview Video</button>
                         <button type="submit" name="btnSave" class="btn btn-success">Save To File</button>
