@@ -22,6 +22,7 @@
         require_once('libs/define.php'); 
         require_once('libs/my-func.php');
 
+        $videoInfo  = [];
         $videoID    = isset($_POST['video-id']) ? trim($_POST['video-id']) : '';
 
         $strURL = createURL([
@@ -31,6 +32,17 @@
         ]);
 
         $dataReturn   = json_decode(file_get_contents($API_URL . 'videos?' . $strURL), true);
+
+        if($dataReturn['items']){
+            $snippet = $dataReturn['items'][0]['snippet'];
+            $videoInfo['id']            = $videoID;
+            $videoInfo['publishedAt']   = $snippet['publishedAt'];
+            $videoInfo['title']         = $snippet['title'];
+            $videoInfo['slug']          = createSlug($snippet['title']);
+            $videoInfo['description']   = $snippet['description'];
+            $videoInfo['tags']          = $snippet['tags'];
+            $videoInfo['thumbnails']    = $snippet['thumbnails']['standard']['url'];
+        }        
     ?>
     <div class="container-fluid">
 
