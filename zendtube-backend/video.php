@@ -24,6 +24,7 @@
 
         $videoInfo  = [];
         $videoID    = isset($_POST['video-id']) ? trim($_POST['video-id']) : '';
+        $result     = '';
 
         $strURL = createURL([
             'part'  => 'snippet',
@@ -42,7 +43,17 @@
             $videoInfo['description']   = $snippet['description'];
             $videoInfo['tags']          = $snippet['tags'];
             $videoInfo['thumbnails']    = $snippet['thumbnails']['standard']['url'];
-        }        
+        }
+
+        if (isset($_POST["btnPreview"])){
+            $result = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' . $videoInfo['id'] . '" frameborder="0" allow="accelerometer; 
+                autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+       } else if (isset($_POST["btnSave"])){
+       } else if (isset($_POST["btnClear"])){
+           $result     = '';
+           $videoInfo  = [];
+           $videoID    = '';
+       }
     ?>
     <div class="container-fluid">
 
@@ -72,6 +83,14 @@
                     <h3 class="panel-title">Result</h3>
                 </div>
                 <div class="panel-body">
+                    <?php 
+                        if($result) {
+                            echo "<pre>";
+                            print_r(json_encode($videoInfo));
+                            echo "</pre>";
+                            echo $result;
+                        }
+                    ?>
                 </div>
                 <div class="panel-footer">
                 </div>
