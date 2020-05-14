@@ -699,4 +699,9 @@ Lấy thông tin playlist youtube
     Get playlist 01: Lấy thông tin của playlist(chưa có danh sách video)
         youtube api(Reference): Playlists -> list
             GET https://www.googleapis.com/youtube/v3/playlists
+    Get playlist 02
+        youtube api(Reference): PlaylistItems -> list
+        pageToken: Dùng để kiểm tra xem có còn dữ liệu để lấy không
+            The pageToken parameter identifies a specific page in the result set that should be returned. In an API response, the nextPageToken and 
+            prevPageToken properties identify other pages that could be retrieved.
     

@@ -46,13 +46,50 @@
             $playlistInfo['thumbnails']    = $snippet['thumbnails']['standard']['url'];
         }
 
-        echo "<pre>";
-        print_r($playlistInfo);
-        echo "</pre>";
+        // Step 02 - Get Videos Info
+        $items = [];
+        $nextPageToken = '';
+        do {
+            $strURL     = createURL([
+                'part'          => 'snippet',
+                'playlistId'    => $playlistID,  
+                'key'           => $API_KEY,
+                'maxResults'    => 15,
+                'pageToken'     => $nextPageToken
+            ]);
+
+            $dataReturn = json_decode(file_get_contents($API_URL . 'playlistItems?' . $strURL), true);
+
+            if($dataReturn['items']) {
+                foreach ($dataReturn['items'] as $key => $value) {
+                    $snippet = $value['snippet'];
+                    $items[] = [
+                        'id'            => $snippet['resourceId']['videoId'],
+                        'publishedAt'   => $snippet['publishedAt'],
+                        'channelId'     => $snippet['channelId'],
+                        'playlistID'    => $playlistID,
+                        'title'         => $snippet['title'],
+                        'slug'          => createSlug($snippet['title']),
+                        'description'   => $snippet['description'],
+                        'thumbnails'    => $snippet['thumbnails']['maxres']['url'],
+                        'views'         => 1,
+                        'comments'      => 1,
+                        'ratings'       => 1,
+                    ];
+                }
+            }
+
+            $nextPageToken = isset($dataReturn['nextPageToken']) ? $dataReturn['nextPageToken'] : '';
+        } while($nextPageToken != '');
+
+        $playlistInfo['items']  = $items;
 
         if (isset($_POST["btnPreview"])){
-            // $result = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' . $videoInfo['id'] . '" frameborder="0" allow="accelerometer; 
-            //     autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+            $result = '<div class="list-group">';
+            foreach ($playlistInfo['items'] as $key => $value) {
+                $result .= '<a href="https://www.youtube.com/watch?v='.$value['id'] .'" class="list-group-item">' . $value['title']. '</a>';
+            }
+            $result .= '</div>';
         } else if (isset($_POST["btnSave"])){
             // $videoIDs = file_get_contents($FILE_VIDEO_TXT);
 
@@ -107,6 +144,13 @@
                 </div>
                 <div class="panel-body">
                     <?php 
+                        if($playlistInfo) {
+                            echo "<pre>";
+                            print_r(json_encode($playlistInfo));
+                            echo "</pre>";
+
+                            echo $result;
+                        }
                         if($msg) echo $msg ;
                     ?>
                 </div>
