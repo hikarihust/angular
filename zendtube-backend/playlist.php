@@ -43,7 +43,7 @@
             $playlistInfo['title']         = $snippet['title'];
             $playlistInfo['slug']          = createSlug($snippet['title']);
             $playlistInfo['description']   = $snippet['description'];
-            $playlistInfo['thumbnails']    = $snippet['thumbnails']['standard']['url'];
+            $playlistInfo['thumbnails']    = isset($snippet['thumbnails']['standard']['url']) ? $snippet['thumbnails']['standard']['url'] : '';
         }
 
         // Step 02 - Get Videos Info
@@ -71,7 +71,7 @@
                         'title'         => $snippet['title'],
                         'slug'          => createSlug($snippet['title']),
                         'description'   => $snippet['description'],
-                        'thumbnails'    => $snippet['thumbnails']['maxres']['url'],
+                        'thumbnails'    => isset($snippet['thumbnails']['maxres']['url']) ? $snippet['thumbnails']['maxres']['url'] : '',
                         'views'         => 1,
                         'comments'      => 1,
                         'ratings'       => 1,
@@ -91,23 +91,23 @@
             }
             $result .= '</div>';
         } else if (isset($_POST["btnSave"])){
-            // $videoIDs = file_get_contents($FILE_VIDEO_TXT);
+            $playlistIDs = file_get_contents($FILE_PLAYLIST_TXT);
 
-            // if (strpos($videoIDs,  "##" . $videoID . "##") === false){ 
-            //     // Step 1: Lưu $videoID vào file videos.txt
-            //     file_put_contents($FILE_VIDEO_TXT, $videoIDs . "##" . $videoID . "##");   
+            if (strpos($playlistIDs,  "##" . $playlistID . "##") === false){ 
+                // Step 1: Lưu $playlistID vào file playlists.txt
+                file_put_contents($FILE_PLAYLIST_TXT, $playlistIDs . "##" . $playlistID . "##");   
 
-            //     // Step 2: Lưu thông tin video $videoInfo của $videoID vào file videos.json    
-            //     $json   = json_decode(file_get_contents($FILE_VIDEO_JSON), true);
-            //     $json[] = $videoInfo;
+                // Step 2: Lưu thông tin playlist $playlistInfo của $playlistID vào file playlists.json
+                $json   = json_decode(file_get_contents($FILE_PLAYLIST_JSON), true);
+                $json[] = $playlistInfo;
 
-            //     file_put_contents($FILE_VIDEO_JSON, json_encode($json));
+                file_put_contents($FILE_PLAYLIST_JSON, json_encode($json));
 
-            //     $msg   = 'Video đã được lưu thành công';
-            // }else {
-            //     // Xuất thông báo video này đã lưu rồi
-            //     $msg   = 'Video này đã được lưu rồi';
-            // }
+                $msg   = 'Playlist đã được lưu thành công';
+            }else {
+                // Xuất thông báo video này đã lưu rồi
+                $msg   = 'Playlist này đã được lưu rồi';
+            }
         } else if (isset($_POST["btnClear"])){
             $result     = '';
             $playlistInfo  = [];
