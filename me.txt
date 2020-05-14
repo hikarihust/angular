@@ -694,4 +694,9 @@ Lấy thông tin video youtube
         videos.txt chứa id của các video, để khi đã lưu thông tin của 1 video nào đó thì sẽ lưu id của video đó vào tập tin này, mỗi lần lưu
             thông tin của video thì sẽ kiểm tra xem id của video đó có tồn tại trong tập tin này hay không. Nếu đã tồn tại thì sẽ ko thực hiện
             lưu vào trong json
-        
+
+Lấy thông tin playlist youtube
+    Get playlist 01: Lấy thông tin của playlist(chưa có danh sách video)
+        youtube api(Reference): Playlists -> list
+            GET https://www.googleapis.com/youtube/v3/playlists
+    
