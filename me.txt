@@ -705,4 +705,23 @@ Lấy thông tin playlist youtube
             The pageToken parameter identifies a specific page in the result set that should be returned. In an API response, the nextPageToken and 
             prevPageToken properties identify other pages that could be retrieved.
     Save
+
+============================================ Project 12: Ztube Website xem video Youtube - Frontend ============================================
+
+Phân tích liệt kê module & component
+    Phân tích các Module
+        Zendtude: Module chính của ứng dụng
+        Elements: Module chứa các element/Widget dùng chung cho toàn bộ ứng dụng
+        Admin: Module dành cho vùng chức năng Admin
+        Shared: Module chia sẻ các tài nguyên dùng chung (class, service, Pipe, component...)
+    Phân chia giao diện và liệt kê các chức năng cần thực hiện
+        Element linh động hơn Widget: element title, element Footer... những thành phần dùng chung
+        Widget Popular Video, Widget Ads... những thành phần với chức năng riêng biệt
+    Xác định các URL có thể có trong ứng dụng
+        /: HomeComponent -> Trang chủ
+        /videos?page=1 VideosComponent -> Danh sách tất cả videos có phân trang
+        /video/:id  VideoComponent -> Thông tin chi tiết của video dựa vào id 
+        /playlists?page=1  PlaylistsComponent -> Danh sách tất cả playlist có phân trang
+        /playlist/:id PlaylistComponent -> Thông tin chi tiết của playlist dựa vào id
+        ** ErrorComponent -> Trang 404
     
