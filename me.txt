@@ -724,4 +724,11 @@ Phân tích liệt kê module & component
         /playlists?page=1  PlaylistsComponent -> Danh sách tất cả playlist có phân trang
         /playlist/:id PlaylistComponent -> Thông tin chi tiết của playlist dựa vào id
         ** ErrorComponent -> Trang 404
+
+Khởi tạo Project với Angular CLI
+    Angular CLI
+        npm install -g @angular/cli
+        ng new zendtude-frontend
+        cd zendtude-frontend
+        ng serve
     
