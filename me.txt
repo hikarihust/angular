@@ -735,4 +735,10 @@ Tích hợp giao diệnVideo Giao diện
     Giao diện
 Xây dựng Module Elements
     Widget Ads 01
+    Widget Ads 02
+        selector: '[zvn-widget-ads]',
+        @Input('zvn-widget-ads') position: string;
+        <div zvn-widget-ads="'top'"></div>
+            'top': Giá trị của Input
+            Không tạo ra thẻ <zvn-widget-ads></zvn-widget-ads> trong cấu trúc DOM 
     
