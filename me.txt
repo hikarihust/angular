@@ -731,6 +731,8 @@ Khởi tạo Project với Angular CLI
         ng new zendtude-frontend
         cd zendtude-frontend
         ng serve
-    Tích hợp giao diệnVideo Giao diện
-        Giao diện
+Tích hợp giao diệnVideo Giao diện
+    Giao diện
+Xây dựng Module Elements
+    Widget Ads 01
     
