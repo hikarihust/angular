@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { WidgetAdsComponent } from './widget-ads/widget-ads.component';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -8,6 +9,7 @@ import { WidgetAdsComponent } from './widget-ads/widget-ads.component';
     WidgetAdsComponent
   ],
   imports: [
+    CommonModule
   ],
   exports: [
     WidgetAdsComponent

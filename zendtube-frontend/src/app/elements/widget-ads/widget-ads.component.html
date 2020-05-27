@@ -1,9 +1,25 @@
-<a href="#" target="_blank"><img src="images/no-banner-468x60.jpg" width="468" height="60" alt="" /></a>
 
+<!-- TOP -->
+<a *ngIf="position=='top'"  href="#" target="_blank">
+  <img src="assets/images/no-banner-468x60.jpg" width="468" height="60" alt="ads-top" />
+</a>
 
+<!-- SIDEBAR -->
+<div *ngIf="position=='sidebar'"  class="banner-widget no-border">
+  <a href="#" target="_blank">
+    <img src="assets/images/no-banner-300x250.jpg" width="300" height="250" alt="ads-sidebar" />
+  </a>
+  <a href="#" class="banner-meta">
+    <i class="fa fa-angle-double-up"></i> Contact us about advert spaces <i class="fa fa-angle-double-up"></i>
+  </a>
+</div>
 
-<!--
-<div class="banner-widget no-border">
-  <a href="#" target="_blank"><img src="images/no-banner-300x250.jpg" width="300" height="250" alt="" /></a>
-  <a href="contact-us.html" class="banner-meta"><i class="fa fa-angle-double-up"></i> Contact us about advert spaces <i class="fa fa-angle-double-up"></i></a>
-</div> -->
+<!-- ARTICLE -->
+<div *ngIf="position=='article'" class="panel-block banner-block">
+  <a href="#" target="_blank">
+    <img src="assets/images/no-banner-468x60-light.jpg" width="468" height="60" alt="ads-article">
+  </a>
+  <a href="#" class="banner-meta">
+    <i class="fa fa-angle-double-up"></i> Contact us about advert spaces <i class="fa fa-angle-double-up"></i>
+  </a>
+</div>
