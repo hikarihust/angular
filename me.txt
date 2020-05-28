@@ -745,4 +745,5 @@ Xây dựng Module Elements
         Khi dùng ngIf thì cần phải import CommonModule
     Widget Banner
     Widget Social
+    Widget Menu Top
     

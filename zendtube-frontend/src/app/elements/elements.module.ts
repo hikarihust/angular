@@ -3,6 +3,7 @@ import { WidgetAdsComponent } from './widget-ads/widget-ads.component';
 import { CommonModule } from '@angular/common';
 import { WidgetBannerComponent } from './widget-banner/widget-banner.component';
 import { WidgetSocialComponent } from './widget-social/widget-social.component';
+import { WidgetMenuTopComponent } from './widget-menu-top/widget-menu-top.component';
 
 
 
@@ -10,7 +11,8 @@ import { WidgetSocialComponent } from './widget-social/widget-social.component';
   declarations: [
     WidgetAdsComponent,
     WidgetBannerComponent,
-    WidgetSocialComponent
+    WidgetSocialComponent,
+    WidgetMenuTopComponent
   ],
   imports: [
     CommonModule
@@ -18,7 +20,8 @@ import { WidgetSocialComponent } from './widget-social/widget-social.component';
   exports: [
     WidgetAdsComponent,
     WidgetBannerComponent,
-    WidgetSocialComponent
+    WidgetSocialComponent,
+    WidgetMenuTopComponent
   ]
 })
 export class ElementsModule { }
