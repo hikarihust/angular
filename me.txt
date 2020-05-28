@@ -744,4 +744,5 @@ Xây dựng Module Elements
     Widget Ads 03
         Khi dùng ngIf thì cần phải import CommonModule
     Widget Banner
-     
+    Widget Social
+    
