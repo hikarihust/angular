@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { WidgetBannerComponent } from './widget-banner/widget-banner.component';
 import { WidgetSocialComponent } from './widget-social/widget-social.component';
 import { WidgetMenuTopComponent } from './widget-menu-top/widget-menu-top.component';
+import { WidgetMenuMainComponent } from './widget-menu-main/widget-menu-main.component';
 
 
 
@@ -12,7 +13,8 @@ import { WidgetMenuTopComponent } from './widget-menu-top/widget-menu-top.compon
     WidgetAdsComponent,
     WidgetBannerComponent,
     WidgetSocialComponent,
-    WidgetMenuTopComponent
+    WidgetMenuTopComponent,
+    WidgetMenuMainComponent
   ],
   imports: [
     CommonModule
@@ -21,7 +23,8 @@ import { WidgetMenuTopComponent } from './widget-menu-top/widget-menu-top.compon
     WidgetAdsComponent,
     WidgetBannerComponent,
     WidgetSocialComponent,
-    WidgetMenuTopComponent
+    WidgetMenuTopComponent,
+    WidgetMenuMainComponent
   ]
 })
 export class ElementsModule { }

@@ -746,4 +746,5 @@ Xây dựng Module Elements
     Widget Banner
     Widget Social
     Widget Menu Top
+    Widget Meun Main
     
