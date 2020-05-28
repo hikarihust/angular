@@ -743,4 +743,5 @@ Xây dựng Module Elements
             Không tạo ra thẻ <zvn-widget-ads></zvn-widget-ads> trong cấu trúc DOM 
     Widget Ads 03
         Khi dùng ngIf thì cần phải import CommonModule
-    
+    Widget Banner
+     
