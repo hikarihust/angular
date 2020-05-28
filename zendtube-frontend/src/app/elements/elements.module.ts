@@ -8,6 +8,8 @@ import { WidgetSocialComponent } from './widget-social/widget-social.component';
 import { WidgetMenuTopComponent } from './widget-menu-top/widget-menu-top.component';
 import { WidgetMenuMainComponent } from './widget-menu-main/widget-menu-main.component';
 
+import { WidgetPlaylistComponent } from './widget-playlist/widget-playlist.component';
+
 // Element
 import { ElmHeaderComponent } from './elm-header/elm-header.component';
 
@@ -18,6 +20,8 @@ import { ElmHeaderComponent } from './elm-header/elm-header.component';
     WidgetSocialComponent,
     WidgetMenuTopComponent,
     WidgetMenuMainComponent,
+    WidgetPlaylistComponent,
+
     ElmHeaderComponent
   ],
   imports: [
@@ -29,6 +33,8 @@ import { ElmHeaderComponent } from './elm-header/elm-header.component';
     WidgetSocialComponent,
     WidgetMenuTopComponent,
     WidgetMenuMainComponent,
+    WidgetPlaylistComponent,
+
     ElmHeaderComponent
   ]
 })

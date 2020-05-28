@@ -748,4 +748,5 @@ Xây dựng Module Elements
     Widget Menu Top
     Widget Meun Main
     Element Header
+    Widget Playlist
     
