@@ -752,4 +752,13 @@ Xây dựng Module Elements
     Widget Featured Videos
     Widget Popular Video
     Widget Contact
-    
+    Widget Facebook
+        Box Like Facebook - Page Plugin
+        Step 1: Include the JavaScript SDK on your page once, ideally right after the opening body tag.
+            <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0"></script>
+        Step 2: Place this code wherever you want the plugin to appear on your page.
+            <div class="fb-page" data-href="https://www.facebook.com/zendvngroup" data-tabs="" data-width="" data-height="" 
+            data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+            <blockquote cite="https://www.facebook.com/zendvngroup" class="fb-xfbml-parse-ignore">
+            <a href="https://www.facebook.com/zendvngroup">ZendVN</a></blockquote></div>
