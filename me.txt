@@ -766,4 +766,5 @@ Xây dựng Module Elements
     FooterBottom - FooterTop - Footer
     Element Playlist
     Element Video
+    Optimized Featured - Popular
     
