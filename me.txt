@@ -750,4 +750,5 @@ Xây dựng Module Elements
     Element Header
     Widget Playlist
     Widget Featured Videos
+    Widget Popular Video
     
