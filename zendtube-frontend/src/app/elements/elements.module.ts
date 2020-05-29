@@ -11,6 +11,7 @@ import { WidgetMenuMainComponent } from './widget-menu-main/widget-menu-main.com
 import { WidgetPlaylistComponent } from './widget-playlist/widget-playlist.component';
 import { WidgetFeaturedVideoComponent } from './widget-featured-video/widget-featured-video.component';
 import { WidgetPopularVideoComponent } from './widget-popular-video/widget-popular-video.component';
+import { WidgetContactComponent } from './widget-contact/widget-contact.component';
 
 // Element
 import { ElmHeaderComponent } from './elm-header/elm-header.component';
@@ -25,6 +26,7 @@ import { ElmHeaderComponent } from './elm-header/elm-header.component';
     WidgetPlaylistComponent,
     WidgetFeaturedVideoComponent,
     WidgetPopularVideoComponent,
+    WidgetContactComponent,
 
     ElmHeaderComponent
   ],
@@ -40,6 +42,7 @@ import { ElmHeaderComponent } from './elm-header/elm-header.component';
     WidgetPlaylistComponent,
     WidgetFeaturedVideoComponent,
     WidgetPopularVideoComponent,
+    WidgetContactComponent,
 
     ElmHeaderComponent
   ]

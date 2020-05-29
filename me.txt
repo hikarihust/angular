@@ -751,4 +751,5 @@ Xây dựng Module Elements
     Widget Playlist
     Widget Featured Videos
     Widget Popular Video
+    Widget Contact
     
