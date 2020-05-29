@@ -764,4 +764,5 @@ Xây dựng Module Elements
             <a href="https://www.facebook.com/zendvngroup">ZendVN</a></blockquote></div>
     Copyright - Menu bottom
     FooterBottom - FooterTop - Footer
+    Element Playlist
     

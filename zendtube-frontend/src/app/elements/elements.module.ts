@@ -21,6 +21,7 @@ import { ElmHeaderComponent } from './elm-header/elm-header.component';
 import { ElmFooterTopComponent } from './elm-footer-top/elm-footer-top.component';
 import { ElmFooterBottomComponent } from './elm-footer-bottom/elm-footer-bottom.component';
 import { ElmFooterComponent } from './elm-footer/elm-footer.component';
+import { ElmPlaylistComponent } from './elm-playlist/elm-playlist.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ElmFooterComponent } from './elm-footer/elm-footer.component';
     ElmHeaderComponent,
     ElmFooterTopComponent,
     ElmFooterBottomComponent,
-    ElmFooterComponent
+    ElmFooterComponent,
+    ElmPlaylistComponent
   ],
   imports: [
     CommonModule
@@ -62,7 +64,8 @@ import { ElmFooterComponent } from './elm-footer/elm-footer.component';
     ElmHeaderComponent,
     ElmFooterTopComponent,
     ElmFooterBottomComponent,
-    ElmFooterComponent
+    ElmFooterComponent,
+    ElmPlaylistComponent
   ]
 })
 export class ElementsModule { }
