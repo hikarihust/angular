@@ -762,3 +762,5 @@ Xây dựng Module Elements
             data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
             <blockquote cite="https://www.facebook.com/zendvngroup" class="fb-xfbml-parse-ignore">
             <a href="https://www.facebook.com/zendvngroup">ZendVN</a></blockquote></div>
+    Copyright - Menu bottom
+    

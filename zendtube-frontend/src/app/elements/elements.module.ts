@@ -13,6 +13,8 @@ import { WidgetFeaturedVideoComponent } from './widget-featured-video/widget-fea
 import { WidgetPopularVideoComponent } from './widget-popular-video/widget-popular-video.component';
 import { WidgetContactComponent } from './widget-contact/widget-contact.component';
 import { WidgetFacebookComponent } from './widget-facebook/widget-facebook.component';
+import { WidgetCopyrightComponent } from './widget-copyright/widget-copyright.component';
+import { WidgetMenuBottomComponent } from './widget-menu-bottom/widget-menu-bottom.component';
 
 // Element
 import { ElmHeaderComponent } from './elm-header/elm-header.component';
@@ -29,6 +31,8 @@ import { ElmHeaderComponent } from './elm-header/elm-header.component';
     WidgetPopularVideoComponent,
     WidgetContactComponent,
     WidgetFacebookComponent,
+    WidgetCopyrightComponent,
+    WidgetMenuBottomComponent,
 
     ElmHeaderComponent
   ],
@@ -46,6 +50,8 @@ import { ElmHeaderComponent } from './elm-header/elm-header.component';
     WidgetPopularVideoComponent,
     WidgetContactComponent,
     WidgetFacebookComponent,
+    WidgetCopyrightComponent,
+    WidgetMenuBottomComponent,
 
     ElmHeaderComponent
   ]
