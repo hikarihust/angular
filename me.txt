@@ -765,4 +765,5 @@ Xây dựng Module Elements
     Copyright - Menu bottom
     FooterBottom - FooterTop - Footer
     Element Playlist
+    Element Video
     
