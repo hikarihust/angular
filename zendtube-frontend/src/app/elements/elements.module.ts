@@ -18,6 +18,9 @@ import { WidgetMenuBottomComponent } from './widget-menu-bottom/widget-menu-bott
 
 // Element
 import { ElmHeaderComponent } from './elm-header/elm-header.component';
+import { ElmFooterTopComponent } from './elm-footer-top/elm-footer-top.component';
+import { ElmFooterBottomComponent } from './elm-footer-bottom/elm-footer-bottom.component';
+import { ElmFooterComponent } from './elm-footer/elm-footer.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { ElmHeaderComponent } from './elm-header/elm-header.component';
     WidgetCopyrightComponent,
     WidgetMenuBottomComponent,
 
-    ElmHeaderComponent
+    ElmHeaderComponent,
+    ElmFooterTopComponent,
+    ElmFooterBottomComponent,
+    ElmFooterComponent
   ],
   imports: [
     CommonModule
@@ -53,7 +59,10 @@ import { ElmHeaderComponent } from './elm-header/elm-header.component';
     WidgetCopyrightComponent,
     WidgetMenuBottomComponent,
 
-    ElmHeaderComponent
+    ElmHeaderComponent,
+    ElmFooterTopComponent,
+    ElmFooterBottomComponent,
+    ElmFooterComponent
   ]
 })
 export class ElementsModule { }

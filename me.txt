@@ -763,4 +763,5 @@ Xây dựng Module Elements
             <blockquote cite="https://www.facebook.com/zendvngroup" class="fb-xfbml-parse-ignore">
             <a href="https://www.facebook.com/zendvngroup">ZendVN</a></blockquote></div>
     Copyright - Menu bottom
+    FooterBottom - FooterTop - Footer
     
