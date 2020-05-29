@@ -749,4 +749,5 @@ Xây dựng Module Elements
     Widget Meun Main
     Element Header
     Widget Playlist
+    Widget Featured Videos
     
