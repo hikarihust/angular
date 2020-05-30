@@ -1,13 +1,6 @@
 <div class="content-panel">
-  <div class="panel-title">
-      <h2>Latest Videos</h2>
-      <div class="right video-set-layout">
-          <a href="#v-set-layout" rel="grid" class="active"><i class="fa fa-th"></i></a>
-          <a href="#v-set-layout" rel="hdgrid"><i class="fa fa-th-large"></i></a>
-          <a href="#v-set-layout" rel="list"><i class="fa fa-th-list"></i></a>
-          <a href="#v-set-layout" rel="hdlist"><i class="fa fa-bars"></i></a>
-      </div>
-  </div>
+  <!-- ELEMENT PANEL TITLE -->
+  <div class="panel-title" [zvn-elm-panel-title]="title"></div>
   <div class="panel-block video-list grid">
       <!-- ELEMENT VIDEO -->
       <div class="item" zvn-elm-video show-desc="true"></div>

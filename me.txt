@@ -767,4 +767,8 @@ Xây dựng Module Elements
     Element Playlist
     Element Video
     Optimized Featured - Popular
+    Element Panel Title
+        Input: 
+            <zvn-elm-playlist title="Angular"></zvn-elm-playlist>
+            <div class="panel-title" [zvn-elm-panel-title]="title"></div>
     
