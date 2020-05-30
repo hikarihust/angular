@@ -23,8 +23,8 @@ import { ZVideoModule } from './zvideo/zvideo.module';
 
     // Custom Module
     SharedModule,
-    ElementsModule,
     ZVideoModule,
+    ElementsModule,
 
     // Routing
     AppRoutingModule

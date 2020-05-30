@@ -14,14 +14,14 @@ const defineRoutes: Routes = [
   {path: '', component: HomeComponent},
 
   // List videos /videos?page=1
-  {path: '/videos', component: VideoComponent},
+  {path: 'videos', component: VideosComponent},
 
   // List Playlists /playlists?page=1
-  {path: '/playlists', component: PlaylistsComponent},
+  {path: 'playlists', component: PlaylistsComponent},
 
   // List videos in Playlist /playlists?page=1
   {
-    path: '/playlist',
+    path: 'playlist',
     children: [
       {
         path: '',
@@ -36,7 +36,7 @@ const defineRoutes: Routes = [
 
   // Info video /video/:id
   {
-    path: '/video',
+    path: 'video',
     children: [
       {
         path: '',

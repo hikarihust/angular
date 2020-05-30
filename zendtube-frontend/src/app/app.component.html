@@ -2,40 +2,7 @@
         <div class="boxed">
           <!-- HEADER -->
           <header class="header dark" zvn-elm-header></header>
-
-          <!-- BEGIN .content -->
-          <section class="content">
-              <!-- BEGIN .wrapper -->
-              <div class="wrapper">
-                  <!-- BEGIN .with-sidebar-layout -->
-                  <div class="with-sidebar-layout left">
-
-                      <!-- ELEMENT PLAYLIST : LATEST PLAYLIST -->
-                      <zvn-elm-playlist title="Angular" layout="grid"></zvn-elm-playlist>
-                      <zvn-elm-playlist title="PHP" layout="hdgrid"></zvn-elm-playlist>
-                      <!-- WIDGET ADS: article -->
-                      <div class="content-panel" zvn-widget-ads="article"></div>
-                      <zvn-elm-playlist title="Java" layout="list"></zvn-elm-playlist>
-                      <zvn-elm-playlist title="ReactJS" layout="hdlist"></zvn-elm-playlist>
-                      <!-- WIDGET ADS: article -->
-                      <div class="content-panel" zvn-widget-ads="article"></div>
-
-                  </div>
-                  <!-- BEGIN #sidebar -->
-                  <aside id="sidebar" class="right">
-                      <!-- WIDGET PLAYLIST -->
-                      <div class="widget" zvn-widget-playlist></div>
-
-                      <!-- WIDGET ADS : Sidebar -->
-                      <div class="widget" zvn-widget-ads="sidebar"></div>
-
-                      <!-- WIDGET FEATURED VIDEO -->
-                      <div class="widget" zvn-widget-featured-video></div>
-                  </aside>
-                  <!-- END .wrapper -->
-              </div>
-              <!-- BEGIN .content -->
-          </section>
+          <router-outlet></router-outlet>
 
           <!-- FOOTER -->
           <zvn-elm-footer></zvn-elm-footer>
