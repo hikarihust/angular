@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFireDatabase } from '@angular/fire/database';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -8,8 +9,10 @@ import { Observable } from 'rxjs';
 })
 export class TrainingComponent implements OnInit {
   items: Observable<any[]>;
-  constructor(firestore: AngularFirestore) {
-    this.items = firestore.collection('items').valueChanges();
+  item: Observable<any>;
+  constructor(db: AngularFireDatabase) {
+    this.items = db.list('/items').valueChanges();
+    this.item = db.object('/items/sefrftgt').valueChanges();
   }
   ngOnInit() {
   }

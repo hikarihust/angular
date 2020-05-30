@@ -1,6 +1,8 @@
 <h3>training</h3>
 <ul>
-  <li class="text" *ngFor="let item of items | async">
-    {{item.value}}
+  <li class="text" *ngFor="let elm of items | async">
+    {{ elm.id }} - {{ elm.name }}
   </li>
 </ul>
+
+<h3 *ngIf="item" >{{ (item | async | json) }}</h3>

@@ -794,14 +794,19 @@ Firebase tích hợp và sử dụng: Tìm hiểu các chức năng của Fireba
         https://github.com/angular/angularfire/blob/master/docs/install-and-setup.md
         AngularFire Quickstart
         Firebase - zendtude - setting
-    Config Firebase 02
+    Config Firebase 02(Realtime Database)
         Để có quyền đọc
         Database - Rules:
-            rules_version = '2';
-            service cloud.firestore {
-                match /databases/{database}/documents {
-                    match /{document=**} {
-                    allow read, write: if true;
-                    }
-                }
+            {
+            /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+            "rules": {
+                ".read": true,
+                ".write": true
             }
+            }
+    Firebase API 01
+        https://github.com/angular/angularfire
+        Developer Guide
+        list() Trả về danh sách các đối tượng
+        object() trả về 1 đối tượng
+    
