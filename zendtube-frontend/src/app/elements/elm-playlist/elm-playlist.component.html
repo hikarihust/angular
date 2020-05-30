@@ -3,6 +3,7 @@
   <div class="panel-title" 
     [zvn-elm-panel-title]="title"
     [layout]="layout"
+    (myLayout)="changeLayout($event)"
     ></div>
   <div class="panel-block video-list {{ layout }}">
       <!-- ELEMENT VIDEO -->

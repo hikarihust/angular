@@ -9,6 +9,11 @@ export class ElmPlaylistComponent implements OnInit {
   @Input('layout') layout: string;
   constructor() {
   }
+
   ngOnInit() {
+  }
+
+  changeLayout(data: any) {
+    this.layout = data;
   }
 }

@@ -772,4 +772,6 @@ Xây dựng Module Elements
             <zvn-elm-playlist title="Angular"></zvn-elm-playlist>
             <div class="panel-title" [zvn-elm-panel-title]="title"></div>
     Playlist - Panel Title 01
+    Playlist - Panel Title 02
+        click event trong tag <a> => return false để không bị chuyển trang khi click
     

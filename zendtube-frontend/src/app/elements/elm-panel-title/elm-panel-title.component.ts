@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: '[zvn-elm-panel-title]',
@@ -7,9 +7,16 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ElmPanelTitleComponent implements OnInit {
   @Input("zvn-elm-panel-title") title: string = null;
   @Input('layout') layout: string;
+  @Output() myLayout = new EventEmitter<string>();
   constructor() {
   }
   ngOnInit() {
+  }
+
+  setLayout(layout: string) {
+    this.layout = layout;
+    this.myLayout.emit(layout);
+    return false;
   }
 
   setActive(layout: string) {
