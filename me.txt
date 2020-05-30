@@ -784,4 +784,9 @@ Xây dựng Module Zvideo
         zvideo-routing.module.ts
             imports: [RouterModule.forChild(defineRoutes)]
     Zvideo 03
-    
+Firebase tích hợp và sử dụng: Tìm hiểu các chức năng của Firebase
+    Admin & Install Firebase
+        Firebase -> Go to Console -> Add project 
+        Project name: zendtude
+        Docs - For Web
+        Angularfire: Package được xây dựng để làm việc với Angular

@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "zendtube-frontend",
+      "public": "dist/zendtube-frontend",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

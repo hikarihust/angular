@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { ElementsModule } from './elements/elements.module';
 import { ZVideoModule } from './zvideo/zvideo.module';
+import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ZVideoModule } from './zvideo/zvideo.module';
     SharedModule,
     ZVideoModule,
     ElementsModule,
+    AdminModule,
 
     // Routing
     AppRoutingModule

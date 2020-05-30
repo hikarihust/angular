@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "zendtude": {
+      "hosting": {
+        "zendtube-frontend": [
+          "zendtude"
+        ]
+      }
+    }
+  }
+}
