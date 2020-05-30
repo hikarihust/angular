@@ -778,4 +778,9 @@ Xây dựng Module Shared
     Module Shared: Chứa các tài nguyên dùng chung cho toàn bộ ứng dụng
 Xây dựng Module Zvideo
     Zvideo 01
+    Zvideo 02
+        app-routing.module.ts
+            imports: [RouterModule.forRoot(defineRoutes)]
+        zvideo-routing.module.ts
+            imports: [RouterModule.forChild(defineRoutes)]
     
