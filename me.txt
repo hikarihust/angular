@@ -790,3 +790,8 @@ Firebase tích hợp và sử dụng: Tìm hiểu các chức năng của Fireba
         Project name: zendtude
         Docs - For Web
         Angularfire: Package được xây dựng để làm việc với Angular
+    Config Firebase 01
+        https://github.com/angular/angularfire/blob/master/docs/install-and-setup.md
+        AngularFire Quickstart
+        Firebase - zendtude - setting
+        

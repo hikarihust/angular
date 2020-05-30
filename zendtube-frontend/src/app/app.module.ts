@@ -6,6 +6,10 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+// AngularFireModule
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+
 // Module
 import { SharedModule } from './shared/shared.module';
 import { ElementsModule } from './elements/elements.module';
@@ -21,6 +25,7 @@ import { AdminModule } from './admin/admin.module';
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
 
     // Custom Module
     SharedModule,
