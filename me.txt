@@ -774,4 +774,6 @@ Xây dựng Module Elements
     Playlist - Panel Title 01
     Playlist - Panel Title 02
         click event trong tag <a> => return false để không bị chuyển trang khi click
+Xây dựng Module Shared
+    Module Shared: Chứa các tài nguyên dùng chung cho toàn bộ ứng dụng
     
