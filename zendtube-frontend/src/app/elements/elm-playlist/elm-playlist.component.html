@@ -1,8 +1,12 @@
 <div class="content-panel">
   <!-- ELEMENT PANEL TITLE -->
-  <div class="panel-title" [zvn-elm-panel-title]="title"></div>
-  <div class="panel-block video-list grid">
+  <div class="panel-title" 
+    [zvn-elm-panel-title]="title"
+    [layout]="layout"
+    ></div>
+  <div class="panel-block video-list {{ layout }}">
       <!-- ELEMENT VIDEO -->
+      <div class="item" zvn-elm-video show-desc="true"></div>
       <div class="item" zvn-elm-video show-desc="true"></div>
       <div class="item" zvn-elm-video show-desc="true"></div>
 

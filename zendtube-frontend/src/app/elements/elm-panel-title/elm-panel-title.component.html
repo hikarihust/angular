@@ -1,7 +1,7 @@
 <h2>{{ title }}</h2>
 <div class="right video-set-layout">
-    <a href="#v-set-layout" rel="grid" class="active"><i class="fa fa-th"></i></a>
-    <a href="#v-set-layout" rel="hdgrid"><i class="fa fa-th-large"></i></a>
-    <a href="#v-set-layout" rel="list"><i class="fa fa-th-list"></i></a>
-    <a href="#v-set-layout" rel="hdlist"><i class="fa fa-bars"></i></a>
+    <a href="#v-set-layout" rel="grid" [ngClass]="setActive('grid')"><i class="fa fa-th"></i></a>
+    <a href="#v-set-layout" rel="hdgrid" [ngClass]="setActive('hdgrid')"><i class="fa fa-th-large"></i></a>
+    <a href="#v-set-layout" rel="list" [ngClass]="setActive('list')"><i class="fa fa-th-list"></i></a>
+    <a href="#v-set-layout" rel="hdlist" [ngClass]="setActive('hdlist')"><i class="fa fa-bars"></i></a>
 </div>

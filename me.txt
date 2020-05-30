@@ -771,4 +771,5 @@ Xây dựng Module Elements
         Input: 
             <zvn-elm-playlist title="Angular"></zvn-elm-playlist>
             <div class="panel-title" [zvn-elm-panel-title]="title"></div>
+    Playlist - Panel Title 01
     

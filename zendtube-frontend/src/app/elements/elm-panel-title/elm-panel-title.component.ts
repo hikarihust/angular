@@ -6,8 +6,15 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ElmPanelTitleComponent implements OnInit {
   @Input("zvn-elm-panel-title") title: string = null;
+  @Input('layout') layout: string;
   constructor() {
   }
   ngOnInit() {
+  }
+
+  setActive(layout: string) {
+    return {
+      active: (layout==this.layout)
+    };
   }
 }

@@ -6,6 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ElmPlaylistComponent implements OnInit {
   @Input('title') title: string;
+  @Input('layout') layout: string;
   constructor() {
   }
   ngOnInit() {
