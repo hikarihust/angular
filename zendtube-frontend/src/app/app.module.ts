@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 
 // AngularFireModule
 import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 
 // Module
@@ -26,6 +27,7 @@ import { AdminModule } from './admin/admin.module';
     FormsModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
 
     // Custom Module
     SharedModule,

@@ -1,1 +1,6 @@
 <h3>training</h3>
+<ul>
+  <li class="text" *ngFor="let item of items | async">
+    {{item.value}}
+  </li>
+</ul>
