@@ -29,9 +29,16 @@ export class PushDataComponent implements OnInit {
 
     // Playlist
     const PlaylistRef = this._db.list("playlist");
-
     dbPlaylist.playlist.forEach((playlist: any) => {
       console.log(playlist);
+      PlaylistRef.push({
+        id         : playlist.id,
+        channelId  : playlist.channelId,
+        title      : playlist.title,
+        slug       : playlist.slug,
+        description: playlist.description,
+        thumbnails : playlist.thumbnails,
+      });
     });
   }
 }

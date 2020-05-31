@@ -38,8 +38,9 @@
 
         if($dataInfoReturn['items']){
             $snippet = $dataInfoReturn['items'][0]['snippet'];
-            $playlistInfo['id']            = $playlistInfo;
+            $playlistInfo['id']            = $dataInfoReturn['items'][0]['id'];
             $playlistInfo['publishedAt']   = $snippet['publishedAt'];
+            $playlistInfo['channelId']     = $snippet['channelId'];
             $playlistInfo['title']         = $snippet['title'];
             $playlistInfo['slug']          = createSlug($snippet['title']);
             $playlistInfo['description']   = $snippet['description'];

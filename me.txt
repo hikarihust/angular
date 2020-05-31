@@ -828,4 +828,5 @@ Xây dựng chức năng Push data & Mock Data
     Ads 02
         Lưu thông tin dữ liệu mẫu lên Firebase
     Playlist 01: Lấy thông tin của các playlist lưu trữ vào trong JSON
+    Playlist 02
     

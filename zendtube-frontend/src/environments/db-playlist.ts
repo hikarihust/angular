@@ -1,8 +1,9 @@
 export const dbPlaylist = {
   "playlist": [
     {
-      "id": [],
+      "id": "PLv6GftO355Avn86HCfkNnTLeOckiXZ603",
       "publishedAt": "2019-07-17T09:58:52Z",
+      "channelId": "UCcHLHCQqPZDlzwI20PzzL8g",
       "title": "Trả lời câu hỏi lập trình trên Youtube",
       "slug": "tra-loi-cau-hoi-lap-trinh-tren-youtube",
       "description": "",
@@ -154,8 +155,9 @@ export const dbPlaylist = {
       ]
     },
     {
-      "id": [],
+      "id": "PLv6GftO355AsMUZXqKY_IFsNahY1txNXS",
       "publishedAt": "2017-02-04T12:22:23Z",
+      "channelId": "UCcHLHCQqPZDlzwI20PzzL8g",
       "title": "Lập trình Angular - Angular 2x - Angular 4x - AngularJS",
       "slug": "lap-trinh-angular-angular-2x-angular-4x-angularjs",
       "description": "Khóa học được xây dựng dựa trên các project thực tế, mỗi chương học là mỗi project, thông qua việc xây dựng các project này các bạn học viên sẽ được tiếp cận ngay với cách sử dụng Angular 2x để giải quyết tình huống thực tế (hạn chế học các phần lý thuyết thừa và không áp dụng được vào công việc)",
@@ -1334,8 +1336,9 @@ export const dbPlaylist = {
       ]
     },
     {
-      "id": [],
+      "id": "PLv6GftO355AvoxffFOtyfH8eDUvEBAR1r",
       "publishedAt": "2016-10-24T13:27:12Z",
+      "channelId": "UCcHLHCQqPZDlzwI20PzzL8g",
       "title": "Lập trình Phalcon Framework - Video tự học Phalcon",
       "slug": "lap-trinh-phalcon-framework-video-tu-hoc-phalcon",
       "description": "Series video này được trích ra từ khóa học lập trình Phalcon Framework, series này sẽ giúp các bạn tự học lập trình Phalcon Framework dễ dàng hơn và có hệ thống hơn\n\nGiới thiệu khóa học lập trình Phalcon http://zendvn.com/khoa-hoc-lap-trinh-phalcon/\n\n-----------------\n\nZendVN xin cảm ơn các bạn đã dành thời gian để xem video này!\n\nHãy nhấn Subcribe để ủng hộ ZendVN và nhận được các video mới nhất về Lập trình web, lập trình di động, thiết kế web, kỹ năng lập trình, kỹ năng nghề nghiệp, kỹ năng mềm và những chia sẻ hữu ích khác từ ZendVN các bạn nhé!\nXin trân trọng!\n\nZendVN đào tạo lập trình trực tuyến - www.zend.vn - training@zend.vn - Phone: +84 (08) 66.837626",
@@ -3619,8 +3622,9 @@ export const dbPlaylist = {
       ]
     },
     {
-      "id": [],
+      "id": "PLv6GftO355Aue6eFwcf-GirTEzuD-99nu",
       "publishedAt": "2016-10-17T09:43:38Z",
+      "channelId": "UCcHLHCQqPZDlzwI20PzzL8g",
       "title": "Lập trình Zend Framework - Video Zend Framework 2x",
       "slug": "lap-trinh-zend-framework-video-zend-framework-2x",
       "description": "Loạt video \"Tự học Zend Framework\" thuộc các chương học đầu tiên trong khóa học lập trình Zend Framework 2x tại ZendVN. Sau khi hoàn tất khóa học này các bạn sẽ có một nền tảng vững chắc về lập trình hướng đối tượng PHP, hiểu được cấu trúc mô hình MVC trong các PHP framework hiện nay, hiểu rõ về các thư viện trong Zend Framework và có thể tự nghiên cứu các thư viện PHP framework bất kỳ dựa trên nền tảng của khóa học Zend Framework.\n\nNgoài ra khóa học sẽ hướng dẫn bạn quy trình và các bước để xây dựng một trang web bán hàng hoàn chỉnh từ frontend đến backend sử dụng zend framework và các kỹ thuật xử lý chuyên sâu khác trong thực tế.\n\nKhóa học lập trình zend framework 2x http://zend.vn/khoa-hoc-lap-trinh-zend-framework-2-x/\n\n-------------------------\n\nZendVN xin cảm ơn các bạn đã dành thời gian quý báo để xem video này!\n\nHãy nhấn Like video và Subcribe kênh để ủng hộ ZendVN và nhận được các video mới nhất về Lập trình web, lập trình di động, thiết kế web, kỹ năng lập trình, kỹ năng nghề nghiệp, kỹ năng mềm và những chia sẻ hữu ích khác từ ZendVN các bạn nhé!\n\nZendVN đào tạo lập trình trực tuyến - www.zend.vn - training@zend.vn - Phone: +84 (08) 66.837626",
@@ -5527,8 +5531,9 @@ export const dbPlaylist = {
       ]
     },
     {
-      "id": [],
+      "id": "PLv6GftO355Aug0rwKfb6v96mlYrwOw7XV",
       "publishedAt": "2016-10-06T09:23:30Z",
+      "channelId": "UCcHLHCQqPZDlzwI20PzzL8g",
       "title": "Tự học NoSQL - MongoDB",
       "slug": "tu-hoc-nosql-mongodb",
       "description": "",
@@ -6005,8 +6010,9 @@ export const dbPlaylist = {
       ]
     },
     {
-      "id": [],
+      "id": "PLv6GftO355AsQtYp_YrsqEihOCiNlZkCb",
       "publishedAt": "2016-09-19T02:42:43Z",
+      "channelId": "UCcHLHCQqPZDlzwI20PzzL8g",
       "title": "Lập trình TypeScript",
       "slug": "lap-trinh-typescript",
       "description": "Tham khảo khóa học lập trình TypeScript http://zend.vn/khoa-hoc-lap-trinh-typescript/",
@@ -6522,8 +6528,9 @@ export const dbPlaylist = {
       ]
     },
     {
-      "id": [],
+      "id": "PLv6GftO355AsmgFEoUx_XHfN14FAI3SrN",
       "publishedAt": "2015-10-13T07:40:07Z",
+      "channelId": "UCcHLHCQqPZDlzwI20PzzL8g",
       "title": "Lập trình Android - Tự học lập trình Android",
       "slug": "lap-trinh-android-tu-hoc-lap-trinh-android",
       "description": "Video được trích từ khóa học lập trình Android từ cơ bản đến nâng cao tại ZendVN, khóa học lập trình Android trực tuyến cung cấp các kiến thức trọng tâm về lập trình Android cũng như cách xây dựng các project chúng ta thường gặp trong thực tế\n\nTham khảo khóa học http://zend.vn/khoa-hoc-lap-trinh-and...\n\n----------------------------------------\n\n👉 Website: www.zend.vn\n👉 Skype: zendvn.help\n👉 Email: training@zend.vn\n👉 Số điện thoại: +84 (08) 66.837626\n👉 Facebook: https://www.fb.com/zendvngroup\n👉 Facebook trao đổi lập trình: https://www.fb.com/groups/ZendVN.Group/",
@@ -8326,8 +8333,9 @@ export const dbPlaylist = {
       ]
     },
     {
-      "id": [],
+      "id": "PLv6GftO355Av6u60DTCvrUe6aXror_bdE",
       "publishedAt": "2015-06-30T07:13:56Z",
+      "channelId": "UCcHLHCQqPZDlzwI20PzzL8g",
       "title": "Tự học Lập trình JAVA",
       "slug": "tu-hoc-lap-trinh-java",
       "description": "Sau khi hoàn tất khóa học bạn sẽ được trang bị kiến thức vững chắc về ngôn ngữ lập trình JAVA. Từ đó có thể tự nghiên cứu và phát triển thêm kỹ năng lập trình JAVA và tiến xa hơn là sử dụng JAVA để phát triển các ứng dụng phần mềm, ứng dụng web, ứng dụng mobile (lập trình Android).\n\nThông tin chi tiết khóa học: http://zend.vn/khoa-hoc-lap-trinh-java/ với rất nhiều chương trình hỗ trợ cho học sinh và sinh viên",
