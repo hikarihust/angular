@@ -6,10 +6,12 @@ import { AdminRoutingModule } from './admin-routing.module';
 
 // Component
 import { TrainingComponent } from './components/training.component';
+import { PushDataComponent } from './components/push-data.component';
 
 @NgModule({
   declarations: [
-    TrainingComponent
+    TrainingComponent,
+    PushDataComponent
   ],
   imports: [
     CommonModule,

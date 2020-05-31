@@ -821,4 +821,8 @@ Firebase tích hợp và sử dụng: Tìm hiểu các chức năng của Fireba
         update()
         remove() Nếu truyền vào key thì xóa 1 phần tử, còn ko truyền thì sẽ xóa tất cả các phần tử nằm trong list đã chọn
     Firebase API 04(Querying lists)
+Xây dựng chức năng Push data & Mock Data
+    Ads 01
+        Phần lưu hình ảnh quảng cáo: url, link, text, position(sidebar, banner, article)
+        Upload các tấm hình lên Storage 
     
