@@ -820,4 +820,5 @@ Firebase tích hợp và sử dụng: Tìm hiểu các chức năng của Fireba
         push() Thêm phần tử mới
         update()
         remove() Nếu truyền vào key thì xóa 1 phần tử, còn ko truyền thì sẽ xóa tất cả các phần tử nằm trong list đã chọn
+    Firebase API 04(Querying lists)
     

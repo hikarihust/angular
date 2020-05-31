@@ -12,7 +12,7 @@ export class TrainingComponent implements OnInit {
   item: Observable<any>;
   // itemRef: AngularFireObject<any>;
   constructor(db: AngularFireDatabase) {
-    this.items = db.list('/items').valueChanges();
+    this.items = db.list('/items', ref => ref.orderByChild('ordering').equalTo(2)).valueChanges();
     this.item = db.object('/items/sefrftgt').valueChanges();
 
     // ----- Retrieving data as objects
@@ -33,7 +33,9 @@ export class TrainingComponent implements OnInit {
     // ----- Retrieving data as lists
     // Adding new items
     // const itemsRef = db.list('items');
-    // itemsRef.push({ name: 'abc', id: 4 });
+    // itemsRef.push({ id: 1, name: 'Angular', ordering: 1 });
+    // itemsRef.push({ id: 2, name: 'PHP', ordering: 2 });
+    // itemsRef.push({ id: 3, name: 'Typescript', ordering: 4 });
 
     // Updating items in the list using update
     // itemsRef.update('-M8dIGeyth442bXWpdiz', { name: 'abc 123' });
