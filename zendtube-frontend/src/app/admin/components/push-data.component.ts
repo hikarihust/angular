@@ -28,9 +28,9 @@ export class PushDataComponent implements OnInit {
     */
 
     // Playlist
+    /*
     const PlaylistRef = this._db.list("playlist");
     dbPlaylist.playlist.forEach((playlist: any) => {
-      console.log(playlist);
       PlaylistRef.push({
         id         : playlist.id,
         channelId  : playlist.channelId,
@@ -40,5 +40,31 @@ export class PushDataComponent implements OnInit {
         thumbnails : playlist.thumbnails,
       });
     });
+    */
+
+    // Video
+    const videoRef = this._db.list("video");
+    dbPlaylist.playlist.forEach((playlist: any) => {
+      playlist.items.forEach((video: any) => {
+        videoRef.push({
+          id          : video.id,
+          publishedAt : video.publishedAt,
+          channelId   : video.channelId,
+          playlistId  : video.playlistID,
+          title       : video.title,
+          slug        : video.slug,
+          description : video.description,
+          thumbnails  : video.thumbnails,
+          views       : this.getRandomInt(1, 500),
+          comments    : this.getRandomInt(1, 10),
+          ratings     : this.getRandomInt(1, 100),
+          featured    : (this.getRandomInt(1, 5)==2) ? true :false
+        });
+      });
+    });
+  }
+
+  getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 }
