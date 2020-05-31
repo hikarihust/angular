@@ -809,6 +809,15 @@ Firebase tích hợp và sử dụng: Tìm hiểu các chức năng của Fireba
         Developer Guide
         list() Trả về danh sách các đối tượng
         object() trả về 1 đối tượng
-    Firebase API 02
+    Firebase API 02(Retrieving data as objects)
         Remove data, Saving data, Updating data
+            set(value: T)Replaces the current value in the database with the new value specified as the parameter. This is called a 
+                destructive update, because it deletes everything currently in place and saves the new value.
+            update(value: T) Updates the current value with in the database with the new value specified as the parameter. This is 
+                called a non-destructive update, because it only updates the values specified.
+            remove() Deletes all data present at that location. Same as calling set(null)
+    Firebase API 03(Retrieving data as lists)
+        push() Thêm phần tử mới
+        update()
+        remove() Nếu truyền vào key thì xóa 1 phần tử, còn ko truyền thì sẽ xóa tất cả các phần tử nằm trong list đã chọn
     

@@ -10,11 +10,12 @@ import { Observable } from 'rxjs';
 export class TrainingComponent implements OnInit {
   items: Observable<any[]>;
   item: Observable<any>;
-  itemRef: AngularFireObject<any>;
+  // itemRef: AngularFireObject<any>;
   constructor(db: AngularFireDatabase) {
     this.items = db.list('/items').valueChanges();
     this.item = db.object('/items/sefrftgt').valueChanges();
 
+    // ----- Retrieving data as objects
     // Remove data
     // const promise = db.object('/items/abc').remove();
     // promise
@@ -28,6 +29,18 @@ export class TrainingComponent implements OnInit {
     // Updating data
     // const itemRef = db.object('/items/abc');
     // itemRef.update({ ordering: 150 });
+
+    // ----- Retrieving data as lists
+    // Adding new items
+    // const itemsRef = db.list('items');
+    // itemsRef.push({ name: 'abc', id: 4 });
+
+    // Updating items in the list using update
+    // itemsRef.update('-M8dIGeyth442bXWpdiz', { name: 'abc 123' });
+
+    // Removing items from the list
+    // itemsRef.remove('wdfrtgg');
+    // itemsRef.remove();
   }
   ngOnInit() {
   }
