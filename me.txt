@@ -809,4 +809,6 @@ Firebase tích hợp và sử dụng: Tìm hiểu các chức năng của Fireba
         Developer Guide
         list() Trả về danh sách các đối tượng
         object() trả về 1 đối tượng
+    Firebase API 02
+        Remove data, Saving data, Updating data
     
