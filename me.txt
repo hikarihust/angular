@@ -790,6 +790,7 @@ Firebase tích hợp và sử dụng: Tìm hiểu các chức năng của Fireba
         Project name: zendtude
         Docs - For Web
         Angularfire: Package được xây dựng để làm việc với Angular
+            ng add @angular/fire
     Config Firebase 01
         https://github.com/angular/angularfire/blob/master/docs/install-and-setup.md
         AngularFire Quickstart
@@ -829,7 +830,9 @@ Xây dựng chức năng Push data & Mock Data
         Lưu thông tin dữ liệu mẫu lên Firebase
     Playlist 01: Lấy thông tin của các playlist lưu trữ vào trong JSON
     Playlist 02
-    Video
+    Video    
 Xây dựng và hoàn chỉnh Widget
 	Widget Ads 01
-    
+    https://www.youtube.com/watch?v=tfy2mTv5JsY
+  Widget Ads 02
+  

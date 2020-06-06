@@ -4,6 +4,7 @@ import { Observable, BehaviorSubject, Subject } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 
 import { Ads } from 'src/app/shared/defines/ads.class';
+import { AdsService } from './../../shared/services/ads.service';
 
 @Component({
   selector: '[zvn-widget-ads]',
@@ -12,11 +13,14 @@ import { Ads } from 'src/app/shared/defines/ads.class';
 export class WidgetAdsComponent implements OnInit {
   @Input('zvn-widget-ads') position: string;
 
-  // item: Observable<any>;
+  ads: Ads[] = [];
+  adsDetails: Ads;
+  item: Ads;
 
   // size$: BehaviorSubject<string|null>;
   constructor(
-    private _db: AngularFireDatabase
+    private _db: AngularFireDatabase,
+    private _adsService: AdsService
   ) {
   }
   ngOnInit() {
@@ -34,19 +38,66 @@ export class WidgetAdsComponent implements OnInit {
     });
     */
 
+    /*
     const position$ = new Subject<string>();
     const queryObservable = position$.pipe(
-      switchMap(position => 
+      switchMap(position =>
         this._db.list('/ads', ref => ref.orderByChild('position').equalTo(position)).valueChanges()
       )
     );
-    
+
     // subscribe to changes
     queryObservable.subscribe(queriedItems => {
-      console.log(queriedItems);  
+      console.log(queriedItems);
     });
 
     // trigger the query
     position$.next(this.position);
+    */
+
+    /*
+    this._adsService.getAll().snapshotChanges().subscribe(res => {
+      this.ads.length = 0;
+      res.forEach(t => {
+        const item = t.payload.toJSON();
+        item['key'] = t.key;
+        this.ads.push(item as Ads);
+      });
+      console.log("getAll fetched successfully");
+      console.log(this.ads);
+    }, err => {
+      debugger;
+      console.log("An error occurred");
+    });
+    */
+    this.getItemByPosition(this.position);
+  }
+
+  getItemById(id: string) {
+    this._adsService.getItemById(id).snapshotChanges().subscribe(res => {
+      if (res.payload.exists()) {
+        this.adsDetails = res.payload.toJSON() as Ads;
+        this.adsDetails.key = res.key;
+        console.log('getItemById successfully');
+        // console.log(this.adsDetails);
+      } else {
+        console.log('Unknown error');
+      }
+      return res;
+    });
+  }
+
+  getItemByPosition(position: string) {
+    this._adsService.getItemByPosition(position).snapshotChanges().subscribe(res => {
+      if (res[0].payload.exists()) {
+        this.item = res[0].payload.toJSON() as Ads;
+        this.item.key = res[0].key;
+        console.log(this.item);
+        console.log("getItemByPosition fetched successfully");
+      } else {
+        console.log('Unknown error');
+      }
+      return res;
+    });
   }
 }

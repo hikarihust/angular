@@ -1,7 +1,7 @@
 
 <!-- TOP -->
-<a *ngIf="position=='top'"  href="#" target="_blank">
-  <img src="assets/images/no-banner-468x60.jpg" width="468" height="60" alt="ads-top" />
+<a *ngIf="item && position=='banner'"  href="{{ item.link }}" target="_blank">
+  <img src="{{ item.url }}" width="468" height="60" alt="{{ item.text }}" />
 </a>
 
 <!-- SIDEBAR -->
