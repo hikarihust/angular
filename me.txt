@@ -839,4 +839,5 @@ Xây dựng và hoàn chỉnh Widget
   Widget Ads 04
     FIREBASE WARNING: Using an unspecified index
   Widget Playlist 01
-  
+  Widget Playlist 02
+    Khi dùng đến routerLink thì import RouterModule

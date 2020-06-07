@@ -1,28 +1,15 @@
 <h3>Playlist</h3>
-<div class="widget-videos">
+<div class="widget-videos" *ngIf="items">
     <!-- BEGIN .item -->
-    <div class="item">
+    <div class="item" *ngFor="let item of items">
         <div class="item-header">
-            <a href="#" class="video-thumb">
-              <img src="assets/images/photos/image-2.jpg" width="16" height="9" class="aspect-px" rel="" alt="" />
+            <a [routerLink]="['/playlist', item.id]" class="video-thumb">
+              <img src="{{ item.thumbnails }}" width="16" height="9" class="aspect-px" rel="" alt="{{ item.title }}" />
             </a>
         </div>
         <div class="item-content">
             <h3>
-              <a href="#">Manhattan in motion</a>
-            </h3>
-        </div>
-        <!-- END .item -->
-    </div>
-    <div class="item">
-        <div class="item-header">
-            <a href="#" class="video-thumb">
-              <img src="assets/images/photos/image-2.jpg" width="16" height="9" class="aspect-px" rel="" alt="" />
-            </a>
-        </div>
-        <div class="item-content">
-            <h3>
-              <a href="#">Manhattan in motion</a>
+              <a [routerLink]="['/playlist', item.id]">{{ item.title }}</a>
             </h3>
         </div>
         <!-- END .item -->

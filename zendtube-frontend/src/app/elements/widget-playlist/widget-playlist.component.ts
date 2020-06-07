@@ -27,7 +27,6 @@ export class WidgetPlaylistComponent implements OnInit {
         this.items.push(item as Playlist);
       });
       console.log('getItems fetched successfully');
-      console.log(this.items);
     }, err => {
       debugger;
       console.log(`An error occurred ${err}`);
