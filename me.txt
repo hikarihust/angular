@@ -851,4 +851,6 @@ Xây dựng và hoàn chỉnh Widget
 Xây dựng trang Home
   Playlist Title
   Playlist Video
+  Playlist Total
+    +(this.totalItems): Chuyển đổi sang số nguyên
   

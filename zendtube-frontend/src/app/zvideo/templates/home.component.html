@@ -4,6 +4,7 @@
     <!-- ELEMENT PLAYLIST : LATEST PLAYLIST -->
     <zvn-elm-playlist
       *ngFor="let playlistInfo of playlistsInfo"
+      totalItems="{{ playlistInfo.totalItems }}"
       playlistID="{{ playlistInfo.playlistID }}"
       layout="{{ playlistInfo.layoutType }}">
     </zvn-elm-playlist>

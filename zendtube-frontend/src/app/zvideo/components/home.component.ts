@@ -13,19 +13,23 @@ export class HomeComponent implements OnInit {
     this.playlistsInfo = [
       {
         'playlistID': 'PLv6GftO355Avn86HCfkNnTLeOckiXZ603',
-        'layoutType': 'grid'
+        'layoutType': 'grid',
+        'totalItems': 3
       },
       {
         'playlistID': 'PLv6GftO355AsMUZXqKY_IFsNahY1txNXS',
-        'layoutType': 'hdgrid'
+        'layoutType': 'hdgrid',
+        'totalItems': 2
       },
       {
         'playlistID': 'PLv6GftO355AvoxffFOtyfH8eDUvEBAR1r',
-        'layoutType': 'list'
+        'layoutType': 'list',
+        'totalItems': 2
       },
       {
         'playlistID': 'PLv6GftO355Aue6eFwcf-GirTEzuD-99nu',
-        'layoutType': 'hdlist'
+        'layoutType': 'hdlist',
+        'totalItems': 1
       }
     ]
   }

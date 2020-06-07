@@ -12,6 +12,7 @@ import { Video } from './../../shared/defines/video.class';
 export class ElmPlaylistComponent implements OnInit {
   @Input('playlistID') playlistID: string;
   @Input('layout') layout: string;
+  @Input('totalItems') totalItems: number = 2;
 
   playlistInfo: Playlist = null;
   items: Video[] = [];
@@ -53,8 +54,7 @@ export class ElmPlaylistComponent implements OnInit {
 
   // Get videos in playlist
   getItemsByPlaylistID() {
-    this._videoService.getItemsByPlaylistID(this.playlistID).snapshotChanges().subscribe(res => {
-      this.items.length = 0;
+    this._videoService.getItemsByPlaylistID(this.playlistID, +(this.totalItems)).snapshotChanges().subscribe(res => {
       res.forEach(t => {
         const item = t.payload.toJSON();
         item['$key'] = t.key;
