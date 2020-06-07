@@ -1,19 +1,10 @@
 export class Ads {
   constructor(
-    private  _key     : string = "",
     private _url      : string = "",
     private _link     : string = "",
     private _text     : string = "",
     private _position : string = "",
   ) {
-  }
-
-  public get key(): string {
-    return this._key;
-  }
-
-  public set key(v: string) {
-    this._key = v;
   }
 
   public get url(): string {

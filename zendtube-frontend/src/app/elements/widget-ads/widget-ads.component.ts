@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { AngularFireDatabase } from '@angular/fire/database';
 
 import { Ads } from './../../shared/defines/ads.class';
 import { AdsService } from './../../shared/services/ads.service';
@@ -15,9 +14,7 @@ export class WidgetAdsComponent implements OnInit {
   adsDetails: Ads;
   item: Ads;
 
-  // size$: BehaviorSubject<string|null>;
   constructor(
-    private _db: AngularFireDatabase,
     private _adsService: AdsService
   ) {
   }
@@ -74,8 +71,9 @@ export class WidgetAdsComponent implements OnInit {
   getItemById(id: string) {
     this._adsService.getItemById(id).snapshotChanges().subscribe(res => {
       if (res.payload.exists()) {
-        this.adsDetails = res.payload.toJSON() as Ads;
-        this.adsDetails.key = res.key;
+        const item = res.payload.toJSON() as Ads;
+        item['$key'] = res[0].key;
+        this.adsDetails = item;
         console.log('getItemById successfully');
       } else {
         console.log('Unknown error');
@@ -87,13 +85,17 @@ export class WidgetAdsComponent implements OnInit {
   getItemByPosition(position: string) {
     this._adsService.getItemByPosition(position).snapshotChanges().subscribe(res => {
       if (res[0].payload.exists()) {
-        this.item = res[0].payload.toJSON() as Ads;
-        this.item.key = res[0].key;
+        const item = res[0].payload.toJSON() as Ads;
+        item['$key'] = res[0].key;
+        this.item = item;
         console.log("getItemByPosition fetched successfully");
       } else {
         console.log('Unknown error');
       }
       return res;
+    }, err => {
+      debugger;
+      console.log(`An error occurred ${err}`);
     });
   }
 }
