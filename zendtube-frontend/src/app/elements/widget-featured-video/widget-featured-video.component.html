@@ -1,7 +1,5 @@
 <h3> Videos</h3>
-<div class="widget-videos-small">
+<div class="widget-videos-small" *ngIf="items">
     <!-- ELEMENT VIDEO -->
-    <div class="item" zvn-elm-video></div>
-    <div class="item" zvn-elm-video></div>
-    <div class="item" zvn-elm-video></div>
+    <div class="item" *ngFor="let item of items" [zvn-elm-video]="item"></div>
 </div>

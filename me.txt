@@ -846,4 +846,5 @@ Xây dựng và hoàn chỉnh Widget
         RouterModule
       ],
   Widget Featured 01
+  Widget Featured 02
   
