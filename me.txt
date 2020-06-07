@@ -847,4 +847,5 @@ Xây dựng và hoàn chỉnh Widget
       ],
   Widget Featured 01
   Widget Featured 02
+  Widget Popular
   

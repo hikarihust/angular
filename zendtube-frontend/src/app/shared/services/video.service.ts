@@ -17,4 +17,9 @@ export class VideoService {
     this.video = this._db.list(AppSetting.TBL_VIDEO, ref => ref.orderByChild('featured').equalTo(true).limitToFirst(4)) as AngularFireList<Video>;
     return this.video;
   }
+
+  getItemsPopular(): AngularFireList<Video> {
+    this.video = this._db.list(AppSetting.TBL_VIDEO, ref => ref.orderByChild('views').limitToLast(3)) as AngularFireList<Video>;
+    return this.video;
+  }
 }
