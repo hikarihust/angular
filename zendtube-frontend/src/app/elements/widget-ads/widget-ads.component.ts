@@ -1,9 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { AngularFireDatabase, AngularFireAction } from '@angular/fire/database';
-import { Observable, BehaviorSubject, Subject } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
+import { AngularFireDatabase } from '@angular/fire/database';
 
-import { Ads } from 'src/app/shared/defines/ads.class';
+import { Ads } from './../../shared/defines/ads.class';
 import { AdsService } from './../../shared/services/ads.service';
 
 @Component({
@@ -79,7 +77,6 @@ export class WidgetAdsComponent implements OnInit {
         this.adsDetails = res.payload.toJSON() as Ads;
         this.adsDetails.key = res.key;
         console.log('getItemById successfully');
-        // console.log(this.adsDetails);
       } else {
         console.log('Unknown error');
       }
@@ -92,7 +89,6 @@ export class WidgetAdsComponent implements OnInit {
       if (res[0].payload.exists()) {
         this.item = res[0].payload.toJSON() as Ads;
         this.item.key = res[0].key;
-        console.log(this.item);
         console.log("getItemByPosition fetched successfully");
       } else {
         console.log('Unknown error');
