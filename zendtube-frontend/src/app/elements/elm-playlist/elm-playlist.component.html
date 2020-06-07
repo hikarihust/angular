@@ -5,14 +5,13 @@
     [layout]="layout"
     (myLayout)="changeLayout($event)"
     ></div>
-  <div class="panel-block video-list {{ layout }}">
+  <div class="panel-block video-list {{ layout }}" *ngIf="items">
       <!-- ELEMENT VIDEO -->
-      <div class="item" zvn-elm-video show-desc="true"></div>
-      <div class="item" zvn-elm-video show-desc="true"></div>
-      <div class="item" zvn-elm-video show-desc="true"></div>
+      <div class="item" *ngFor="let item of items"
+        [zvn-elm-video]="item" show-desc="true"></div>
 
       <div class="clear-list-button">
-          <a href="#" class="back-button">View More Videos</a>
+          <a [routerLink]="['/playlist', playlistInfo.id]" class="back-button">View More Videos</a>
       </div>
   </div>
 </div>

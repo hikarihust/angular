@@ -3,6 +3,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Playlist } from './../../shared/defines/playlist.class';
 import { VideoService } from './../../shared/services/video.service';
 import { PlaylistService } from './../../shared/services/playlist.service';
+import { Video } from './../../shared/defines/video.class';
 
 @Component({
   selector: 'zvn-elm-playlist',
@@ -13,6 +14,8 @@ export class ElmPlaylistComponent implements OnInit {
   @Input('layout') layout: string;
 
   playlistInfo: Playlist = null;
+  items: Video[] = [];
+
   constructor(
     private _videoService: VideoService,
     private _playlistService: PlaylistService,
@@ -21,12 +24,14 @@ export class ElmPlaylistComponent implements OnInit {
 
   ngOnInit() {
     this.getItemByID();
+    this.getItemsByPlaylistID();
   }
 
   changeLayout(data: any) {
     this.layout = data;
   }
 
+  // Get playlist Info
   getItemByID() {
     if (this.playlistID) {
       this._playlistService.getItemByID(this.playlistID).snapshotChanges()
@@ -34,9 +39,8 @@ export class ElmPlaylistComponent implements OnInit {
           if ((res[0].payload.exists())) {
             console.log("Playlist fetched successfully");
             const playlistInfo = res[0].payload.toJSON() as Playlist;
-            // playlistInfo['$key'] = res.key;
+            playlistInfo['$key'] = res[0].key;
             this.playlistInfo = playlistInfo;
-            console.log(this.playlistInfo);
           } else {
             console.log("Playlist does not exist");
           }
@@ -45,5 +49,21 @@ export class ElmPlaylistComponent implements OnInit {
           debugger;
         });
     }
+  }
+
+  // Get videos in playlist
+  getItemsByPlaylistID() {
+    this._videoService.getItemsByPlaylistID(this.playlistID).snapshotChanges().subscribe(res => {
+      this.items.length = 0;
+      res.forEach(t => {
+        const item = t.payload.toJSON();
+        item['$key'] = t.key;
+        this.items.push(item as Video);
+      });
+      console.log('getItems fetched successfully');
+    }, err => {
+      debugger;
+      console.log(`An error occurred ${err}`);
+    });
   }
 }

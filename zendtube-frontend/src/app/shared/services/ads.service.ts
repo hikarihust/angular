@@ -25,7 +25,7 @@ export class AdsService {
     return this.adsObjectDetails;
   }
 
-  getItemByPosition(position: string): AngularFireList<Ads> {
+  getItemByPosition(position: string): AngularFireList<Ads[]> {
     return this._db.list(AppSetting.TBL_ADS,
     ref => ref.orderByChild('position').equalTo(position));
   }

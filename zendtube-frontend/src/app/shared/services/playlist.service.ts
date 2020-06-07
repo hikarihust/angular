@@ -8,19 +8,15 @@ import { AppSetting } from './../../app.setting';
   providedIn: 'root'
 })
 export class PlaylistService {
-  playlists: AngularFireList<Playlist>;
-  playlist: AngularFireList<Playlist>;
 
   constructor(private _db: AngularFireDatabase) {
   }
 
-  getItems(): AngularFireList<Playlist> {
-    this.playlists = this._db.list(AppSetting.TBL_PLAYLIST, ref => ref.limitToFirst(4)) as AngularFireList<Playlist>;
-    return this.playlists;
+  getItems(): AngularFireList<Playlist[]> {
+    return this._db.list(AppSetting.TBL_PLAYLIST, ref => ref.limitToFirst(4)) as AngularFireList<Playlist[]>;
   }
 
-  getItemByID(playlistID: string): AngularFireList<Playlist> {
-    this.playlist = this._db.list(AppSetting.TBL_PLAYLIST, ref => ref.orderByChild('id').equalTo(playlistID)) as AngularFireList<Playlist>;
-    return this.playlist;
+  getItemByID(playlistID: string): AngularFireList<Playlist[]> {
+    return this._db.list(AppSetting.TBL_PLAYLIST, ref => ref.orderByChild('id').equalTo(playlistID)) as AngularFireList<Playlist[]>;
   }
 }
