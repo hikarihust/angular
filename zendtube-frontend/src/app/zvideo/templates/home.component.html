@@ -2,15 +2,13 @@
 <div class="with-sidebar-layout left">
 
     <!-- ELEMENT PLAYLIST : LATEST PLAYLIST -->
-    <zvn-elm-playlist title="Angular" layout="grid"></zvn-elm-playlist>
-    <zvn-elm-playlist title="PHP" layout="hdgrid"></zvn-elm-playlist>
+    <zvn-elm-playlist
+      *ngFor="let playlistInfo of playlistsInfo"
+      playlistID="{{ playlistInfo.playlistID }}"
+      layout="{{ playlistInfo.layoutType }}">
+    </zvn-elm-playlist>
     <!-- WIDGET ADS: article -->
     <div class="content-panel" zvn-widget-ads="article"></div>
-    <zvn-elm-playlist title="Java" layout="list"></zvn-elm-playlist>
-    <zvn-elm-playlist title="ReactJS" layout="hdlist"></zvn-elm-playlist>
-    <!-- WIDGET ADS: article -->
-    <div class="content-panel" zvn-widget-ads="article"></div>
-
 </div>
 <!-- BEGIN #sidebar -->
 <aside id="sidebar" class="right">
