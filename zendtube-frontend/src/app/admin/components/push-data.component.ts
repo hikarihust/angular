@@ -58,7 +58,7 @@ export class PushDataComponent implements OnInit {
           views       : this.getRandomInt(1, 500),
           comments    : this.getRandomInt(1, 10),
           ratings     : this.getRandomInt(1, 100),
-          featured    : (this.getRandomInt(1, 5)==2) ? true :false
+          featured    : (this.getRandomInt(1, 5)==2) ? true : false
         });
       });
     });

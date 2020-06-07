@@ -841,3 +841,9 @@ Xây dựng và hoàn chỉnh Widget
   Widget Playlist 01
   Widget Playlist 02
     Khi dùng đến routerLink thì import RouterModule
+      imports: [
+        CommonModule,
+        RouterModule
+      ],
+  Widget Featured 01
+  

@@ -14,7 +14,7 @@ export class PlaylistService {
   }
 
   getItems(): AngularFireList<Playlist> {
-    this.playlist = this._db.list(AppSetting.TBL_PLAYLISTS, ref => ref.limitToFirst(4)) as AngularFireList<Playlist>;
+    this.playlist = this._db.list(AppSetting.TBL_PLAYLIST, ref => ref.limitToFirst(4)) as AngularFireList<Playlist>;
     return this.playlist;
   }
 }

@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 // Service
 import { AdsService } from './services/ads.service';
 import { PlaylistService } from './services/playlist.service';
+import { VideoService } from './services/video.service';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PlaylistService } from './services/playlist.service';
   ],
   providers: [
     AdsService,
-    PlaylistService
+    PlaylistService,
+    VideoService
   ]
 })
 export class SharedModule { }
