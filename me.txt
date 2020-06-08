@@ -853,4 +853,6 @@ Xây dựng trang Home
   Playlist Video
   Playlist Total
     +(this.totalItems): Chuyển đổi sang số nguyên
+Xây dựng trang Video
+  Video Info
   
