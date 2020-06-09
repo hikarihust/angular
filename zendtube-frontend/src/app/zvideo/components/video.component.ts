@@ -14,6 +14,8 @@ export class VideoComponent implements OnInit {
   videoID: string;
   videoInfo: Video = null;
   playlistInfo: Playlist = null;
+  items: Video[] = [];
+  layoutDefault: string = 'grid';
 
   constructor(
     private _activatedRouteService: ActivatedRoute,
@@ -36,7 +38,10 @@ export class VideoComponent implements OnInit {
             const videoInfo = res[0].payload.toJSON() as Video;
             videoInfo['$key'] = res[0].key;
             this.videoInfo = videoInfo;
+            // PlaylistInfo
             this.getPlaylistInfo(this.videoInfo.playlistId);
+            // Videos
+            this.getVideosByPlaylistID(this.videoInfo.playlistId);
           } else {
             console.log("Video Info by videoID does not exist");
           }
@@ -57,7 +62,6 @@ export class VideoComponent implements OnInit {
             const playlistInfo = res[0].payload.toJSON() as Playlist;
             playlistInfo['$key'] = res[0].key;
             this.playlistInfo = playlistInfo;
-            console.log(this.playlistInfo);
           } else {
             console.log("PlaylistInfo by playlistID does not exist");
           }
@@ -66,5 +70,24 @@ export class VideoComponent implements OnInit {
           debugger;
         });
     }
+  }
+
+  // Get videos by playlistID
+  getVideosByPlaylistID(playlistId: string) {
+    this._videoService.getItemsByPlaylistID(playlistId, 3).snapshotChanges().subscribe(res => {
+      res.forEach(t => {
+        const item = t.payload.toJSON();
+        item['$key'] = t.key;
+        this.items.push(item as Video);
+      });
+      console.log('getItems fetched successfully');
+    }, err => {
+      debugger;
+      console.log(`An error occurred ${err}`);
+    });
+  }
+
+  changeLayout(data: any) {
+    this.layoutDefault = data;
   }
 }
