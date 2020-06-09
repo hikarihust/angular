@@ -65,8 +65,9 @@
   </div>
 
   <zvn-elm-playlist
+    *ngIf="videoInfo"
     totalItems="3"
-    playlistID="{{ videoInfo?.playlistId }}"
+    playlistID="{{ videoInfo.playlistId }}"
     layout="{{ layoutDefault }}">
   </zvn-elm-playlist>
   <!-- ADS -->

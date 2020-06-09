@@ -41,7 +41,7 @@ export class VideoComponent implements OnInit {
             // PlaylistInfo
             this.getPlaylistInfo(this.videoInfo.playlistId);
             // Videos
-            this.getVideosByPlaylistID(this.videoInfo.playlistId);
+            // this.getVideosByPlaylistID(this.videoInfo.playlistId);
           } else {
             console.log("Video Info by videoID does not exist");
           }
