@@ -861,4 +861,14 @@ Xây dựng trang Video
   Router
     Khi sử dụng snapshot thì nó không quan sát sự thay đổi của params
       -> Subscription
+  Reload Playlist
+    ngOnInit() là phương thức chỉ được chạy 1 lần do đó phần danh sách sẽ không được cập nhật lại
+    Để bắt sự thay đổi của các giá trị truyền vào đối với 1 Component nào đó thì thông qua các LifeCycle Hook
+      <zvn-elm-playlist
+        *ngIf="videoInfo"
+        totalItems="3"
+        playlistID="{{ videoInfo.playlistId }}"
+        layout="{{ layoutDefault }}">
+      </zvn-elm-playlist>
+    this.items.length = 0;
   

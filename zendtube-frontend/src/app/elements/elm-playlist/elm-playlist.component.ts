@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 
 import { Playlist } from './../../shared/defines/playlist.class';
 import { VideoService } from './../../shared/services/video.service';
@@ -9,7 +9,7 @@ import { Video } from './../../shared/defines/video.class';
   selector: 'zvn-elm-playlist',
   templateUrl: './elm-playlist.component.html',
 })
-export class ElmPlaylistComponent implements OnInit {
+export class ElmPlaylistComponent implements OnInit, OnChanges {
   @Input('playlistID') playlistID: string;
   @Input('layout') layout: string;
   @Input('totalItems') totalItems: number = 2;
@@ -24,8 +24,7 @@ export class ElmPlaylistComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getItemByID();
-    this.getItemsByPlaylistID();
+    this.initData();
   }
 
   changeLayout(data: any) {
@@ -55,6 +54,7 @@ export class ElmPlaylistComponent implements OnInit {
   // Get videos in playlist
   getItemsByPlaylistID() {
     this._videoService.getItemsByPlaylistID(this.playlistID, +(this.totalItems)).snapshotChanges().subscribe(res => {
+      this.items.length = 0;
       res.forEach(t => {
         const item = t.payload.toJSON();
         item['$key'] = t.key;
@@ -66,4 +66,13 @@ export class ElmPlaylistComponent implements OnInit {
       console.log(`An error occurred ${err}`);
     });
   }
+
+  initData() {
+    this.getItemByID();
+    this.getItemsByPlaylistID();
+  }
+
+  ngOnChanges(){
+    this.initData();
+	}
 }

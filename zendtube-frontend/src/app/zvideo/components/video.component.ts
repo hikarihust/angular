@@ -82,6 +82,7 @@ export class VideoComponent implements OnInit, OnDestroy {
   // Get videos by playlistID
   getVideosByPlaylistID(playlistId: string) {
     this._videoService.getItemsByPlaylistID(playlistId, 3).snapshotChanges().subscribe(res => {
+      this.items.length = 0;
       res.forEach(t => {
         const item = t.payload.toJSON();
         item['$key'] = t.key;
