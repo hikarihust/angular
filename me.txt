@@ -874,4 +874,7 @@ Xây dựng trang Video
   Scroll 
     LifeCycle AfterViewChecked
     How to detect a route change in Angular?
+  Loading 01
+    http://ajaxload.info/
+      Dùng để customize tạo ra 1 ajax-loader.gif
   

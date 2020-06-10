@@ -26,6 +26,7 @@ import { ElmPlaylistComponent } from './elm-playlist/elm-playlist.component';
 import { ElmVideoComponent } from './elm-video/elm-video.component';
 import { ElmPanelTitleComponent } from './elm-panel-title/elm-panel-title.component';
 import { ElmYoutubeIframeComponent } from './elm-youtube-iframe/elm-youtube-iframe.component';
+import { ElmLoaderComponent } from './elm-loader/elm-loader.component';
 
 // Module
 import { SharedModule } from '../shared/shared.module';
@@ -53,6 +54,7 @@ import { SharedModule } from '../shared/shared.module';
     ElmVideoComponent,
     ElmPanelTitleComponent,
     ElmYoutubeIframeComponent,
+    ElmLoaderComponent
   ],
   imports: [
     CommonModule,
@@ -80,7 +82,8 @@ import { SharedModule } from '../shared/shared.module';
     ElmPlaylistComponent,
     ElmVideoComponent,
     ElmPanelTitleComponent,
-    ElmYoutubeIframeComponent
+    ElmYoutubeIframeComponent,
+    ElmLoaderComponent
   ]
 })
 export class ElementsModule { }
