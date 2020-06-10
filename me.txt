@@ -871,4 +871,7 @@ Xây dựng trang Video
         layout="{{ layoutDefault }}">
       </zvn-elm-playlist>
     this.items.length = 0;
+  Scroll 
+    LifeCycle AfterViewChecked
+    How to detect a route change in Angular?
   

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnDestroy } from '@angular/core';
+import { Component, OnInit, Input, OnDestroy, AfterViewChecked } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Subscription } from 'rxjs';
 
@@ -11,7 +11,7 @@ import { PlaylistService } from './../../shared/services/playlist.service';
   selector: 'zvn-zvideo-video',
   templateUrl: './../templates/video.component.html',
 })
-export class VideoComponent implements OnInit, OnDestroy {
+export class VideoComponent implements OnInit, OnDestroy, AfterViewChecked {
   videoID: string;
   videoInfo: Video = null;
   playlistInfo: Playlist = null;
@@ -20,6 +20,7 @@ export class VideoComponent implements OnInit, OnDestroy {
   subscription: Subscription;
 
   constructor(
+    private _routerService: Router,
     private _activatedRouteService: ActivatedRoute,
     private _videoService: VideoService,
     private _playlistService: PlaylistService
@@ -97,6 +98,12 @@ export class VideoComponent implements OnInit, OnDestroy {
 
   changeLayout(data: any) {
     this.layoutDefault = data;
+  }
+
+  ngAfterViewChecked() {
+    this._routerService.events.subscribe((val) => {
+      window.scrollTo(0, 0);
+    });
   }
 
 	ngOnDestroy(){
