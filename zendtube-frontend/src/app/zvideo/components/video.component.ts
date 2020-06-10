@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Component, OnInit, Input, OnDestroy } from '@angular/core';
+import { Router, ActivatedRoute, Params } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 import { Video } from './../../shared/defines/video.class';
 import { VideoService } from './../../shared/services/video.service';
@@ -10,12 +11,13 @@ import { PlaylistService } from './../../shared/services/playlist.service';
   selector: 'zvn-zvideo-video',
   templateUrl: './../templates/video.component.html',
 })
-export class VideoComponent implements OnInit {
+export class VideoComponent implements OnInit, OnDestroy {
   videoID: string;
   videoInfo: Video = null;
   playlistInfo: Playlist = null;
   items: Video[] = [];
   layoutDefault: string = 'grid';
+  subscription: Subscription;
 
   constructor(
     private _activatedRouteService: ActivatedRoute,
@@ -24,8 +26,13 @@ export class VideoComponent implements OnInit {
   ) {
   }
   ngOnInit() {
-    this.videoID = this._activatedRouteService.snapshot.params['id'];
-    this.getItemByID();
+		this.subscription = this._activatedRouteService.params.subscribe(
+			(params: Params) => {
+        this.videoID = params['id'];
+        this.videoID = this._activatedRouteService.snapshot.params['id'];
+        this.getItemByID();
+			}
+    );
   }
 
   // Video Info by videoID
@@ -90,4 +97,8 @@ export class VideoComponent implements OnInit {
   changeLayout(data: any) {
     this.layoutDefault = data;
   }
+
+	ngOnDestroy(){
+		this.subscription.unsubscribe();
+	}
 }

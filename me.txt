@@ -858,4 +858,7 @@ Xây dựng trang Video
   IFrame
   Playlist 01
   Playlist 02
+  Router
+    Khi sử dụng snapshot thì nó không quan sát sự thay đổi của params
+      -> Subscription
   
