@@ -1,4 +1,6 @@
-import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, OnDestroy } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 import { Playlist } from '../../shared/defines/playlist.class';
 import { VideoService } from '../../shared/services/video.service';
@@ -10,7 +12,7 @@ import { PagerService } from './../../shared/services/pager.service';
   selector: 'zvn-elm-playlist-pagination',
   templateUrl: './elm-playlist-pagination.component.html',
 })
-export class ElmPlaylistPaginationComponent implements OnInit, OnChanges {
+export class ElmPlaylistPaginationComponent implements OnInit, OnChanges, OnDestroy {
   @Input('playlistID') playlistID: string;
   @Input('layout') layout: string;
   @Input('totalItems') totalItems: number = 2;
@@ -19,8 +21,10 @@ export class ElmPlaylistPaginationComponent implements OnInit, OnChanges {
   playlistInfo: Playlist = null;
   items: Video[] = [];
   pager: any;
+  subscription: Subscription;
 
   constructor(
+    private _activatedRouteService: ActivatedRoute,
     private _videoService: VideoService,
     private _playlistService: PlaylistService,
     private _pagerService: PagerService
@@ -29,8 +33,6 @@ export class ElmPlaylistPaginationComponent implements OnInit, OnChanges {
 
   ngOnInit() {
     this.initData();
-    this.pager = this._pagerService.getPager(17, 2, 5);
-    console.log(this.pager);
   }
 
   changeLayout(data: any) {
@@ -67,6 +69,11 @@ export class ElmPlaylistPaginationComponent implements OnInit, OnChanges {
         this.items.push(item as Video);
       });
       console.log('getItems fetched successfully');
+      this.subscription = this._activatedRouteService.queryParams.subscribe(
+        (params: Params) => {
+          this.pager = this._pagerService.getPager(this.items.length, +(params['page']), 5);
+        }
+      );
     }, err => {
       debugger;
       console.log(`An error occurred ${err}`);
@@ -80,5 +87,9 @@ export class ElmPlaylistPaginationComponent implements OnInit, OnChanges {
 
   ngOnChanges(){
     this.initData();
+  }
+  
+	ngOnDestroy(){
+		this.subscription.unsubscribe();
 	}
 }

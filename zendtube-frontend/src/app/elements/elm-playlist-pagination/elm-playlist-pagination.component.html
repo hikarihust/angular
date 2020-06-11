@@ -12,6 +12,9 @@
         [zvn-elm-video]="item" show-desc="true"></div>
       
       <!-- PAGINATION -->
-      <div class="pagination" zvn-elm-pager></div>
+      <div class="pagination" 
+        *ngIf="pager"
+        [zvn-elm-pager]="pager">
+      </div>
   </div>
 </div>

@@ -1,10 +1,14 @@
-<a class="page-numbers" href="#">
-  First
-</a>
-<a class="prev page-numbers" href="#">
+
+<!-- First -->
+<a class="page-numbers" href="#" *ngIf="pager.currentPage !==1">First</a>
+<span class="page-numbers" *ngIf="pager.currentPage ===1">First</span>
+
+<a class="prev page-numbers" href="#" *ngIf="pager.currentPage !==1">
   <i class="fa fa-caret-left"></i>
   Previous
 </a>
+<span class="page-numbers" *ngIf="pager.currentPage ===1">Previous</span>
+
 <a class="page-numbers" href="#">1</a>
 <span class="page-numbers current">2</span>
 <a class="page-numbers" href="#">3</a>
