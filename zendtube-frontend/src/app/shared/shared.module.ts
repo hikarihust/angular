@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { AdsService } from './services/ads.service';
 import { PlaylistService } from './services/playlist.service';
 import { VideoService } from './services/video.service';
+import { PagerService } from './services/pager.service';
 
 // Pipe
 import { SafePipe } from './pipes/safe.pipe';
@@ -22,7 +23,8 @@ import { SafePipe } from './pipes/safe.pipe';
   providers: [
     AdsService,
     PlaylistService,
-    VideoService
+    VideoService,
+    PagerService
   ]
 })
 export class SharedModule { }

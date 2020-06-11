@@ -4,6 +4,7 @@ import { Playlist } from '../../shared/defines/playlist.class';
 import { VideoService } from '../../shared/services/video.service';
 import { PlaylistService } from '../../shared/services/playlist.service';
 import { Video } from '../../shared/defines/video.class';
+import { PagerService } from './../../shared/services/pager.service';
 
 @Component({
   selector: 'zvn-elm-playlist-pagination',
@@ -17,15 +18,19 @@ export class ElmPlaylistPaginationComponent implements OnInit, OnChanges {
 
   playlistInfo: Playlist = null;
   items: Video[] = [];
+  pager: any;
 
   constructor(
     private _videoService: VideoService,
     private _playlistService: PlaylistService,
+    private _pagerService: PagerService
   ) {
   }
 
   ngOnInit() {
     this.initData();
+    this.pager = this._pagerService.getPager(17, 2, 5);
+    console.log(this.pager);
   }
 
   changeLayout(data: any) {

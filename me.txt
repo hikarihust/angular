@@ -881,4 +881,11 @@ Xây dựng trang Video
 Xây dựng trang Playlist
     Playlist
     Pagination 01
+    Pagination 02
+        Angular Pagination
+        Angular Pagination Examle with logic like google
+        https://jasonwatmore.com/post/2016/08/23/angular-2-pagination-example-with-logic-like-google
+        pages = Array.from(Array((endPage + 1) - startPage).keys()).map(i => startPage + i);
+        pages = Array.from(Array((10 + 1) - 1).keys()).map(i => 1 + i);
+        -> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     
