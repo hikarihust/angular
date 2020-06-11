@@ -1,5 +1,5 @@
 <h3>Playlist</h3>
-<zvn-elm-loader [isLoading]="isLoading"></zvn-elm-loader>
+<zvn-elm-loader *ngIf="items.length==0"></zvn-elm-loader>
 <div class="widget-videos" *ngIf="items">
     <!-- BEGIN .item -->
     <div class="item" *ngFor="let item of items">

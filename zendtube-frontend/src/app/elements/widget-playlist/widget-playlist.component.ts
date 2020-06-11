@@ -10,7 +10,6 @@ import { PlaylistService } from './../../shared/services/playlist.service';
 export class WidgetPlaylistComponent implements OnInit {
 
   items: Playlist[] = [];
-  isLoading: boolean = true;
   constructor(
     private _playlistService: PlaylistService
   ) {
@@ -26,7 +25,6 @@ export class WidgetPlaylistComponent implements OnInit {
         const item = t.payload.toJSON();
         item['$key'] = t.key;
         this.items.push(item as Playlist);
-        this.isLoading = false;
       });
       console.log('getItems fetched successfully');
     }, err => {

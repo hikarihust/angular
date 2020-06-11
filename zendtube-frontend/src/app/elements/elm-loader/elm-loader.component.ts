@@ -5,7 +5,7 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './elm-loader.component.html',
 })
 export class ElmLoaderComponent implements OnInit {
-  @Input("isLoading") isLoading: boolean = true;
+  // @Input("isLoading") isLoading: boolean = true;
   constructor() {
   }
   ngOnInit() {
