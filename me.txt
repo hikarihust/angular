@@ -878,4 +878,6 @@ Xây dựng trang Video
     http://ajaxload.info/
       Dùng để customize tạo ra 1 ajax-loader.gif
   Loading 02
-  
+Xây dựng trang Playlist
+    Playlist
+    

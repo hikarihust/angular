@@ -11,7 +11,7 @@
       <div class="item" *ngFor="let item of items"
         [zvn-elm-video]="item" show-desc="true"></div>
 
-      <div class="clear-list-button">
+      <div class="clear-list-button" *ngIf="showMoreVideo==true">
           <a [routerLink]="['/playlist', playlistInfo.id]" class="back-button">View More Videos</a>
       </div>
   </div>

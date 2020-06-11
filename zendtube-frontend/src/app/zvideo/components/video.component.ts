@@ -30,7 +30,7 @@ export class VideoComponent implements OnInit, OnDestroy, AfterViewChecked {
 		this.subscription = this._activatedRouteService.params.subscribe(
 			(params: Params) => {
         this.videoID = params['id'];
-        this.videoID = this._activatedRouteService.snapshot.params['id'];
+        // this.videoID = this._activatedRouteService.snapshot.params['id'];
         this.getItemByID();
 			}
     );
