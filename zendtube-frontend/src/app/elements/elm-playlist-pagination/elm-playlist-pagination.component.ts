@@ -1,18 +1,19 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 
-import { Playlist } from './../../shared/defines/playlist.class';
-import { VideoService } from './../../shared/services/video.service';
-import { PlaylistService } from './../../shared/services/playlist.service';
-import { Video } from './../../shared/defines/video.class';
+import { Playlist } from '../../shared/defines/playlist.class';
+import { VideoService } from '../../shared/services/video.service';
+import { PlaylistService } from '../../shared/services/playlist.service';
+import { Video } from '../../shared/defines/video.class';
 
 @Component({
-  selector: 'zvn-elm-playlist',
-  templateUrl: './elm-playlist.component.html',
+  selector: 'zvn-elm-playlist-pagination',
+  templateUrl: './elm-playlist-pagination.component.html',
 })
-export class ElmPlaylistComponent implements OnInit, OnChanges {
+export class ElmPlaylistPaginationComponent implements OnInit, OnChanges {
   @Input('playlistID') playlistID: string;
   @Input('layout') layout: string;
   @Input('totalItems') totalItems: number = 2;
+  @Input('showMoreVideo') showMoreVideo: boolean = true;
 
   playlistInfo: Playlist = null;
   items: Video[] = [];
@@ -53,7 +54,7 @@ export class ElmPlaylistComponent implements OnInit, OnChanges {
 
   // Get videos in playlist
   getItemsByPlaylistID() {
-    this._videoService.getItemsByPlaylistID(this.playlistID, +(this.totalItems)).snapshotChanges().subscribe(res => {
+    this._videoService.getItemsPaginationByPlaylistID(this.playlistID).snapshotChanges().subscribe(res => {
       this.items.length = 0;
       res.forEach(t => {
         const item = t.payload.toJSON();

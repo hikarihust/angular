@@ -23,6 +23,10 @@ export class VideoService {
   getItemsByPlaylistID(playlistID: string, totalItems: number = 4): AngularFireList<Video[]> {
     return this._db.list(AppSetting.TBL_VIDEO, ref => ref.orderByChild('playlistId').equalTo(playlistID).limitToFirst(totalItems)) as AngularFireList<Video[]>;
   }
+  
+  getItemsPaginationByPlaylistID(playlistID: string): AngularFireList<Video[]> {
+    return this._db.list(AppSetting.TBL_VIDEO, ref => ref.orderByChild('playlistId').equalTo(playlistID)) as AngularFireList<Video[]>;
+  }
 
   getItemByID(videoID: string): AngularFireList<Video> {
     return this._db.list(AppSetting.TBL_VIDEO, ref => ref.orderByChild('id').equalTo(videoID).limitToLast(1)) as AngularFireList<Video>;
