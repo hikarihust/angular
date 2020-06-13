@@ -1,10 +1,10 @@
 
 <!-- First -->
-<a class="page-numbers" href="#" *ngIf="pager.currentPage !==1">First</a>
+<a (click)="setPage(1)" class="page-numbers" *ngIf="pager.currentPage !==1">First</a>
 <span class="page-numbers" *ngIf="pager.currentPage ===1">First</span>
 
 <!-- Previous -->
-<a class="prev page-numbers" href="#" *ngIf="pager.currentPage !==1">
+<a class="prev page-numbers" (click)="setPage(pager.currentPage-1)" *ngIf="pager.currentPage !==1">
   <i class="fa fa-caret-left"></i>
   Previous
 </a>
@@ -12,19 +12,20 @@
 
 <a class="page-numbers"
   *ngFor="let page of pager.pages"
+  (click)="setPage(page)"
   [ngClass]="{current: pager.currentPage == page}">
   {{ page }}
 </a>
 
 <!-- Next -->
-<a class="next page-numbers" href="#" *ngIf="pager.currentPage !==pager.totalPages">
+<a class="next page-numbers" (click)="setPage(pager.currentPage+1)" *ngIf="pager.currentPage !==pager.totalPages">
   Next 
   <i class="fa fa-caret-right"></i>
 </a>
 <span class="page-numbers" *ngIf="pager.currentPage ===pager.totalPages">Next</span>
 
 <!-- Last -->
-<a class="page-numbers" href="#" *ngIf="pager.currentPage !==pager.totalPages">
+<a (click)="setPage(pager.totalPages)" class="page-numbers" *ngIf="pager.currentPage !==pager.totalPages">
   Last
 </a>
 <span class="page-numbers" *ngIf="pager.currentPage ===pager.totalPages">Last</span>

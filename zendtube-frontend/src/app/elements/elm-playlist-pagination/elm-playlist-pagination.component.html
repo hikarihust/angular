@@ -14,6 +14,7 @@
       <!-- PAGINATION -->
       <div class="pagination" 
         *ngIf="pager"
+        (setCurrentPage)="setPage($event)"
         [zvn-elm-pager]="pager">
       </div>
   </div>

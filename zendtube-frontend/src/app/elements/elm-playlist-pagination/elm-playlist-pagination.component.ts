@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, OnChanges, OnDestroy } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 
 import { Playlist } from '../../shared/defines/playlist.class';
@@ -27,7 +27,8 @@ export class ElmPlaylistPaginationComponent implements OnInit, OnChanges, OnDest
     private _activatedRouteService: ActivatedRoute,
     private _videoService: VideoService,
     private _playlistService: PlaylistService,
-    private _pagerService: PagerService
+    private _pagerService: PagerService,
+    private _routerService: Router
   ) {
   }
 
@@ -79,6 +80,14 @@ export class ElmPlaylistPaginationComponent implements OnInit, OnChanges, OnDest
     }, err => {
       debugger;
       console.log(`An error occurred ${err}`);
+    });
+  }
+
+  setPage(page: number) {
+    this._routerService.navigate(['playlist', this.playlistID], {
+      queryParams: {
+        page: page
+      }
     });
   }
 

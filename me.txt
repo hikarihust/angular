@@ -893,4 +893,5 @@ Xây dựng trang Playlist
         +(params['page']) Ép sang kiểu số
     Pagination 04
         Next hiển thị khi ko phải là trang cuối cùng
+    Pagination 05
     
