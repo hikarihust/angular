@@ -7,6 +7,8 @@ export class PagerService {
       // calculate total pages
       totalPages = Math.ceil(totalItems / pageSize);
 
+      if(totalPages == 1) return null;
+
       // ensure current page isn't out of range
       if (currentPage < 1) { 
           currentPage = 1; 

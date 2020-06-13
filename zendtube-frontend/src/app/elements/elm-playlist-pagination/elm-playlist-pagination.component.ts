@@ -20,6 +20,8 @@ export class ElmPlaylistPaginationComponent implements OnInit, OnChanges, OnDest
 
   playlistInfo: Playlist = null;
   items: Video[] = [];
+  // paged items
+  pagedItems: Video[];
   pager: any;
   subscription: Subscription;
 
@@ -74,7 +76,8 @@ export class ElmPlaylistPaginationComponent implements OnInit, OnChanges, OnDest
         (params: Params) => {
           let currentPage: number = params['page'];
           if(currentPage === undefined) currentPage =1;
-          this.pager = this._pagerService.getPager(this.items.length, +(currentPage), 5);
+          // initialize to page
+          this.setPage(currentPage);
         }
       );
     }, err => {
@@ -84,11 +87,22 @@ export class ElmPlaylistPaginationComponent implements OnInit, OnChanges, OnDest
   }
 
   setPage(page: number) {
-    this._routerService.navigate(['playlist', this.playlistID], {
-      queryParams: {
-        page: page
-      }
-    });
+    // get pager object from service
+    this.pager = this._pagerService.getPager(this.items.length, +(page), 5);
+
+    if(this.pager) {
+      // get current page of items
+      this.pagedItems = this.items.slice(this.pager.startIndex, this.pager.endIndex + 1);
+
+      this._routerService.navigate(['playlist', this.playlistID], {
+        queryParams: {
+          page: page
+        }
+      });
+    } else {
+      this.pagedItems = this.items;
+    }
+
   }
 
   initData() {

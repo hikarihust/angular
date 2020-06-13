@@ -8,7 +8,7 @@
     ></div>
   <div class="panel-block video-list {{ layout }}" *ngIf="items">
       <!-- ELEMENT VIDEO -->
-      <div class="item" *ngFor="let item of items"
+      <div class="item" *ngFor="let item of pagedItems"
         [zvn-elm-video]="item" show-desc="true"></div>
       
       <!-- PAGINATION -->
