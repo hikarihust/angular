@@ -891,4 +891,6 @@ Xây dựng trang Playlist
     Pagination 03
         subscription -> Phải có OnDestroy
         +(params['page']) Ép sang kiểu số
+    Pagination 04
+        Next hiển thị khi ko phải là trang cuối cùng
     

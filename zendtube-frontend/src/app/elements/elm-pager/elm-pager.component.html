@@ -3,20 +3,28 @@
 <a class="page-numbers" href="#" *ngIf="pager.currentPage !==1">First</a>
 <span class="page-numbers" *ngIf="pager.currentPage ===1">First</span>
 
+<!-- Previous -->
 <a class="prev page-numbers" href="#" *ngIf="pager.currentPage !==1">
   <i class="fa fa-caret-left"></i>
   Previous
 </a>
 <span class="page-numbers" *ngIf="pager.currentPage ===1">Previous</span>
 
-<a class="page-numbers" href="#">1</a>
-<span class="page-numbers current">2</span>
-<a class="page-numbers" href="#">3</a>
-<a class="page-numbers" href="#">4</a>
-<a class="next page-numbers" href="#">
+<a class="page-numbers"
+  *ngFor="let page of pager.pages"
+  [ngClass]="{current: pager.currentPage == page}">
+  {{ page }}
+</a>
+
+<!-- Next -->
+<a class="next page-numbers" href="#" *ngIf="pager.currentPage !==pager.totalPages">
   Next 
   <i class="fa fa-caret-right"></i>
 </a>
-<a class="page-numbers" href="#">
+<span class="page-numbers" *ngIf="pager.currentPage ===pager.totalPages">Next</span>
+
+<!-- Last -->
+<a class="page-numbers" href="#" *ngIf="pager.currentPage !==pager.totalPages">
   Last
 </a>
+<span class="page-numbers" *ngIf="pager.currentPage ===pager.totalPages">Last</span>
