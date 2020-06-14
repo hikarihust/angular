@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {AngularFireDatabase, AngularFireList, AngularFireObject} from '@angular/fire/database';
+import { BehaviorSubject } from 'rxjs';
 
 import { Video } from '../defines/video.class';
 import { AppSetting } from './../../app.setting';
@@ -26,6 +27,10 @@ export class VideoService {
   
   getItemsPaginationByPlaylistID(playlistID: string): AngularFireList<Video[]> {
     return this._db.list(AppSetting.TBL_VIDEO, ref => ref.orderByChild('playlistId').equalTo(playlistID)) as AngularFireList<Video[]>;
+  }
+
+  getItemsScrollByPlaylistID(playlistID: string, totalItems: number = 3): AngularFireList<Video[]> {
+    return this._db.list(AppSetting.TBL_VIDEO, ref => ref.orderByChild('playlistId').equalTo(playlistID).limitToFirst(totalItems)) as AngularFireList<Video[]>;
   }
 
   getItemByID(videoID: string): AngularFireList<Video> {

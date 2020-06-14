@@ -32,6 +32,7 @@ import { ElmPagerComponent } from './elm-pager/elm-pager.component';
 
 // Module
 import { SharedModule } from '../shared/shared.module';
+import { ElmPlaylistLoadMoreComponent } from './elm-playlist-load-more/elm-playlist-load-more.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,9 @@ import { SharedModule } from '../shared/shared.module';
     ElmYoutubeIframeComponent,
     ElmLoaderComponent,
     ElmPlaylistPaginationComponent,
-    ElmPagerComponent
+    ElmPagerComponent,
+
+    ElmPlaylistLoadMoreComponent
   ],
   imports: [
     CommonModule,
@@ -89,7 +92,9 @@ import { SharedModule } from '../shared/shared.module';
     ElmYoutubeIframeComponent,
     ElmLoaderComponent,
     ElmPlaylistPaginationComponent,
-    ElmPagerComponent
+    ElmPagerComponent,
+
+    ElmPlaylistLoadMoreComponent
   ]
 })
 export class ElementsModule { }

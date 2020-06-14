@@ -15,7 +15,6 @@ import { PagerService } from './../../shared/services/pager.service';
 export class ElmPlaylistPaginationComponent implements OnInit, OnChanges, OnDestroy {
   @Input('playlistID') playlistID: string;
   @Input('layout') layout: string;
-  @Input('totalItems') totalItems: number = 2;
   @Input('showMoreVideo') showMoreVideo: boolean = true;
 
   playlistInfo: Playlist = null;
