@@ -919,4 +919,24 @@ Xây dựng trang Playlist
         Pagination with AngularFire Inside of Angular
         Không cần ngOnChanges()
     Load More 02
+Publish ứng dụng on Xampp 
+    ng build: Câu lệnh đóng gói sản phẩm
+        Compiles an Angular app into an output directory named dist/ at the given output path. Must be executed 
+        from within a workspace directory
+        -> Được Folder dist
+    Dùng mã nguồn này lên 1 host nào đó
+    Tạo ra 1 host ảo bằng phần mềm Xampp
+        Lúc này thì có lỗi về đường dẫn như: 
+            http://localhost/assets/css/reset.css
+            ...
+        -> Khắc phục bằng cách tao ra 1 host ảo
+        C:\Windows\System32\drivers\etc\hosts
+            127.0.0.1       zendtubequang.vn
+        C:\xampp\apache\conf\extra\httpd-vhosts.conf
+            NameVirtualHost *:80
+            <VirtualHost *:80>
+                ServerAdmin zendtubequang.vn
+                DocumentRoot "C:/xampp/htdocs/zendtube"
+                ServerName zendtubequang.vn
+            </VirtualHost>
     
