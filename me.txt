@@ -918,3 +918,5 @@ Xây dựng trang Playlist
     Load More 01
         Pagination with AngularFire Inside of Angular
         Không cần ngOnChanges()
+    Load More 02
+    

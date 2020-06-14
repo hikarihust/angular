@@ -44,7 +44,7 @@ export class VideoComponent implements OnInit, OnDestroy, AfterViewChecked {
           if ((res[0].payload.exists())) {
             console.log("Video Info by videoID fetched successfully");
             const videoInfo = res[0].payload.toJSON() as Video;
-            videoInfo['$key'] = res[0].key;
+            // videoInfo['$key'] = res[0].key;
             this.videoInfo = videoInfo;
             // PlaylistInfo
             this.getPlaylistInfo(this.videoInfo.playlistId);

@@ -1,5 +1,6 @@
 export class Video {
   constructor(
+    private _$key         : string  = "",
     private _id           : string  = "",
     private _publishedAt  : string  = "",
     private _channelId    : string  = "",
@@ -13,6 +14,10 @@ export class Video {
     private _ratings      : number  = 0,
     private _featured     : boolean = false,
   ) {
+  }
+
+  public get $key(): string {
+    return this._$key;
   }
 
   public get id(): string {

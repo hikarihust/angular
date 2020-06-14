@@ -18,7 +18,9 @@ export class ElmPlaylistLoadMoreComponent implements OnInit {
   items: Video[]                 = [];
   limit: BehaviorSubject<number> = null;
   lastKey: string                = null;
-  queryAble: boolean             = true;
+  allItems: Video[]              = [];
+  totalItems: number             = 0;
+  showButtonLoadMore: boolean    = true;
 
   constructor(
     private _videoService: VideoService,
@@ -67,7 +69,6 @@ export class ElmPlaylistLoadMoreComponent implements OnInit {
             this.items.push(item as Video);
           });
           console.log('getItems fetched successfully');
-          console.log(this.items);
         }, err => {
           debugger;
           console.log(`An error occurred ${err}`);
@@ -76,12 +77,35 @@ export class ElmPlaylistLoadMoreComponent implements OnInit {
     }
   }
 
+  // Get all items By PlaylistID
+  getAllItemsByPlaylistID() {
+    if(this.playlistID) {
+      this._videoService.getAllItemsByPlaylistID(this.playlistID).snapshotChanges().subscribe(res => {
+        this.allItems.length = 0;
+        res.forEach(t => {
+          const item = t.payload.toJSON();
+          item['$key'] = t.key;
+          this.allItems.push(item as Video);
+        });
+        this.totalItems = this.allItems.length;
+      }, err => {
+        debugger;
+        console.log(`An error occurred ${err}`);
+      });
+    }
+  }
+
   initData() {
     this.getItemByID();
     this.getItemsByPlaylistID();
+    this.getAllItemsByPlaylistID();
   }
 
   loadMore() {
-    this.limit.next(this.limit.getValue() + 3);
+    if(this.totalItems > this.limit.getValue()) {
+      this.limit.next(this.limit.getValue() + 3);
+    } else {
+      this.showButtonLoadMore = false;
+    }
   }
 }
