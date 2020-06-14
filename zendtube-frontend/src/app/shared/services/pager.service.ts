@@ -1,4 +1,6 @@
 export class PagerService {
+
+  pageRange: number = 10;
   getPager(totalItems: number, currentPage: number = 1, pageSize: number = 10) {
       let totalPages: number;
       let startPage: number;
@@ -16,7 +18,7 @@ export class PagerService {
           currentPage = totalPages; 
       }
       
-      if (totalPages <= 10) {
+      if (totalPages <= this.pageRange) {
           // less than 10 total pages so show all
           startPage = 1;
           endPage = totalPages;

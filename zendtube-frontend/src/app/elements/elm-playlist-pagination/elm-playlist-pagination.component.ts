@@ -88,7 +88,7 @@ export class ElmPlaylistPaginationComponent implements OnInit, OnChanges, OnDest
 
   setPage(page: number) {
     // get pager object from service
-    this.pager = this._pagerService.getPager(this.items.length, +(page), 5);
+    this.pager = this._pagerService.getPager(this.items.length, +(page), 3);
 
     if(this.pager) {
       // get current page of items
